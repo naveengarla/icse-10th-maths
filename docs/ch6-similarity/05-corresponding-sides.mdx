@@ -1,0 +1,209 @@
+---
+id: similarity-05
+title: Finding Corresponding Sides — The Hardest Skill
+sidebar_label: 5. Corresponding Sides
+sidebar_position: 6
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { OrientationProblem, TriangleInsideTriangle } from '@site/src/components/CorrespondingSides';
+
+# 5. Finding Corresponding Sides — The Hardest Skill
+
+## Why this trips everyone up
+
+You now know *when* two triangles are similar (AA, SAS, SSS).
+
+But the harder question is: **once you know they're similar, which side of one triangle corresponds to which side of the other?**
+
+This is where most students lose marks in ICSE — they set up the wrong ratio and get the wrong answer.
+
+The problem is worse when triangles are:
+- **Rotated** (one is turned relative to the other)
+- **Flipped** (one is a mirror image)
+- **Inside the same figure** (both triangles share vertices or sides)
+
+---
+
+## The key principle
+
+:::note The one rule that fixes everything
+**Corresponding sides are OPPOSITE corresponding (equal) angles.**
+
+If $\angle A = \angle P$, then side $BC$ (opposite $\angle A$) corresponds to side $QR$ (opposite $\angle P$).
+:::
+
+This means: to find which sides correspond, **find which angles are equal first**.
+
+---
+
+## Step-by-step method
+
+**Given $\triangle ABC \sim \triangle PQR$ (letters in this order):**
+
+| In $\triangle ABC$ | Opposite angle | Corresponds to | In $\triangle PQR$ |
+|-------------------|---------------|---------------|-------------------|
+| Side $BC$ | $\angle A$ | ↔ | Side $QR$ (opposite $\angle P$) |
+| Side $CA$ | $\angle B$ | ↔ | Side $RP$ (opposite $\angle Q$) |
+| Side $AB$ | $\angle C$ | ↔ | Side $PQ$ (opposite $\angle R$) |
+
+The proportion is: $\dfrac{BC}{QR} = \dfrac{CA}{RP} = \dfrac{AB}{PQ} = k$
+
+**The shortcut:** In $\triangle ABC \sim \triangle PQR$, the letters tell you the correspondence directly:
+- 1st letter A ↔ 1st letter P
+- 2nd letter B ↔ 2nd letter Q
+- 3rd letter C ↔ 3rd letter R
+
+---
+
+## The rotation problem — visually
+
+<OrientationProblem />
+
+This is the most common trap. Two triangles that are similar but one is rotated or flipped. The angle arc colours tell you which vertices match.
+
+**The trick: colour your angle arcs before writing any ratio.**
+
+---
+
+## The "triangle inside a triangle" figure
+
+This is the most common ICSE question type for similarity.
+
+<TriangleInsideTriangle />
+
+**Pattern:** A line parallel to the base of a triangle cuts the other two sides, creating a smaller similar triangle inside.
+
+**The golden rule:** In $\triangle CDE \sim \triangle CAB$:
+$$\dfrac{CD}{CA} = \dfrac{DE}{AB} = \dfrac{CE}{CB}$$
+
+Note: it's $CD/CA$ NOT $CD/AD$. The ratio is the WHOLE side to the WHOLE side — because $\triangle CDE$ corresponds to $\triangle CAB$, and $CA$ is the full side.
+
+---
+
+## The three most common mistake patterns
+
+<Tabs>
+  <TabItem value="m1" label="Mistake 1 — Wrong order">
+
+**Wrong:** $\triangle ABC \sim \triangle PQR$ → writing $\dfrac{AB}{QR} = \dfrac{BC}{PQ}$
+
+**Why it's wrong:** $AB$ is opposite $\angle C$ and $QR$ is opposite $\angle P$. These angles are not equal.
+
+**Correct:** $\dfrac{AB}{PQ} = \dfrac{BC}{QR}$ (match 1st with 1st, 2nd with 2nd)
+
+  </TabItem>
+  <TabItem value="m2" label="Mistake 2 — Partial side">
+
+**Figure:** $D$ on $AB$, line $DE \parallel BC$, so $\triangle ADE \sim \triangle ABC$.
+
+**Wrong:** $\dfrac{AD}{DB} = \dfrac{AE}{BC}$ — mixing $DB$ (a part) with $BC$ (a whole side)
+
+**Correct:** $\dfrac{AD}{AB} = \dfrac{AE}{AC} = \dfrac{DE}{BC}$ — always use the FULL corresponding sides
+
+  </TabItem>
+  <TabItem value="m3" label="Mistake 3 — Mixed triangles">
+
+**Wrong:** Writing ratios with one side from each triangle in the *same* fraction position
+
+For $\triangle ABC \sim \triangle PQR$:
+
+$\dfrac{AB}{QR}$ — this mixes: $AB$ is opposite $\angle C$, $QR$ is opposite $\angle P$. If $\angle C \neq \angle P$, this ratio means nothing.
+
+**Correct:** Keep all sides from $\triangle ABC$ on top (or all on bottom): $\dfrac{AB}{PQ} = \dfrac{BC}{QR}$
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Worked examples with figures
+
+<Tabs>
+  <TabItem value="ex1" label="Example 1 — Parallel Line">
+
+**Question:** In $\triangle ABC$, $DE \parallel BC$ where $D$ is on $AB$ and $E$ is on $AC$. $AD = 3$, $DB = 5$, $AE = 4$. Find $EC$ and $DE$ if $BC = 12$.
+
+**Step 1 — Prove similar:**
+
+$\triangle ADE \sim \triangle ABC$ (AA — common angle at $A$, corresponding angles from $DE \parallel BC$)
+
+**Step 2 — Set up ratio:** (using full sides)
+
+$$\dfrac{AD}{AB} = \dfrac{AE}{AC} = \dfrac{DE}{BC}$$
+
+$$\dfrac{3}{3+5} = \dfrac{4}{4+EC} = \dfrac{DE}{12}$$
+
+**Step 3 — Find EC:**
+
+$$\dfrac{3}{8} = \dfrac{4}{4+EC} \implies 3(4+EC) = 32 \implies EC = \dfrac{20}{3} \approx 6.67$$
+
+**Step 4 — Find DE:**
+
+$$\dfrac{3}{8} = \dfrac{DE}{12} \implies DE = \dfrac{36}{8} = 4.5$$
+
+  </TabItem>
+  <TabItem value="ex2" label="Example 2 — Rotated Triangles">
+
+**Question:** In the figure, $\angle ABC = \angle ACD$. $AB = 8$, $BC = 6$, $AC = 4$. Find $CD$.
+
+**Step 1 — Find common angle:** $\angle A = \angle A$ (shared)
+
+**Step 2 — Two equal angles (AA):** $\triangle ABC \sim \triangle ACD$
+
+(Careful: $\angle A$ is first in both, $\angle ABC$ matches $\angle ACD$)
+
+**Step 3 — Write ratio** (A↔A, B↔C, C↔D):
+
+$$\dfrac{AB}{AC} = \dfrac{BC}{CD} = \dfrac{AC}{AD}$$
+
+$$\dfrac{8}{4} = \dfrac{6}{CD}$$
+
+$$CD = \dfrac{6 \times 4}{8} = 3$$
+
+  </TabItem>
+  <TabItem value="ex3" label="Example 3 — Two Triangles Meeting at Vertex">
+
+**Question:** Diagonals of trapezium $ABCD$ meet at $O$ (where $AB \parallel CD$). Prove $\triangle AOB \sim \triangle COD$.
+
+**Step 1:** $\angle AOB = \angle COD$ (vertically opposite angles)
+
+**Step 2:** $\angle OAB = \angle OCD$ (alternate angles, $AB \parallel CD$)
+
+**Step 3:** $\triangle AOB \sim \triangle COD$ by **AA**
+
+**Corresponding sides:**
+
+$$\dfrac{OA}{OC} = \dfrac{OB}{OD} = \dfrac{AB}{CD}$$
+
+  </TabItem>
+</Tabs>
+
+---
+
+## The four-step method for any similarity problem
+
+:::tip Exam method — use this every time
+**Step 1:** Identify the two triangles being compared (name them clearly)
+
+**Step 2:** Mark equal angles in the figure (use arc symbols or colour coding in your head)
+
+**Step 3:** Write the similarity statement with letters in MATCHING ORDER
+
+**Step 4:** Write the proportion $\dfrac{\text{side}_1}{\text{side}_1'} = \dfrac{\text{side}_2}{\text{side}_2'} = \dfrac{\text{side}_3}{\text{side}_3'}$ and solve
+:::
+
+---
+
+## Summary
+
+:::tip What to remember
+1. **Corresponding sides are opposite equal angles**
+2. **Letter order matters:** $\triangle ABC \sim \triangle PQR$ means A↔P, B↔Q, C↔R
+3. **Always use complete sides** — not partial segments (unless the question asks about segments)
+4. **In a figure:** mark angle arcs with different symbols before writing any ratio
+5. **Most common figure type:** parallel line inside triangle → AA similarity
+:::
+
+**Next:** [Basic Proportionality Theorem — the parallel line rule →](./06-bpt) *(coming soon)*

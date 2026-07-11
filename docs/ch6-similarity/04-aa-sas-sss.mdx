@@ -1,0 +1,274 @@
+---
+id: similarity-04
+title: The Three Conditions — AA, SAS, SSS
+sidebar_label: 4. AA, SAS, SSS
+sidebar_position: 5
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { AACondition, SASCondition, SSSCondition } from '@site/src/components/SimilarityConditions';
+
+# 4. The Three Conditions — AA, SAS, SSS
+
+## The central question of this chapter
+
+Given two triangles — how do you PROVE they are similar without measuring every angle and every side?
+
+Mathematicians discovered that you don't need to check everything. Just three shortcuts work.
+
+:::note The three conditions
+If any ONE of these is true, the triangles are similar:
+1. **AA** — Two pairs of angles are equal
+2. **SAS** — One pair of angles is equal AND the sides around that angle are proportional
+3. **SSS** — All three pairs of corresponding sides are proportional
+:::
+
+---
+
+## Condition 1 — AA (Angle-Angle)
+
+### The idea
+
+If two angles of one triangle equal two angles of another triangle — the triangles are similar.
+
+**Why only two angles?** Because angles in a triangle always add up to 180°. So if two angles match, the third one is forced to match too (180° minus the other two).
+
+$$\angle A = \angle P \text{ and } \angle B = \angle Q \implies \angle C = \angle R \text{ automatically}$$
+
+### Visualised
+
+<AACondition />
+
+### When to use AA
+
+AA is the **most commonly used** condition in ICSE problems because:
+- You only need to spot 2 equal angles
+- Parallel lines automatically create equal corresponding angles (very common in figures)
+- A shared angle counts as a "free" equal angle
+
+### AA in practice
+
+<Tabs>
+  <TabItem value="parallel" label="Using Parallel Lines">
+
+**Figure:** In $\triangle ABC$, $DE \parallel BC$ where $D$ is on $AB$ and $E$ is on $AC$.
+
+**Why is $\triangle ADE \sim \triangle ABC$?**
+
+- $\angle A = \angle A$ — **common angle** (shared by both triangles)
+- $\angle ADE = \angle ABC$ — **corresponding angles** (since $DE \parallel BC$)
+
+Two angles match → **AA** → $\triangle ADE \sim \triangle ABC$
+
+  </TabItem>
+  <TabItem value="shared" label="Using a Shared Angle">
+
+**Figure:** In $\triangle ABC$, $\angle ADB = 90°$ where $D$ is the foot of altitude from $A$.
+
+**Why is $\triangle ABD \sim \triangle ACD$?**
+
+- $\angle ADB = \angle ADC = 90°$
+- $\angle B = \angle B$ in $\triangle ABD$, $\angle A = \angle A$ in $\triangle ACD$...
+
+Actually: $\angle ABD$ in $\triangle ABD$ and $\angle DAC$ in $\triangle ACD$ — these are complementary pairs. A shared vertex creates common angles.
+
+  </TabItem>
+  <TabItem value="vertical" label="Vertically Opposite Angles">
+
+**Figure:** Diagonals of a quadrilateral intersect at $O$.
+
+$\angle AOB = \angle COD$ — **vertically opposite angles** (equal)
+
+If also $\angle OAB = \angle OCD$ — **alternate angles** (if $AB \parallel CD$)
+
+Then $\triangle AOB \sim \triangle COD$ by **AA**.
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Condition 2 — SAS (Side-Angle-Side)
+
+### The idea
+
+One angle of the first triangle equals one angle of the second triangle, AND the two sides that form that angle are in the same ratio in both triangles.
+
+$$\angle A = \angle P \quad \text{and} \quad \dfrac{AB}{PQ} = \dfrac{AC}{PR}$$
+
+Then $\triangle ABC \sim \triangle PQR$.
+
+### The critical word: INCLUDED
+
+The equal angle must be the angle **between** (included by) the two proportional sides. An angle at one corner, with the two sides of that corner being the proportional ones.
+
+<SASCondition />
+
+### SAS in practice
+
+<Tabs>
+  <TabItem value="example" label="Worked Example">
+
+In $\triangle ABC$ and $\triangle PQR$:
+- $\angle B = \angle Q = 60°$
+- $AB = 4$, $PQ = 6$
+- $BC = 6$, $QR = 9$
+
+**Check:** $\dfrac{PQ}{AB} = \dfrac{6}{4} = 1.5$ and $\dfrac{QR}{BC} = \dfrac{9}{6} = 1.5$ ✓
+
+Equal ratio + included angle $\angle B = \angle Q$
+
+**Conclusion:** $\triangle ABC \sim \triangle PQR$ by **SAS** with $k = 1.5$
+
+  </TabItem>
+  <TabItem value="trap" label="⚠️ The SAS Trap">
+
+**What goes wrong:** Students use SAS when the equal angle is NOT between the two proportional sides.
+
+**Example of wrong usage:**
+
+$\angle A = \angle P$ (at vertex A and P), sides $BC = 5$ and $QR = 10$ (ratio 2), sides $AB = 3$ and $PQ = 6$ (ratio 2).
+
+But wait — $\angle A$ is the angle at vertex $A$, which is between sides $AB$ and $AC$. The side $BC$ is NOT adjacent to $\angle A$.
+
+So $BC/QR$ cannot be used for SAS with angle $A$.
+
+**Rule:** Only use sides that meet at the equal angle.
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Condition 3 — SSS (Side-Side-Side)
+
+### The idea
+
+All three pairs of corresponding sides are in the same ratio.
+
+$$\dfrac{AB}{PQ} = \dfrac{BC}{QR} = \dfrac{CA}{RP} = k$$
+
+If all three ratios are equal → the triangles are similar.
+
+<SSSCondition />
+
+### SSS in practice
+
+<Tabs>
+  <TabItem value="check" label="How to Check SSS">
+
+**Step 1:** List the sides of both triangles in order (smallest to largest or matched by position).
+
+**Step 2:** Compute each ratio: $\dfrac{\text{new}}{\text{original}}$.
+
+**Step 3:** If all three ratios are identical → SSS → Similar.
+
+**Example:**
+
+$\triangle ABC$: sides 5, 7, 9. $\triangle PQR$: sides 10, 14, 18.
+
+$10/5 = 2$, $14/7 = 2$, $18/9 = 2$. All equal → **SSS** → $\triangle ABC \sim \triangle PQR$ with $k = 2$.
+
+  </TabItem>
+  <TabItem value="not-similar" label="When SSS Fails">
+
+**Example:**
+
+$\triangle ABC$: sides 3, 4, 5. $\triangle PQR$: sides 6, 9, 10.
+
+$6/3 = 2$, $9/4 = 2.25$, $10/5 = 2$. 
+
+The middle ratio is different. **NOT similar.**
+
+Even one unequal ratio breaks similarity.
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Comparing all three conditions
+
+| Condition | What you check | Most common use |
+|-----------|---------------|----------------|
+| **AA** | 2 pairs of equal angles | Parallel lines, shared angles, alternate angles |
+| **SAS** | 1 equal angle + the 2 sides around it are proportional | When angles are given with some sides |
+| **SSS** | All 3 side ratios equal | When all sides are given, no angles |
+
+:::tip Which condition to use in an exam?
+- **Parallel lines in the figure?** → Almost always **AA**
+- **One angle given, some sides given?** → Try **SAS**
+- **All sides given, no angles?** → **SSS**
+- **Two angles mentioned or provable?** → **AA** (easiest)
+:::
+
+---
+
+## Writing the proof — exam format
+
+ICSE expects you to state the condition clearly. Here is the exact format:
+
+```
+In △ABC and △PQR:
+  ∠A = ∠P    ... (given / alternate angles / corresponding angles)
+  ∠B = ∠Q    ... (give reason)
+∴ △ABC ~ △PQR    ... (AA)
+```
+
+Always:
+1. Write the two triangles being compared
+2. State the equal angles / proportional sides
+3. Give a reason for each
+4. State the conclusion with the condition used
+
+---
+
+## Quick practice
+
+<Tabs>
+  <TabItem value="q1" label="Q1">
+
+In $\triangle ABC$, $DE \parallel BC$ ($D$ on $AB$, $E$ on $AC$). Write a similarity statement and state the condition.
+
+  </TabItem>
+  <TabItem value="a1" label="Answer 1">
+
+In $\triangle ADE$ and $\triangle ABC$:
+
+- $\angle DAE = \angle BAC$ (common angle at $A$)
+- $\angle ADE = \angle ABC$ (corresponding angles, $DE \parallel BC$)
+
+$\therefore \triangle ADE \sim \triangle ABC$ (AA)
+
+**Note the order:** $A$ matches $A$, $D$ matches $B$, $E$ matches $C$.
+
+  </TabItem>
+  <TabItem value="q2" label="Q2">
+
+$\triangle PQR$ has $PQ = 6$, $QR = 8$, $PR = 10$. $\triangle XYZ$ has $XY = 3$, $YZ = 4$, $XZ = 5$.
+
+Are they similar? State the condition.
+
+  </TabItem>
+  <TabItem value="a2" label="Answer 2">
+
+$\dfrac{PQ}{XY} = \dfrac{6}{3} = 2$, $\quad \dfrac{QR}{YZ} = \dfrac{8}{4} = 2$, $\quad \dfrac{PR}{XZ} = \dfrac{10}{5} = 2$
+
+All ratios equal 2. $\therefore \triangle PQR \sim \triangle XYZ$ **(SSS)** with $k = 2$.
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Summary
+
+:::tip Remember
+- **AA** — 2 angles equal (third is automatic) — most common
+- **SAS** — 1 angle equal AND the sides AROUND that angle are proportional
+- **SSS** — all 3 side ratios equal
+- In ICSE: AA appears in 80% of questions — master it first
+:::
+
+**Next:** [The hardest skill — which sides actually correspond? →](./05-corresponding-sides)

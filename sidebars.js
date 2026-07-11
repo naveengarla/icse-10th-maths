@@ -43,6 +43,8 @@ const sidebars = {
         'ch6-similarity/similarity-01',
         'ch6-similarity/similarity-02',
         'ch6-similarity/similarity-03',
+        'ch6-similarity/similarity-04',
+        'ch6-similarity/similarity-05',
       ],
     },
   ],
