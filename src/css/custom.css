@@ -1,0 +1,203 @@
+/* ── BRAND COLOURS ── */
+:root {
+  --ifm-color-primary: #1e3a5f;
+  --ifm-color-primary-dark: #192f4d;
+  --ifm-color-primary-darker: #162b47;
+  --ifm-color-primary-darkest: #11223a;
+  --ifm-color-primary-light: #234571;
+  --ifm-color-primary-lighter: #264977;
+  --ifm-color-primary-lightest: #2c5589;
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* subject colours reused across MDX */
+  --c-navy:   #1e3a5f;
+  --c-blue:   #3b82f6;
+  --c-cyan:   #06b6d4;
+  --c-green:  #10b981;
+  --c-teal:   #0f766e;
+  --c-orange: #f59e0b;
+  --c-red:    #dc2626;
+  --c-purple: #7e22ce;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #5b9bd5;
+  --ifm-color-primary-dark: #3f8bca;
+  --ifm-color-primary-darker: #3283c7;
+  --ifm-color-primary-darkest: #2569a3;
+  --ifm-color-primary-light: #77abe0;
+  --ifm-color-primary-lighter: #84b3e3;
+  --ifm-color-primary-lightest: #aacbec;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ── TABLET-FIRST TYPOGRAPHY ── */
+/* Samsung Tab typically 10–12", 1280–1600px — we want comfortable reading at arm's length */
+body {
+  font-size: 16px;      /* never below 16 on tablet */
+  line-height: 1.7;
+}
+
+.markdown h1 { font-size: 1.9rem; }
+.markdown h2 { font-size: 1.45rem; margin-top: 2.5rem; }
+.markdown h3 { font-size: 1.15rem; }
+
+/* ── TOUCH-FRIENDLY TABS ── */
+/* Docusaurus Tabs — larger hit target for fingers */
+.tabs__item {
+  font-size: 0.9rem;
+  padding: 0.75rem 1.1rem;
+  min-height: 48px;          /* Material Design minimum touch target */
+  display: flex;
+  align-items: center;
+}
+
+/* ── NAV / SIDEBAR ── */
+.navbar {
+  box-shadow: 0 1px 8px rgba(0,0,0,0.12);
+}
+.navbar__title {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+/* Sidebar item spacing — easier to tap */
+.menu__link {
+  font-size: 0.9rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 6px;
+}
+.menu__link:hover,
+.menu__link--active {
+  background-color: var(--ifm-color-primary-lightest);
+  color: white;
+}
+
+/* ── CONTENT WIDTH — use the full screen ── */
+.container {
+  max-width: 1400px !important;
+}
+/* On tablet landscape (≥1024px) keep sidebar + content nicely balanced */
+@media (min-width: 1024px) {
+  .docMainContainer_gTbr {
+    max-width: calc(100% - 300px);
+  }
+}
+
+/* ── CUSTOM COMPONENTS (used in MDX) ── */
+
+/* Story card — Finland phenomenon */
+.story-card {
+  background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #1e40af;
+}
+.story-card strong { color: #1d4ed8; }
+.story-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+/* Formula pill */
+.fpill {
+  display: inline-block;
+  background: #1e3a5f;
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin: 0.35rem 0;
+}
+.fpill-teal  { background: #0f766e; }
+.fpill-green { background: #15803d; }
+
+/* Trap box */
+.trap-box {
+  background: #fff1f2;
+  border-left: 4px solid #dc2626;
+  border-radius: 0 8px 8px 0;
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0;
+}
+.trap-box .trap-title {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #dc2626;
+  margin-bottom: 0.3rem;
+}
+.trap-box p { color: #9f1239; font-size: 0.9rem; margin: 0; }
+
+/* Info box */
+.info-box {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+  color: #1e40af;
+}
+
+/* SVG wrapper */
+.svg-wrap {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+.svg-wrap svg { display: block; max-width: 100%; }
+
+/* Answer box */
+.ans-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f766e;
+}
+
+/* Key Numbers table (used in overview) */
+.key-nums { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.key-nums td { padding: 0.45rem 0.75rem; border-bottom: 1px solid #e2e8f0; }
+.key-nums tr:last-child td { border-bottom: none; }
+.key-nums .lbl { color: #64748b; }
+.key-nums .val { font-weight: 700; text-align: right; }
+
+/* Exam badge */
+.exam-badge {
+  display: inline-block;
+  background: #ef4444;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+/* ── MOBILE (< 768px) ── */
+@media (max-width: 768px) {
+  body { font-size: 15px; }
+  .fpill { font-size: 0.82rem; }
+  .tabs__item { padding: 0.6rem 0.75rem; font-size: 0.82rem; }
+}

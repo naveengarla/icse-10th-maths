@@ -1,0 +1,364 @@
+---
+id: normal
+title: GST — Deep Learning
+sidebar_label: Deep Learning
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import GSTBarModel from '@site/src/components/GSTBarModel';
+import SupplyChain from '@site/src/components/SupplyChain';
+import IntraInterDiagram from '@site/src/components/IntraInterDiagram';
+
+# 📦 GST — Deep Learning
+
+## 1. The Story (Finland Phenomenon)
+
+<div className="story-card">
+  <div className="story-label">🎮 Arjun's Gaming Rig</div>
+  <p>
+    <strong>Arjun</strong> walks into a Delhi electronics shop to buy a graphics card.
+    The sticker says <strong>₹40,000</strong> (Marked Price).
+    The shopkeeper offers a <strong>10% festival discount</strong>.
+    The government charges <strong>18% GST</strong> on electronics.
+    Both seller and buyer are in Delhi — <strong>intra-state</strong> transaction.
+    <br /><br />
+    How much does Arjun actually pay? Where does the tax money go?
+    Why is the tax <em>not</em> on ₹40,000?
+    Every formula in this chapter answers one of those three questions.
+  </p>
+</div>
+
+Before GST (pre-2017), India had VAT, Excise Duty, Service Tax, Entry Tax — each charged differently.
+A single product could be taxed 5–6 times from factory to consumer.
+**GST replaced all of these** with one unified tax.
+
+| Type | What it means |
+|------|--------------|
+| **Direct Tax** | Paid directly by the earner — e.g. Income Tax |
+| **Indirect Tax (GST)** | Collected from the consumer through the seller. The seller is the government's tax collector. |
+
+---
+
+## 2. Core Vocabulary
+
+| Term | Meaning | Arjun's GPU |
+|------|---------|-------------|
+| **Marked Price (M.P.)** | Price tagged before discount | ₹40,000 |
+| **Discount** | `d% × M.P. ÷ 100` | ₹4,000 (10%) |
+| **Selling Price (S.P.)** | After discount, before GST | ₹36,000 |
+| **Taxable Value** | = S.P. — GST is applied **here** | ₹36,000 ⚠️ |
+| **GST Amount** | `GST% × Taxable Value ÷ 100` | ₹6,480 |
+| **CGST / SGST** | Intra-state: total GST split equally | ₹3,240 each |
+| **Final Bill** | Taxable Value + GST | ₹42,480 |
+
+---
+
+## 3. Bar Model — Singapore CPA Approach
+
+Singapore Math never introduces a formula before a student sees it concretely and pictorially first.
+
+<Tabs>
+  <TabItem value="concrete" label="🧱 Concrete">
+
+**Stage 1 — Concrete:** What physically happens to the money.
+
+Arjun hands over ₹42,480.
+The shopkeeper keeps ₹36,000 (his selling price).
+He sends ₹3,240 (CGST) to the Central Government and ₹3,240 (SGST) to the Delhi State Government.
+The ₹4,000 discount was a gift from the shopkeeper — the government never touches it.
+
+| Who gets it | Amount |
+|------------|--------|
+| 🏪 Shopkeeper | ₹36,000 |
+| 🏛️ Central Govt (CGST) | ₹3,240 |
+| 🏛️ State Govt (SGST) | ₹3,240 |
+| 🎁 Discount (vanishes) | ₹4,000 — no GST on this |
+
+  </TabItem>
+  <TabItem value="pictorial" label="🖼️ Pictorial (Bar Model)">
+
+**Stage 2 — Pictorial:** See the money flow as proportional bars.
+
+<GSTBarModel />
+
+<div className="info-box">
+  <strong>Why the bar model matters:</strong> The discount piece disappears <em>before</em> the
+  GST bars appear. This makes it visually impossible to accidentally calculate GST on the Marked Price.
+</div>
+
+  </TabItem>
+  <TabItem value="abstract" label="🔢 Abstract (Formulas)">
+
+**Stage 3 — Abstract:** Only now do we meet symbols — they describe what you already saw.
+
+<div className="fpill">SP = MP × (100 − d) / 100</div>
+<p>Arjun: 40,000 × 90/100 = <strong>₹36,000</strong></p>
+
+<div className="fpill">GST = r% × SP ÷ 100</div>
+<p>Arjun: 18% × 36,000 = <strong>₹6,480</strong></p>
+
+<div className="fpill">Bill = SP × (100 + r) / 100</div>
+<p>Arjun: 36,000 × 118/100 = <strong>₹42,480</strong></p>
+
+<div className="fpill fpill-teal">Bill = MP × (100−d)/100 × (100+r)/100</div>
+<p>One-step master formula. Combine discount and GST in a single calculation.</p>
+
+<div className="trap-box">
+  <div className="trap-title">⚠️ The #1 Exam Trap</div>
+  <p>GST is on <strong>S.P. (after discount)</strong>, never on M.P.<br />
+  Wrong: 18% × ₹40,000 = ₹7,200 &nbsp;|&nbsp; Correct: 18% × ₹36,000 = ₹6,480</p>
+</div>
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 4. CGST vs SGST vs IGST
+
+<Tabs>
+  <TabItem value="intra" label="🏙️ Intra-State (Same State)">
+
+<IntraInterDiagram type="intra" />
+
+<div className="info-box">
+  <strong>Rule:</strong> Intra-state → CGST + SGST. Each = Total GST Rate ÷ 2.<br />
+  At 18%: CGST = 9%, SGST = 9%.
+</div>
+
+  </TabItem>
+  <TabItem value="inter" label="🗺️ Inter-State (Different States)">
+
+<IntraInterDiagram type="inter" />
+
+<div className="info-box">
+  <strong>Rule:</strong> Inter-state → only IGST. IGST Rate = Total GST Rate.
+</div>
+
+<div className="trap-box">
+  <div className="trap-title">⚠️ Never Mix Them</div>
+  <p>A transaction can't have both IGST and CGST/SGST. It's one or the other.</p>
+</div>
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 5. Formulas in 4 Languages (Finland Languaging)
+
+Finland's research: a student owns a formula only when they can express it in 4 ways.
+
+### Formula 1 — Standard Bill
+
+<Tabs>
+  <TabItem value="words" label="🗣️ Words">
+    Subtract the discount from the Marked Price to get the Selling Price (Taxable Value).
+    Then add a percentage of only that amount as GST. The customer pays SP + GST.
+  </TabItem>
+  <TabItem value="visual" label="👁️ Visual">
+
+  `[MP]` → chop off discount → `[SP]` → glue on GST → `[BILL]`
+
+  *(See the bar model in Section 3)*
+
+  </TabItem>
+  <TabItem value="math" label="🔣 Math">
+
+  <div className="fpill">SP = MP × (100−d)/100</div>
+  <div className="fpill">Bill = SP × (100+r)/100</div>
+  <div className="fpill fpill-teal">Bill = MP × (100−d)/100 × (100+r)/100</div>
+
+  </TabItem>
+  <TabItem value="try" label="✋ Try It">
+
+  **MP = ₹5,000, Discount = 20%, GST = 12%. Find the bill.**
+
+  - SP = 5,000 × 80/100 = **₹4,000**
+  - Bill = 4,000 × 112/100 = **₹4,480**
+
+  </TabItem>
+</Tabs>
+
+### Formula 2 — Reverse (GST-Inclusive Price)
+
+<Tabs>
+  <TabItem value="words" label="🗣️ Words">
+    When the given price already includes GST, it equals (100 + r)% of the original price.
+    To strip the GST out, divide by (100 + r) and multiply by 100.
+  </TabItem>
+  <TabItem value="visual" label="👁️ Visual">
+
+  `[Price A = 118% of SP]` → divide by 118 → multiply by 100 → `[SP]`
+
+  Think: ₹118 includes ₹18 GST. So ₹100 out of every ₹118 is the actual price.
+
+  </TabItem>
+  <TabItem value="math" label="🔣 Math">
+
+  <div className="fpill">SP = A × 100 / (100 + r)</div>
+  <div className="fpill fpill-teal">GST in A = A × r / (100 + r)</div>
+
+  where A = the given inclusive price, r = GST rate %
+
+  </TabItem>
+  <TabItem value="try" label="✋ Try It">
+
+  **Customer pays ₹2,360 including 18% GST. Find the original price and GST.**
+
+  - SP = 2,360 × 100/118 = **₹2,000**
+  - GST = 2,360 − 2,000 = **₹360**
+
+  </TabItem>
+</Tabs>
+
+### Formula 3 — Net GST Payable (for Dealers)
+
+<Tabs>
+  <TabItem value="words" label="🗣️ Words">
+    A dealer collects GST from customers (output tax) but also paid GST when buying stock (input tax).
+    The government only wants the difference — the tax on the dealer's value added.
+  </TabItem>
+  <TabItem value="visual" label="👁️ Visual">
+
+  `OUTPUT TAX` (collected from buyer)
+  `−` `INPUT TAX CREDIT` (paid to supplier)
+  `=` `NET GST PAYABLE`
+
+  </TabItem>
+  <TabItem value="math" label="🔣 Math">
+
+  <div className="fpill">Net GST = Output Tax − Input Tax Credit</div>
+  <div className="fpill fpill-teal">Net GST = (r/100) × (SP − CP)  [same rate only]</div>
+
+  </TabItem>
+  <TabItem value="try" label="✋ Try It">
+
+  **Dealer buys at ₹20,000, sells at ₹28,000. GST = 12%. Find net GST.**
+
+  - Output Tax = 12% × 28,000 = ₹3,360
+  - Input Tax  = 12% × 20,000 = ₹2,400
+  - Net GST    = 3,360 − 2,400 = **₹960**
+  - *Shortcut: 12% × (28,000−20,000) = 12% × 8,000 = ₹960 ✓*
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 6. Supply Chain & Input Tax Credit
+
+<SupplyChain />
+
+<div className="info-box">
+  <strong>Key insight:</strong> The government collects the same total tax (₹6,480) regardless of
+  how many stages there are. Each dealer forwards only their piece — the tax on what they added.
+</div>
+
+<div className="trap-box">
+  <div className="trap-title">⚠️ Consumer Cannot Claim ITC</div>
+  <p>
+    Only registered GST dealers can claim Input Tax Credit. The final consumer (Arjun)
+    pays the full GST and cannot get it back.
+  </p>
+</div>
+
+---
+
+## 7. Worked Examples
+
+<Tabs>
+  <TabItem value="basic" label="📗 Basic">
+
+**Q1 — Discount + CGST + SGST**
+
+> A television is marked at ₹45,000. A 15% discount is given. GST = 28% (intra-state).
+> Find (i) S.P. (ii) CGST (iii) SGST (iv) Amount paid by buyer.
+
+1. SP = 45,000 × 85/100 = **₹38,250**
+2. CGST Rate = SGST Rate = 28/2 = **14% each**
+3. CGST = SGST = 14/100 × 38,250 = **₹5,355 each**
+4. Bill = 38,250 + 5,355 + 5,355 = **₹48,960**
+
+<div className="ans-box">✓ SP = ₹38,250 | CGST = ₹5,355 | SGST = ₹5,355 | Bill = ₹48,960</div>
+
+**Q2 — Successive Discounts + GST**
+
+> MP = ₹10,000. Discounts of 10% then 5%. GST = 12%. Find bill.
+
+1. After 1st discount: 10,000 × 90/100 = ₹9,000
+2. After 2nd discount: 9,000 × 95/100 = ₹8,550 ← taxable value
+3. Bill = 8,550 × 112/100 = **₹9,576**
+
+<div className="trap-box">
+  <div className="trap-title">⚠️ Why not 15%?</div>
+  <p>10% + 5% = 14.5% equivalent, not 15%. Apply one by one.</p>
+</div>
+
+  </TabItem>
+  <TabItem value="reverse" label="📙 Reverse">
+
+**Q3 — Price Inclusive of GST**
+
+> Priya pays ₹7,080 for a saree that includes 18% GST. Find original price and GST.
+
+1. ₹7,080 = 118% of SP → SP = 7,080 × 100/118 = **₹6,000**
+2. GST = 7,080 − 6,000 = **₹1,080**
+
+<div className="ans-box">✓ Price before GST = ₹6,000 | GST = ₹1,080</div>
+
+**Q4 — Find Marked Price from Bill**
+
+> Customer pays ₹28,320 after 20% discount and 18% GST. Find Marked Price.
+
+1. Let MP = x. SP = x × 80/100
+2. Bill = SP × 118/100 → x × 80/100 × 118/100 = 28,320
+3. x = 28,320 × 10000/9440 = **₹30,000**
+
+<div className="ans-box">✓ Marked Price = ₹30,000</div>
+
+  </TabItem>
+  <TabItem value="itc" label="📘 ITC Chain">
+
+**Q5 — Net GST Payable**
+
+> Wholesaler buys at ₹50,000, sells at ₹65,000. GST = 12% (intra-state).
+> Find: (i) Input Tax (ii) Output Tax (iii) Net GST (iv) Invoice to retailer.
+
+1. Input Tax = 12/100 × 50,000 = **₹6,000**
+2. Output Tax = 12/100 × 65,000 = **₹7,800**
+3. Net GST = 7,800 − 6,000 = **₹1,800** *(Shortcut: 12% × 15,000 = ₹1,800 ✓)*
+4. Invoice = 65,000 + 7,800 = **₹72,800**
+
+<div className="ans-box">✓ Input Tax = ₹6,000 | Output Tax = ₹7,800 | Net GST = ₹1,800 | Invoice = ₹72,800</div>
+
+  </TabItem>
+  <TabItem value="rate" label="📕 Rate Change">
+
+**Q6 — GST Rate Reduction**
+
+> Pre-tax price of an AC is ₹30,000. GST drops from 28% to 18%. By how much does the consumer's price change?
+
+1. Old Bill = 30,000 × 128/100 = ₹38,400
+2. New Bill = 30,000 × 118/100 = ₹35,400
+3. Reduction = 38,400 − 35,400 = **₹3,000**
+4. *Shortcut: 30,000 × (28−18)/100 = ₹3,000 ✓*
+
+<div className="ans-box">✓ Consumer price reduced by ₹3,000</div>
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 8. Reflect & Write
+
+Answer in your own words — if you can explain it, you own it.
+
+**Q1:** In one sentence — why is GST on SP (after discount) and not on Marked Price?
+
+**Q2:** "The government gets taxed many times on the same product in a supply chain." True or false? Explain with ITC.
+
+**Q3 (Challenge):** A retailer marks at ₹X, gives 20% discount, charges 18% GST. Customer pays ₹28,320. Find X. *(Answer: ₹30,000)*
