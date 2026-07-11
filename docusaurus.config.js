@@ -1,60 +1,57 @@
 // @ts-check
 const { themes } = require('prism-react-renderer');
-const remarkMath = require('remark-math');
-const rehypeKatex = require('rehype-katex');
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
-  title: 'ICSE Class 10 Maths',
-  tagline: 'Study smarter, not harder — for Prasasta',
-  favicon: 'img/favicon.ico',
+// remark-math and rehype-katex are ESM-only — must use async import
+async function createConfig() {
+  const remarkMath = (await import('remark-math')).default;
+  const rehypeKatex = (await import('rehype-katex')).default;
 
-  url: 'https://naveengarla.github.io',
-  baseUrl: '/icse-10th-maths/',
+  /** @type {import('@docusaurus/types').Config} */
+  return {
+    title: 'ICSE Class 10 Maths',
+    tagline: 'Study smarter, not harder — for Prasasta',
+    favicon: 'img/favicon.ico',
 
-  organizationName: 'naveengarla',
-  projectName: 'icse-10th-maths',
-  deploymentBranch: 'gh-pages',
-  trailingSlash: false,
+    url: 'https://naveengarla.github.io',
+    baseUrl: '/icse-10th-maths/',
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+    organizationName: 'naveengarla',
+    projectName: 'icse-10th-maths',
+    deploymentBranch: 'gh-pages',
+    trailingSlash: false,
 
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+    onBrokenLinks: 'warn',
+    onBrokenMarkdownLinks: 'warn',
 
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
-          remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
-        },
-        blog: false,
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
+    i18n: { defaultLocale: 'en', locales: ['en'] },
+
+    presets: [
+      [
+        'classic',
+        ({
+          docs: {
+            sidebarPath: require.resolve('./sidebars.js'),
+            routeBasePath: '/',
+            remarkPlugins: [remarkMath],
+            rehypePlugins: [rehypeKatex],
+          },
+          blog: false,
+          theme: {
+            customCss: require.resolve('./src/css/custom.css'),
+          },
+        }),
+      ],
     ],
-  ],
 
-  stylesheets: [
-    {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css',
-      type: 'text/css',
-    },
-  ],
+    stylesheets: [
+      {
+        href: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css',
+        type: 'text/css',
+        crossorigin: 'anonymous',
+      },
+    ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Colour palette — matches the navy/teal we used in HTML
+    themeConfig: ({
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
@@ -62,10 +59,7 @@ const config = {
       },
       navbar: {
         title: 'ICSE 10 Maths',
-        logo: {
-          alt: 'ICSE Maths',
-          src: 'img/logo.svg',
-        },
+        logo: { alt: 'ICSE Maths', src: 'img/logo.svg' },
         items: [
           {
             type: 'docSidebar',
@@ -94,8 +88,8 @@ const config = {
         theme: themes.github,
         darkTheme: themes.dracula,
       },
-      // Algolia search can be added later — free for open-source
     }),
-};
+  };
+}
 
-module.exports = config;
+module.exports = createConfig;
