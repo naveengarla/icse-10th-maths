@@ -34,6 +34,17 @@ const sidebars = {
       collapsed: true,
       items: ['ch5-heights-distances/normal', 'ch5-heights-distances/exam'],
     },
+    {
+      type: 'category',
+      label: '🔷 Ch 6 — Similarity',
+      collapsed: false,
+      items: [
+        'ch6-similarity/similarity-index',
+        'ch6-similarity/similarity-01',
+        'ch6-similarity/similarity-02',
+        'ch6-similarity/similarity-03',
+      ],
+    },
   ],
 
   // ── Shown when you click "PYQ" in navbar ──

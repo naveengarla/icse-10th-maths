@@ -1,0 +1,171 @@
+---
+id: similarity-01
+title: What Does "Similar" Actually Mean?
+sidebar_label: 1. What is Similar?
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import SimilarScales from '@site/src/components/SimilarScales';
+
+# 1. What Does "Similar" Actually Mean?
+
+## Start here — you already know this
+
+Have you ever:
+- Zoomed in on a Google Maps satellite image?
+- Seen a movie poster and the same image on a phone screen?
+- Printed a photo at two different sizes?
+
+In all three cases — the image looks **exactly the same**, just at a different size. The shape didn't change. The proportions didn't change. Only the *size* changed.
+
+**That is similarity.**
+
+:::note The one-sentence definition
+Two shapes are **similar** if they have the **same shape** but not necessarily the **same size**.
+:::
+
+---
+
+## What "same shape" actually means
+
+"Same shape" sounds obvious — but in mathematics it means something precise:
+
+> **Every angle in one shape is equal to the corresponding angle in the other shape.**
+
+That's it. If all angles match — the shapes are similar.
+
+Why angles and not sides? Because angles define the *shape*. Sides define the *size*. When you zoom a photo, you change the size (sides get bigger), but you never change the shape (angles stay the same).
+
+---
+
+## See it visually
+
+Here is the **same triangle** at three different sizes. Look at it carefully:
+
+<SimilarScales />
+
+Notice:
+- The **angles** at each corner are **identical** across all three triangles
+- The **side lengths** are **different** — but they all grew by the same factor
+- The **shape** — how "pointy" or "flat" the triangle looks — is **identical**
+
+This is what it means to be similar.
+
+---
+
+## The two things that define similarity
+
+<Tabs>
+  <TabItem value="angles" label="📐 Equal Angles">
+
+In similar triangles, **every angle in one triangle equals the corresponding angle in the other**.
+
+If $\triangle ABC \sim \triangle PQR$, then:
+$$\angle A = \angle P, \quad \angle B = \angle Q, \quad \angle C = \angle R$$
+
+**Corresponding** means they are in the same position — the "top" angle of one matches the "top" angle of the other.
+
+This is not a coincidence. If the angles are the same, the triangles **must** be similar — the shape is completely determined by the angles.
+
+  </TabItem>
+  <TabItem value="sides" label="📏 Proportional Sides">
+
+In similar triangles, **corresponding sides are in the same ratio**.
+
+If $\triangle ABC \sim \triangle PQR$, then:
+$$\dfrac{AB}{PQ} = \dfrac{BC}{QR} = \dfrac{CA}{RP} = k$$
+
+where $k$ is called the **scale factor**.
+
+This ratio $k$ is the same for all three pairs of corresponding sides. That's the key — not that the sides are equal, but that they are all in the **same ratio**.
+
+  </TabItem>
+</Tabs>
+
+---
+
+## What changes and what stays the same
+
+| Property | Stays the same? | Why? |
+|----------|----------------|------|
+| All angles | ✅ Yes — always equal | Angles define the shape |
+| Shape (how it looks) | ✅ Yes — identical | Because angles are equal |
+| Side lengths | ❌ No — they scale | Sides define the size |
+| Ratio of sides | ✅ Yes — all equal to k | That's what proportional means |
+| Area | ❌ No — it changes | Area depends on size |
+
+---
+
+## The notation
+
+When we write $\triangle ABC \sim \triangle PQR$, the **order of letters matters**.
+
+It tells you exactly which vertex matches which:
+- A matches P
+- B matches Q  
+- C matches R
+
+So side $AB$ corresponds to side $PQ$, and so on.
+
+:::warning Common mistake
+$\triangle ABC \sim \triangle PQR$ is NOT the same as $\triangle ABC \sim \triangle QPR$.
+
+The order of letters tells you which angles are equal. Always check the order carefully.
+:::
+
+---
+
+## Quick check — are these similar?
+
+<Tabs>
+  <TabItem value="q1" label="Question 1">
+
+Two triangles: one has angles 40°, 60°, 80°. The other has angles 60°, 80°, 40°.
+
+Are they similar?
+
+  </TabItem>
+  <TabItem value="a1" label="Answer 1">
+
+**Yes — similar!**
+
+Both have the same three angles: 40°, 60°, 80°. The order they're listed doesn't matter — the shapes are identical.
+
+The correct notation would be to match corresponding angles:  
+If $\angle A = 40°, \angle B = 60°, \angle C = 80°$ and $\angle P = 40°, \angle Q = 80°, \angle R = 60°$, then $\triangle ABC \sim \triangle PRQ$.
+
+  </TabItem>
+  <TabItem value="q2" label="Question 2">
+
+Two triangles: $AB = 3$, $BC = 4$, $CA = 5$ and $PQ = 6$, $QR = 8$, $RP = 10$.
+
+Are they similar?
+
+  </TabItem>
+  <TabItem value="a2" label="Answer 2">
+
+**Yes — similar with k = 2!**
+
+Check the ratios: $\dfrac{PQ}{AB} = \dfrac{6}{3} = 2$, $\dfrac{QR}{BC} = \dfrac{8}{4} = 2$, $\dfrac{RP}{CA} = \dfrac{10}{5} = 2$
+
+All three ratios are equal to 2. So $\triangle ABC \sim \triangle PQR$ with scale factor $k = 2$.
+
+Also note: 3-4-5 and 6-8-10 are both Pythagorean triples — both are right-angled triangles.
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Summary
+
+:::tip What to remember
+1. **Similar = same shape, different (or same) size**
+2. **Angles are equal** in similar figures
+3. **Sides are proportional** (in the same ratio k) — NOT necessarily equal
+4. **The order of letters** in $\triangle ABC \sim \triangle PQR$ tells you which vertex matches which
+:::
+
+**Next:** [How is this different from congruence? →](./02-vs-congruence)

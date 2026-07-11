@@ -1,0 +1,181 @@
+---
+id: similarity-02
+title: Similarity vs Congruence
+sidebar_label: 2. Similarity vs Congruence
+sidebar_position: 3
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CongruentVsSimilar from '@site/src/components/CongruentVsSimilar';
+
+# 2. Similarity vs Congruence — Clearing the Confusion
+
+This is where most students get confused. Let's fix it once and for all with a real-world analogy before touching any mathematics.
+
+---
+
+## Real-world analogy first
+
+Imagine you bake two biscuits using the exact same cutter:
+- **Same size** ✓ — the cutter didn't stretch
+- **Same shape** ✓ — the cutter is the same
+
+Those two biscuits are **congruent** — you can pick one up and place it exactly on top of the other.
+
+Now imagine you take a photo of that biscuit and print it at 50% size:
+- **Different size** — it's smaller
+- **Same shape** ✓ — it's still the same biscuit shape
+
+That photo and the biscuit are **similar** — same shape, different size.
+
+---
+
+## See it visually
+
+<CongruentVsSimilar />
+
+---
+
+## The precise definitions
+
+<Tabs>
+  <TabItem value="congruent" label="≅ Congruent">
+
+Two figures are **congruent** if they have:
+- **Same shape** (all angles equal)  
+- **Same size** (all sides equal in length)
+
+Notation: $\triangle ABC \cong \triangle PQR$
+
+This means:
+$$\angle A = \angle P,\ \angle B = \angle Q,\ \angle C = \angle R$$
+$$AB = PQ,\ BC = QR,\ CA = RP$$
+
+**Mental image:** Pick up one triangle and place it on the other — it fits perfectly. You might need to flip or rotate it, but it fits.
+
+  </TabItem>
+  <TabItem value="similar" label="~ Similar">
+
+Two figures are **similar** if they have:
+- **Same shape** (all angles equal)  
+- **Proportional sizes** (all corresponding sides in the same ratio)
+
+Notation: $\triangle ABC \sim \triangle PQR$
+
+This means:
+$$\angle A = \angle P,\ \angle B = \angle Q,\ \angle C = \angle R$$
+$$\dfrac{AB}{PQ} = \dfrac{BC}{QR} = \dfrac{CA}{RP} = k$$
+
+**Mental image:** One is an enlargement or reduction of the other. If k=1, they're actually congruent.
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Side-by-side comparison
+
+| Feature | Congruent (≅) | Similar (~) |
+|---------|--------------|-------------|
+| Angles | Equal | Equal |
+| Sides | **Equal** | **Proportional** (ratio = k) |
+| Scale factor k | Always 1 | Any positive value |
+| Symbol | ≅ | ~ |
+| "Fits on top of each other?" | ✅ Yes (with flipping/rotating) | ❌ Not unless k=1 |
+| Is one a zoom of the other? | Only if k=1 | ✅ Yes, always |
+
+---
+
+## The critical relationship
+
+:::note Key insight
+**All congruent figures are similar** (with k = 1).
+
+But **not all similar figures are congruent** (k ≠ 1 in general).
+
+Congruence is a *special case* of similarity.
+:::
+
+Think of it like this:
+- All squares are similar to each other ✓ (same angles: all 90°, sides proportional)
+- But not all squares are congruent (different sizes!)
+
+---
+
+## What similarity adds that congruence doesn't
+
+In class 9 you studied congruence — when two triangles are exactly the same. The tests were SSS, SAS, ASA, RHS.
+
+Similarity is more flexible and more powerful:
+- You don't need equal sides, just **proportional** sides
+- This lets you work with maps (real building → small model)
+- This lets you find unknown sides using ratios
+- This appears everywhere in geometry proofs
+
+---
+
+## Practice: Congruent, Similar, or Neither?
+
+<Tabs>
+  <TabItem value="q1" label="Q1">
+
+Triangle 1: sides 3, 4, 5. Triangle 2: sides 3, 4, 5.
+
+Congruent, similar, or neither?
+
+  </TabItem>
+  <TabItem value="a1" label="Answer 1">
+
+**Congruent** (and therefore also similar).
+
+All three sides are equal: ratio = 3/3 = 4/4 = 5/5 = 1. Scale factor k = 1. They are both similar AND congruent.
+
+  </TabItem>
+  <TabItem value="q2" label="Q2">
+
+Triangle 1: sides 3, 4, 5. Triangle 2: sides 6, 8, 10.
+
+Congruent, similar, or neither?
+
+  </TabItem>
+  <TabItem value="a2" label="Answer 2">
+
+**Similar** (but NOT congruent).
+
+Ratios: 6/3 = 8/4 = 10/5 = 2. Scale factor k = 2. All sides are in ratio 2:1 — perfectly proportional. But sides are not equal, so not congruent.
+
+  </TabItem>
+  <TabItem value="q3" label="Q3">
+
+Triangle 1: sides 3, 4, 5. Triangle 2: sides 3, 5, 7.
+
+Congruent, similar, or neither?
+
+  </TabItem>
+  <TabItem value="a3" label="Answer 3">
+
+**Neither.**
+
+Check ratios: 3/3 = 1, but 5/4 = 1.25, and 7/5 = 1.4. The ratios are not equal — so the sides are not proportional. Not similar. Not congruent.
+
+Also: 3-4-5 is a right triangle. 3-5-7 is not (3²+5²=34 ≠ 49=7²). Different shapes entirely.
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Summary
+
+:::tip Remember
+| | Congruent | Similar |
+|--|----------|---------|
+| Angles | Equal | Equal |
+| Sides | Equal | Proportional |
+| Scale factor | k = 1 | k = any positive number |
+
+Similarity is congruence **with a zoom button**.
+:::
+
+**Next:** [What is the scale factor and how do we find it? →](./03-scale-factor)

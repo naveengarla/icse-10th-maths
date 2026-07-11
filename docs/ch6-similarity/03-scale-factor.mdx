@@ -1,0 +1,192 @@
+---
+id: similarity-03
+title: Scale Factor — The Zoom Number
+sidebar_label: 3. Scale Factor
+sidebar_position: 4
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import ScaleFactorDiagram from '@site/src/components/ScaleFactorDiagram';
+
+# 3. Scale Factor — The Zoom Number
+
+## The one idea that drives everything
+
+When two triangles are similar, there is one number — the **scale factor k** — that connects them completely.
+
+> **Scale factor k = (any side of the new triangle) ÷ (corresponding side of the original triangle)**
+
+It doesn't matter which pair of sides you use — you'll always get the same answer k.
+
+---
+
+## Visualising the scale factor
+
+<ScaleFactorDiagram k={2} />
+
+In the diagram:
+- The **blue triangle** (solid lines) is the original — $\triangle ABC$
+- The **green triangle** (dashed lines) is the enlarged version — $\triangle A'B'C'$
+- Every point moves **away from O** by a factor of k = 2
+- Every side gets **twice as long**
+- The **angles stay completely unchanged**
+
+---
+
+## Three types of scale factor
+
+<Tabs>
+  <TabItem value="enlarge" label="k > 1 (Enlargement)">
+
+When $k > 1$, the new triangle is **bigger** than the original.
+
+**Example:** $\triangle ABC$ has sides 3, 4, 5. $k = 3$.
+
+New triangle sides: $3 \times 3 = 9$,  $3 \times 4 = 12$,  $3 \times 5 = 15$.
+
+$$\dfrac{9}{3} = \dfrac{12}{4} = \dfrac{15}{5} = 3 = k \checkmark$$
+
+**Real life:** Zooming in on a map. Making a model bigger than the original design.
+
+  </TabItem>
+  <TabItem value="reduce" label="k < 1 (Reduction)">
+
+When $k < 1$, the new triangle is **smaller** than the original.
+
+**Example:** $\triangle ABC$ has sides 10, 8, 6. $k = 0.5$.
+
+New triangle sides: $0.5 \times 10 = 5$,  $0.5 \times 8 = 4$,  $0.5 \times 6 = 3$.
+
+$$\dfrac{5}{10} = \dfrac{4}{8} = \dfrac{3}{6} = 0.5 = k \checkmark$$
+
+**Real life:** A map where 1 cm = 2 km. Making a model of a building (much smaller than reality).
+
+  </TabItem>
+  <TabItem value="same" label="k = 1 (Congruence)">
+
+When $k = 1$, the new shape is **identical** to the original — they are congruent.
+
+**Example:** $\triangle ABC$ has sides 5, 7, 9. $k = 1$.
+
+New triangle sides: $1 \times 5 = 5$,  $1 \times 7 = 7$,  $1 \times 9 = 9$.
+
+Same triangle. Congruent.
+
+**This proves:** Every congruent figure is similar with $k = 1$.
+
+  </TabItem>
+</Tabs>
+
+---
+
+## How to find k (the most important skill)
+
+:::note Rule
+To find the scale factor, divide **any** corresponding side of the new shape by the original shape.
+
+$$k = \dfrac{\text{new side}}{\text{original side}}$$
+
+**Important:** Always divide new ÷ original, not original ÷ new.
+:::
+
+**But wait** — how do I know which sides "correspond"?
+
+The corresponding sides are the ones **opposite equal angles**. In $\triangle ABC \sim \triangle PQR$:
+- Side $BC$ (opposite $\angle A$) corresponds to side $QR$ (opposite $\angle P$, since $\angle A = \angle P$)
+- Side $CA$ (opposite $\angle B$) corresponds to side $RP$ (opposite $\angle Q$)
+- Side $AB$ (opposite $\angle C$) corresponds to side $PQ$ (opposite $\angle R$)
+
+---
+
+## Finding unknown sides using k
+
+This is the main calculation skill for ICSE similarity questions.
+
+**Method:**
+1. Identify that two triangles are similar and write the correspondence
+2. Find k using a pair of sides you know completely
+3. Use k to find the unknown side
+
+<Tabs>
+  <TabItem value="example1" label="Example 1 — Basic">
+
+$\triangle ABC \sim \triangle PQR$. $AB = 4$, $PQ = 10$, $BC = 6$. Find $QR$.
+
+**Step 1 — Find k:**
+$$k = \dfrac{PQ}{AB} = \dfrac{10}{4} = 2.5$$
+
+**Step 2 — Find QR:**
+$$\dfrac{QR}{BC} = k \Rightarrow QR = k \times BC = 2.5 \times 6 = 15$$
+
+  </TabItem>
+  <TabItem value="example2" label="Example 2 — Find Original">
+
+$\triangle ABC \sim \triangle PQR$ with $k = 3$. $QR = 18$. Find $BC$.
+
+Here we know the **new** side and need the **original**.
+
+Since $k = \dfrac{QR}{BC}$:
+$$BC = \dfrac{QR}{k} = \dfrac{18}{3} = 6$$
+
+  </TabItem>
+  <TabItem value="example3" label="Example 3 — Mixed">
+
+In $\triangle DEF \sim \triangle XYZ$: $DE = 6$, $EF = 8$, $XY = 9$. Find $YZ$ and the scale factor.
+
+**Step 1 — Find k:**
+$$k = \dfrac{XY}{DE} = \dfrac{9}{6} = 1.5$$
+
+**Step 2 — Find YZ** (corresponds to EF):
+$$YZ = k \times EF = 1.5 \times 8 = 12$$
+
+**Check:** $\dfrac{YZ}{EF} = \dfrac{12}{8} = 1.5 = k$ ✓
+
+  </TabItem>
+</Tabs>
+
+---
+
+## The proportionality equation
+
+When triangles are similar, the corresponding sides form a **proportion**. You can write it as:
+
+$$\dfrac{AB}{PQ} = \dfrac{BC}{QR} = \dfrac{CA}{RP}$$
+
+This is one equation in disguise — all three fractions equal k.
+
+**Cross-multiplying** gives you ways to find unknowns:
+
+$$AB \times QR = PQ \times BC \quad \text{(from the first two fractions)}$$
+
+:::warning Do not mix up the order
+Always write: $\dfrac{\text{side from } \triangle 1}{\text{side from } \triangle 2} = \dfrac{\text{side from } \triangle 1}{\text{side from } \triangle 2}$
+
+Never mix: $\dfrac{AB}{QR}$ — this puts sides from both triangles in the same fraction. That's wrong.
+:::
+
+---
+
+## What scale factor does NOT tell you
+
+The scale factor $k$ tells you about **lengths**. But:
+- **Angles** are not multiplied by k — they stay the same
+- **Area** is not multiplied by k — it's multiplied by k² (we'll cover this later)
+- **Perimeter** IS multiplied by k — since all sides scale by k
+
+---
+
+## Summary
+
+:::tip Key formulas
+$$k = \dfrac{\text{new side}}{\text{original side}} \quad \text{(same for all corresponding pairs)}$$
+
+| Feature | Scales by |
+|---------|----------|
+| Each side | k |
+| Perimeter | k |
+| Area | k² (later chapter) |
+| Each angle | 1 (unchanged) |
+:::
+
+**Next:** [When can we say two triangles ARE similar? The three conditions →](./04-aa-sas-sss) *(coming soon)*
