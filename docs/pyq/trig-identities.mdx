@@ -7,16 +7,372 @@ sidebar_position: 5
 
 import PYQCard from '@site/src/components/PYQCard';
 
-# 📐 PYQ — Trigonometry Identities
+# 📐 PYQ — Trigonometry Identities (2000–2015)
 
 :::tip Strategy
-When proving, work on ONE side only. If stuck, convert everything to sin and cos.
+**For Prove questions:** Work on ONE side only. If stuck — convert everything to sin and cos.
+**For Evaluate questions:** Replace complementary angles (cos70° = sin20°, etc.) first, then simplify.
 :::
 
 ---
 
-{/* Paste Trig Identities PYQ here */}
+## Year 2000
 
-:::note Questions coming soon
-Send me the Trig Identities PYQ and I'll add them with solutions.
-:::
+<PYQCard year="2000" marks="4" qnum="1"
+  solution={<>
+    <strong>Multiply inside √ by (1−cosA)/(1−cosA):</strong><br/>
+    LHS = √[(1−cosA)² / (1−cos²A)] = √[(1−cosA)² / sin²A]<br/>
+    = (1−cosA) / sinA<br/><br/>
+    <strong>Show RHS equals same:</strong><br/>
+    sinA/(1+cosA) × (1−cosA)/(1−cosA) = sinA(1−cosA)/(1−cos²A) = sinA(1−cosA)/sin²A = (1−cosA)/sinA ✓
+  </>}
+>
+  Prove: √[(1−cosA)/(1+cosA)] = sinA/(1+cosA)
+</PYQCard>
+
+<PYQCard year="2000" marks="4" qnum="2"
+  solution={<>
+    <strong>Use complementary angle: cos(90°−A) = sinA, cosec(90°−A) = secA</strong><br/>
+    LHS = 1/(1+sinA) + 1/(1−sinA)<br/>
+    = (1−sinA + 1+sinA) / [(1+sinA)(1−sinA)]<br/>
+    = 2 / (1−sin²A)<br/>
+    = 2 / cos²A = 2sec²A = 2cosec²(90°−A) = RHS ✓
+  </>}
+>
+  Prove: 1/(1+cos(90°−A)) + 1/(1−cos(90°−A)) = 2cosec²(90°−A)
+</PYQCard>
+
+---
+
+## Year 2001
+
+<PYQCard year="2001" marks="4" qnum="1"
+  solution={<>
+    <strong>Multiply inside √ by (1−sinA)/(1−sinA):</strong><br/>
+    LHS = √[(1−sinA)² / (1−sin²A)] = (1−sinA) / cosA<br/><br/>
+    RHS = cosA/(1+sinA) = cosA(1−sinA)/(1−sin²A) = cosA(1−sinA)/cos²A = (1−sinA)/cosA ✓
+  </>}
+>
+  Prove: √[(1−sinA)/(1+sinA)] = cosA/(1+sinA)
+</PYQCard>
+
+<PYQCard year="2001" marks="4" qnum="2"
+  solution={<>
+    <strong>Step 1:</strong> 2sinA − 1 = 0 → sinA = 1/2 → A = 30°<br/><br/>
+    <strong>Step 2: Verify sin3A = sin90° = 1</strong><br/><br/>
+    <strong>Step 3: Verify RHS:</strong><br/>
+    3sinA − 4sin³A = 3(1/2) − 4(1/2)³ = 3/2 − 4(1/8) = 3/2 − 1/2 = 1 = LHS ✓
+  </>}
+>
+  If 2sinA − 1 = 0, show that sin3A = 3sinA − 4sin³A.
+</PYQCard>
+
+---
+
+## Year 2002
+
+<PYQCard year="2002" marks="4" qnum="1"
+  solution={<>
+    LHS = [(sinA−cosA) + (sinA+cosA)] / [(sinA+cosA)(sinA−cosA)]<br/>
+    = 2sinA / (sin²A − cos²A)<br/>
+    = 2sinA / (1 − cos²A − cos²A)<br/>
+    = 2sinA / (1 − 2cos²A) = RHS ✓
+  </>}
+>
+  Prove: 1/(sinA+cosA) + 1/(sinA−cosA) = 2sinA/(1−2cos²A)
+</PYQCard>
+
+<PYQCard year="2002" marks="4" qnum="2"
+  solution={<>
+    <strong>Use: sin(90°−A) = cosA, sec(90°−A) = cosecA</strong><br/>
+    LHS = 1/(1+cosA) + 1/(1−cosA)<br/>
+    = (1−cosA + 1+cosA) / (1−cos²A)<br/>
+    = 2 / sin²A = 2cosec²A = 2sec²(90°−A) = RHS ✓
+  </>}
+>
+  Prove: 1/(1+sin(90°−A)) + 1/(1−sin(90°−A)) = 2sec²(90°−A)
+</PYQCard>
+
+---
+
+## Year 2003
+
+<PYQCard year="2003" marks="4" qnum="1"
+  solution={<>
+    <strong>Convert tan and cot to sin/cos:</strong><br/>
+    = cosA/(1 − sinA/cosA) + sinA/(1 − cosA/sinA)<br/>
+    = cos²A/(cosA−sinA) + sin²A/(sinA−cosA)<br/>
+    = cos²A/(cosA−sinA) − sin²A/(cosA−sinA)<br/>
+    = (cos²A − sin²A)/(cosA−sinA)<br/>
+    = (cosA+sinA)(cosA−sinA)/(cosA−sinA)<br/>
+    = cosA + sinA = RHS ✓
+  </>}
+>
+  Prove: cosA/(1−tanA) + sinA/(1−cotA) = sinA + cosA
+</PYQCard>
+
+---
+
+## Year 2004
+
+<PYQCard year="2004" marks="4" qnum="1"
+  solution={<>
+    <strong>Convert to sin/cos:</strong><br/>
+    LHS = (cosA/sinA + sinB/cosB) / (cosB/sinB + sinA/cosA)<br/>
+    = [(cosAcosB + sinAsinB)/(sinAcosB)] / [(cosAcosB + sinAsinB)/(sinBcosA)]<br/>
+    = (sinBcosA) / (sinAcosB)<br/>
+    = (cosA/sinA) × (sinB/cosB)<br/>
+    = cotA × tanB = RHS ✓
+  </>}
+>
+  Prove: (cotA + tanB)/(cotB + tanA) = cotA tanB
+</PYQCard>
+
+<PYQCard year="2004" marks="3" qnum="2"
+  solution={<>
+    = 14 × sin30° + 6 × cos60° − 5 × tan45°<br/>
+    = 14 × (1/2) + 6 × (1/2) − 5 × 1<br/>
+    = 7 + 3 − 5<br/>
+    = <strong>5</strong>
+  </>}
+>
+  Evaluate: 14sin30° + 6cos60° − 5tan45°
+</PYQCard>
+
+---
+
+## Year 2005
+
+<PYQCard year="2005" marks="4" qnum="1"
+  solution={<>
+    LHS = (1−tanA)² + (1+tanA)²<br/>
+    = (1 − 2tanA + tan²A) + (1 + 2tanA + tan²A)<br/>
+    = 2 + 2tan²A<br/>
+    = 2(1 + tan²A)<br/>
+    = 2sec²A = RHS ✓
+  </>}
+>
+  Prove: (1−tanA)² + (1+tanA)² = 2sec²A
+</PYQCard>
+
+---
+
+## Year 2006
+
+<PYQCard year="2006" marks="4" qnum="1"
+  solution={<>
+    LHS = (1+tan²A) + (1 + 1/tan²A)<br/>
+    = sec²A + 1 + cot²A<br/>
+    = sec²A + cosec²A &nbsp;[since 1+cot²A = cosec²A]<br/>
+    = 1/cos²A + 1/sin²A<br/>
+    = (sin²A + cos²A)/(sin²A cos²A)<br/>
+    = 1/(sin²A cos²A)<br/><br/>
+    RHS = 1/(sin²A − sin⁴A) = 1/[sin²A(1−sin²A)] = 1/(sin²A cos²A) = LHS ✓
+  </>}
+>
+  Prove: (1+tan²A) + (1 + 1/tan²A) = 1/(sin²A − sin⁴A)
+</PYQCard>
+
+---
+
+## Year 2007
+
+<PYQCard year="2007" marks="4" qnum="1"
+  solution={<>
+    Multiply LHS numerator and denominator by (secA−tanA):<br/>
+    = (secA−tanA) / (sec²A−tan²A)<br/>
+    = (secA−tanA) / 1 &nbsp;[since sec²A−tan²A = 1]<br/>
+    = secA − tanA = RHS ✓
+  </>}
+>
+  Prove: 1/(secA + tanA) = secA − tanA
+</PYQCard>
+
+<PYQCard year="2007" marks="3" qnum="2"
+  solution={<>
+    <strong>Use complementary angles: cos70° = sin20°, cos59° = sin31°</strong><br/>
+    = sin20°/sin20° + sin31°/sin31° − 8sin²30°<br/>
+    = 1 + 1 − 8 × (1/2)²<br/>
+    = 2 − 8 × 1/4<br/>
+    = 2 − 2 = <strong>0</strong>
+  </>}
+>
+  Evaluate: cos70°/sin20° + cos59°/sin31° − 8sin²30°
+</PYQCard>
+
+---
+
+## Year 2008
+
+<PYQCard year="2008" marks="4" qnum="1"
+  solution={<>
+    LHS = sinA × (sinA/cosA) / (1−cosA)<br/>
+    = sin²A / [cosA(1−cosA)]<br/>
+    = (1−cos²A) / [cosA(1−cosA)]<br/>
+    = (1−cosA)(1+cosA) / [cosA(1−cosA)]<br/>
+    = (1+cosA) / cosA<br/>
+    = 1/cosA + cosA/cosA<br/>
+    = secA + 1 = RHS ✓
+  </>}
+>
+  Prove: (sinA tanA)/(1−cosA) = 1 + secA
+</PYQCard>
+
+---
+
+## Year 2009
+
+<PYQCard year="2009" marks="4" qnum="1"
+  solution={<>
+    Same as 2004 Q1 — same question repeated.<br/><br/>
+    LHS = (cosA/sinA + sinB/cosB) / (cosB/sinB + sinA/cosA)<br/>
+    = (cosAcosB + sinAsinB)/(sinAcosB) ÷ (cosAcosB + sinAsinB)/(sinBcosA)<br/>
+    = sinBcosA / sinAcosB = cotA × tanB = RHS ✓
+  </>}
+>
+  Prove: (cotA + tanB)/(cotB + tanA) = cotA tanB
+</PYQCard>
+
+---
+
+## Year 2010
+
+<PYQCard year="2010" marks="3" qnum="1"
+  solution={<>
+    <strong>Use: cos55° = sin35°, sin55° = cos35°</strong><br/>
+    = sin35° × sin35° + cos35° × cos35°<br/>
+    = sin²35° + cos²35°<br/>
+    = <strong>1</strong>
+  </>}
+>
+  Evaluate: sin35°cos55° + cos35°sin55°
+</PYQCard>
+
+<PYQCard year="2010" marks="3" qnum="2"
+  solution={<>
+    <strong>Use: tan80° = cot10°</strong><br/>
+    = cosec²10° − cot²10°<br/>
+    = <strong>1</strong> &nbsp;(by identity: cosec²A − cot²A = 1)
+  </>}
+>
+  Evaluate: cosec²10° − tan²80°
+</PYQCard>
+
+---
+
+## Year 2011
+
+<PYQCard year="2011" marks="3" qnum="1"
+  solution={<>
+    <strong>Use complementary angles:</strong><br/>
+    cos75° = sin15° → first term = sin15°/sin15° = 1<br/>
+    sin12° = cos78° → second term = cos78°/cos78° = 1<br/>
+    cos18° = sin72° → third term = sin72°/sin72° = 1<br/>
+    = 1 + 1 − 1 = <strong>1</strong>
+  </>}
+>
+  Evaluate: cos75°/sin15° + sin12°/cos78° − cos18°/sin72°
+</PYQCard>
+
+<PYQCard year="2011" marks="4" qnum="2"
+  solution={<>
+    LHS = (1/sinA − sinA)(1/cosA − cosA) × sec²A<br/>
+    = [(1−sin²A)/sinA] × [(1−cos²A)/cosA] × (1/cos²A)<br/>
+    = (cos²A/sinA) × (sin²A/cosA) × (1/cos²A)<br/>
+    = (sinA cosA) / cos²A<br/>
+    = sinA/cosA = tanA = RHS ✓
+  </>}
+>
+  Prove: (cosecA − sinA)(secA − cosA)sec²A = tanA
+</PYQCard>
+
+---
+
+## Year 2012
+
+<PYQCard year="2012" marks="4" qnum="1"
+  solution={<>
+    <strong>Simplify RHS:</strong><br/>
+    RHS = tan²A/(secA−1)²<br/>
+    = (sec²A−1)/(secA−1)²<br/>
+    = (secA+1)(secA−1)/(secA−1)²<br/>
+    = (secA+1)/(secA−1)<br/>
+    = (1/cosA + 1)/(1/cosA − 1)<br/>
+    = [(1+cosA)/cosA] / [(1−cosA)/cosA]<br/>
+    = (1+cosA)/(1−cosA) = LHS ✓
+  </>}
+>
+  Prove: (1+cosA)/(1−cosA) = tan²A/(secA−1)²
+</PYQCard>
+
+---
+
+## Year 2013
+
+<PYQCard year="2013" marks="4" qnum="1"
+  solution={<>
+    Same as 2000 Q1:<br/>
+    LHS = √[(1−cosA)² / sin²A] = (1−cosA)/sinA<br/>
+    RHS = sinA(1−cosA)/sin²A = (1−cosA)/sinA ✓
+  </>}
+>
+  Prove: √[(1−cosA)/(1+cosA)] = sinA/(1+cosA)
+</PYQCard>
+
+<PYQCard year="2013" marks="3" qnum="2"
+  solution={<>
+    <strong>Term 1: cot41° = tan49°</strong><br/>
+    cot²41°/tan²49° = tan²49°/tan²49° = 1<br/><br/>
+    <strong>Term 2: sin75° = cos15°</strong><br/>
+    2sin²75°/cos²15° = 2cos²15°/cos²15° = 2<br/><br/>
+    = 1 − 2 = <strong>−1</strong>
+  </>}
+>
+  Evaluate: cot²41°/tan²49° − 2sin²75°/cos²15°
+</PYQCard>
+
+---
+
+## Year 2014
+
+<PYQCard year="2014" marks="3" qnum="1"
+  solution={<>
+    <strong>sin56° = cos34°:</strong> sin²34° + cos²34° = 1<br/>
+    <strong>tan72° = cot18°:</strong> 2 tan18° × cot18° = 2 × 1 = 2<br/>
+    <strong>cot30° = √3:</strong> cot²30° = 3<br/><br/>
+    = 1 + 2 − 3 = <strong>0</strong>
+  </>}
+>
+  Evaluate: sin²34° + sin²56° + 2tan18°tan72° − cot²30°
+</PYQCard>
+
+<PYQCard year="2014" marks="4" qnum="2"
+  solution={<>
+    LHS = (sinθ+cosθ)(sinθ/cosθ + cosθ/sinθ)<br/>
+    = (sinθ+cosθ) × (sin²θ+cos²θ)/(sinθcosθ)<br/>
+    = (sinθ+cosθ) × 1/(sinθcosθ)<br/>
+    = sinθ/(sinθcosθ) + cosθ/(sinθcosθ)<br/>
+    = 1/cosθ + 1/sinθ<br/>
+    = secθ + cosecθ = RHS ✓
+  </>}
+>
+  Prove: (sinθ+cosθ)(tanθ+cotθ) = secθ + cosecθ
+</PYQCard>
+
+---
+
+## Year 2015
+
+<PYQCard year="2015" marks="4" qnum="1"
+  solution={<>
+    Same as 2003 Q1:<br/>
+    cosA/(1−tanA) + sinA/(1−cotA)<br/>
+    = cos²A/(cosA−sinA) + sin²A/(sinA−cosA)<br/>
+    = cos²A/(cosA−sinA) − sin²A/(cosA−sinA)<br/>
+    = (cos²A−sin²A)/(cosA−sinA)<br/>
+    = (cosA+sinA)(cosA−sinA)/(cosA−sinA)<br/>
+    = cosA + sinA = RHS ✓
+  </>}
+>
+  Prove: cosA/(1−tanA) + sinA/(1−cotA) = cosA + sinA
+</PYQCard>
