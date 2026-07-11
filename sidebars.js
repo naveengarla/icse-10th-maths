@@ -6,23 +6,11 @@ const sidebars = {
       id: 'index',
       label: '🏠 Home',
     },
+    // ── CHAPTERS ── (learn first)
     {
       type: 'category',
-      label: '📋 Previous Year Questions',
-      collapsed: false,
-      items: [
-        'pyq/pyq-index',
-        'pyq/pyq-gst',
-        'pyq/pyq-banking',
-        'pyq/pyq-shares',
-        'pyq/pyq-trig-identities',
-        'pyq/pyq-heights-distances',
-      ],
-    },
-    {
-      type: 'category',
-      label: '📦 Chapter 1 — GST',
-      collapsed: false,
+      label: '📦 Ch 1 — GST',
+      collapsed: true,
       items: [
         'ch1-gst/overview',
         'ch1-gst/normal',
@@ -31,7 +19,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '🏦 Chapter 2 — Banking',
+      label: '🏦 Ch 2 — Banking',
       collapsed: true,
       items: [
         'ch2-banking/normal',
@@ -40,7 +28,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '📈 Chapter 3 — Shares & Dividends',
+      label: '📈 Ch 3 — Shares & Dividends',
       collapsed: true,
       items: [
         'ch3-shares/normal',
@@ -49,7 +37,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '📐 Chapter 4 — Trig Identities',
+      label: '📐 Ch 4 — Trig Identities',
       collapsed: true,
       items: [
         'ch4-trig-identities/normal',
@@ -58,12 +46,43 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '📏 Chapter 5 — Heights & Distances',
+      label: '📏 Ch 5 — Heights & Distances',
       collapsed: true,
       items: [
         'ch5-heights-distances/normal',
         'ch5-heights-distances/exam',
       ],
+    },
+    // ── PYQ ── (practice after learning)
+    {
+      type: 'category',
+      label: '📋 PYQ — GST',
+      collapsed: true,
+      items: ['pyq/pyq-gst'],
+    },
+    {
+      type: 'category',
+      label: '📋 PYQ — Banking',
+      collapsed: true,
+      items: ['pyq/pyq-banking'],
+    },
+    {
+      type: 'category',
+      label: '📋 PYQ — Shares',
+      collapsed: true,
+      items: ['pyq/pyq-shares'],
+    },
+    {
+      type: 'category',
+      label: '📋 PYQ — Trig Identities',
+      collapsed: true,
+      items: ['pyq/pyq-trig-identities'],
+    },
+    {
+      type: 'category',
+      label: '📋 PYQ — Heights & Dist.',
+      collapsed: true,
+      items: ['pyq/pyq-heights-distances'],
     },
   ],
 };
