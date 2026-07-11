@@ -1,0 +1,170 @@
+---
+id: similarity-06
+title: Basic Proportionality Theorem (BPT)
+sidebar_label: 6. BPT
+sidebar_position: 7
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { BPTStatic, BPTWhy } from '@site/src/components/BPTDiagram';
+
+# 6. Basic Proportionality Theorem (BPT)
+
+## One theorem, two names
+
+This theorem is known by two names:
+- **Basic Proportionality Theorem (BPT)** — the official ICSE name
+- **Thales' Theorem** — named after the ancient Greek mathematician
+
+Both refer to exactly the same result.
+
+---
+
+## The theorem — what it says
+
+:::note Statement of BPT
+If a line is drawn **parallel to one side** of a triangle, it divides the **other two sides in the same ratio**.
+
+In $\triangle ABC$, if $DE \parallel BC$ (where $D$ is on $AB$ and $E$ is on $AC$), then:
+
+$$\dfrac{AD}{DB} = \dfrac{AE}{EC}$$
+:::
+
+See it visually:
+
+<BPTStatic />
+
+---
+
+## Why does this work? The intuition
+
+Imagine stretching a rubber band from vertex $A$ down to $BC$. Any horizontal slice through the band cuts it in the same proportion — because you're scaling everything equally from point $A$.
+
+More formally: $DE \parallel BC$ means $\triangle ADE \sim \triangle ABC$ (by AA). The similarity gives proportional sides, which gives the ratio result.
+
+---
+
+## The two forms — don't confuse them
+
+<BPTWhy />
+
+**Form 1 (the BPT ratio):**
+$$\dfrac{AD}{DB} = \dfrac{AE}{EC}$$
+*Ratio of the two parts of each side*
+
+**Form 2 (from similarity):**
+$$\dfrac{AD}{AB} = \dfrac{AE}{AC} = \dfrac{DE}{BC}$$
+*Ratio of part to the whole side*
+
+Both are useful. Form 2 lets you find $DE$.
+
+:::warning The most common error
+Students mix up Form 1 and Form 2.
+
+$\dfrac{AD}{DB}$ is NOT the same as $\dfrac{AD}{AB}$.
+
+If $AD = 3$ and $DB = 5$:
+- $\dfrac{AD}{DB} = \dfrac{3}{5}$ (Form 1)
+- $\dfrac{AD}{AB} = \dfrac{3}{8}$ (Form 2 — using the whole side $AB = 3+5 = 8$)
+:::
+
+---
+
+## Converse of BPT
+
+The converse is also true and equally important:
+
+:::note Converse of BPT
+If a line divides two sides of a triangle in the same ratio, then that line is parallel to the third side.
+
+If $\dfrac{AD}{DB} = \dfrac{AE}{EC}$, then $DE \parallel BC$.
+:::
+
+Use the converse when you need to **prove a line is parallel**.
+
+---
+
+## Worked examples
+
+<Tabs>
+  <TabItem value="ex1" label="Find a length">
+
+**Q:** In $\triangle ABC$, $DE \parallel BC$. $AD = 4$, $DB = 6$, $AE = 5$. Find $EC$.
+
+**Solution:**
+
+By BPT: $\dfrac{AD}{DB} = \dfrac{AE}{EC}$
+
+$$\dfrac{4}{6} = \dfrac{5}{EC}$$
+
+$$EC = \dfrac{5 \times 6}{4} = \dfrac{30}{4} = 7.5$$
+
+  </TabItem>
+  <TabItem value="ex2" label="Find DE">
+
+**Q:** In $\triangle ABC$, $DE \parallel BC$. $AD = 3$, $AB = 9$, $BC = 12$. Find $DE$.
+
+**Solution:**
+
+Using Form 2 (part to whole): $\dfrac{AD}{AB} = \dfrac{DE}{BC}$
+
+$$\dfrac{3}{9} = \dfrac{DE}{12}$$
+
+$$DE = \dfrac{3 \times 12}{9} = 4$$
+
+  </TabItem>
+  <TabItem value="ex3" label="Use the Converse">
+
+**Q:** In $\triangle PQR$, $D$ is on $PQ$ and $E$ is on $PR$ with $PD = 4$, $DQ = 8$, $PE = 3$, $ER = 6$. Is $DE \parallel QR$?
+
+**Solution:**
+
+Check: $\dfrac{PD}{DQ} = \dfrac{4}{8} = \dfrac{1}{2}$ and $\dfrac{PE}{ER} = \dfrac{3}{6} = \dfrac{1}{2}$
+
+Both ratios equal $\dfrac{1}{2}$. By the **converse of BPT**, $DE \parallel QR$. ✓
+
+  </TabItem>
+  <TabItem value="ex4" label="Midpoint case">
+
+**Q:** $D$ and $E$ are midpoints of $AB$ and $AC$ in $\triangle ABC$. What is $DE$ in terms of $BC$?
+
+**Solution:**
+
+$D$ is midpoint → $AD = DB$ → $\dfrac{AD}{DB} = 1$
+
+By BPT → $\dfrac{AE}{EC} = 1$ → $E$ is midpoint of $AC$ ✓ (consistent)
+
+Using Form 2: $\dfrac{AD}{AB} = \dfrac{1}{2}$ → $\dfrac{DE}{BC} = \dfrac{1}{2}$ → $DE = \dfrac{BC}{2}$
+
+**This is the Mid-Point Theorem:** The line joining midpoints of two sides = half the third side and is parallel to it.
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Exam writing format
+
+```
+In △ABC, DE ∥ BC (given)
+By BPT: AD/DB = AE/EC
+        4/6   = 5/EC
+∴ EC = 30/4 = 7.5
+```
+
+Always state "By BPT" explicitly — that earns a method mark.
+
+---
+
+## Summary
+
+:::tip BPT at a glance
+**Statement:** $DE \parallel BC$ → $\dfrac{AD}{DB} = \dfrac{AE}{EC}$
+
+**Also gives:** $\dfrac{AD}{AB} = \dfrac{AE}{AC} = \dfrac{DE}{BC}$ (from the similarity $\triangle ADE \sim \triangle ABC$)
+
+**Converse:** $\dfrac{AD}{DB} = \dfrac{AE}{EC}$ → $DE \parallel BC$
+
+**Special case:** $D$, $E$ are midpoints → $DE = \dfrac{1}{2}BC$ (Mid-Point Theorem)
+:::

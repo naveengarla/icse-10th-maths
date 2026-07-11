@@ -1,0 +1,181 @@
+---
+id: similarity-08
+title: Maps and Models
+sidebar_label: 8. Maps & Models
+sidebar_position: 9
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { MapScaleSVG, ScaleTable } from '@site/src/components/MapScaleDiagram';
+
+# 8. Maps and Models — Real-World Similarity
+
+## Everything is similar!
+
+A map of India and India itself are **similar figures** — same shape, different size.
+
+A model car and the real car are **similar objects** — same proportions, different size.
+
+The **scale factor** $k$ connects the model to the real thing.
+
+---
+
+## The scale factor in maps
+
+<MapScaleSVG />
+
+:::note Reading a map scale
+A scale of **1 : 50,000** means:
+
+1 unit on the map = 50,000 of the same unit in reality.
+
+So 1 cm on map = 50,000 cm = **500 m** = **0.5 km** in reality.
+:::
+
+The scale factor here is $k = 50{,}000$ — the real object is $k$ times larger than the map.
+
+---
+
+## What scales by what
+
+<ScaleTable />
+
+This table is the key to all map/model problems:
+
+| What you're finding | Multiply map/model value by |
+|---------------------|----------------------------|
+| Length / distance / perimeter | $k$ |
+| Area | $k^2$ |
+| Volume (for 3D models) | $k^3$ |
+
+---
+
+## How to find k from a given scale
+
+| Scale notation | What it means | k |
+|---------------|--------------|---|
+| 1 : 200 | 1 unit on model = 200 real units | k = 200 |
+| 1 cm represents 5 km | 1 cm = 500,000 cm | k = 500,000 |
+| 1 : 1000 | Model is 1/1000 of real size | k = 1000 |
+
+**Finding k from measurements:**
+
+$$k = \dfrac{\text{actual length}}{\text{map/model length}}$$
+
+---
+
+## Worked examples
+
+<Tabs>
+  <TabItem value="length" label="Find actual length">
+
+**Q:** On a map with scale 1:25,000, two towns are 4 cm apart. Find the actual distance in km.
+
+**Step 1:** $k = 25{,}000$ (1 cm = 25,000 cm real)
+
+**Step 2:** Actual distance $= 4 \times 25{,}000 = 100{,}000$ cm $= 1$ km
+
+  </TabItem>
+  <TabItem value="map-length" label="Find map length">
+
+**Q:** Two cities are 36 km apart. On a map with scale 1 cm = 12 km, find the distance on the map.
+
+**Step 1:** $k = 12$ km per cm
+
+**Step 2:** Map distance $= \dfrac{36}{12} = 3$ cm
+
+  </TabItem>
+  <TabItem value="area" label="Find actual area">
+
+**Q:** A park appears as 6 cm² on a map with scale 1:5000. Find the actual area of the park.
+
+**Step 1:** $k = 5000$
+
+**Step 2:** Actual area $= 6 \times k^2 = 6 \times 5000^2 = 6 \times 25{,}000{,}000 = 150{,}000{,}000$ cm²
+
+**Step 3:** Convert: $150{,}000{,}000$ cm² $= 15{,}000$ m² $= 1.5$ hectares
+
+  </TabItem>
+  <TabItem value="model" label="Model problem">
+
+**Q:** A model of a building is made at scale 1:100.
+- Height of model = 30 cm. Find real height.
+- Area of model's roof = 50 cm². Find real roof area.
+- Volume of model = 200 cm³. Find real volume.
+
+**Scale factor:** $k = 100$
+
+- Real height $= 30 \times 100 = 3000$ cm $= 30$ m ✓
+- Real roof area $= 50 \times 100^2 = 50 \times 10{,}000 = 500{,}000$ cm² $= 50$ m²
+- Real volume $= 200 \times 100^3 = 200 \times 1{,}000{,}000 = 2 \times 10^8$ cm³
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Finding the scale factor from measurements
+
+<Tabs>
+  <TabItem value="from-map" label="From map measurement">
+
+**Q:** On a map, a road is 3 cm long. The actual road is 15 km long. Find the scale of the map.
+
+$$k = \dfrac{\text{actual}}{\text{map}} = \dfrac{15 \text{ km}}{3 \text{ cm}} = \dfrac{15 \times 100{,}000 \text{ cm}}{3 \text{ cm}} = 500{,}000$$
+
+Scale = **1 : 5,00,000**
+
+  </TabItem>
+  <TabItem value="from-areas" label="From area measurements">
+
+**Q:** The floor area of a room is 20 m². On the architect's plan, it appears as 5 cm². Find the scale factor.
+
+$$k^2 = \dfrac{\text{actual area}}{\text{plan area}} = \dfrac{20 \text{ m}^2}{5 \text{ cm}^2} = \dfrac{20 \times 10{,}000 \text{ cm}^2}{5 \text{ cm}^2} = 40{,}000$$
+
+$$k = \sqrt{40{,}000} = 200$$
+
+Scale = **1 : 200**
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Unit conversions to remember
+
+| | |
+|--|--|
+| 1 km = 1000 m = 100,000 cm | 1 m = 100 cm |
+| 1 km² = 10⁶ m² = 10¹⁰ cm² | 1 m² = 10,000 cm² |
+| 1 hectare = 10,000 m² | 1 km² = 100 hectares |
+
+---
+
+## Summary
+
+:::tip Maps and Models — the full picture
+$$k = \dfrac{\text{actual size}}{\text{map/model size}}$$
+
+| Dimension | Scales by |
+|-----------|----------|
+| Length, distance, perimeter | $k$ |
+| Area | $k^2$ |
+| Volume | $k^3$ |
+
+**Always convert to same units before computing k!**
+:::
+
+---
+
+## You've completed all 8 pages of Similarity!
+
+Here's what you can now do:
+- ✅ Explain what similar means without needing a definition
+- ✅ Identify similar triangles using AA, SAS, or SSS
+- ✅ Find corresponding sides even when triangles are rotated or inside a figure
+- ✅ Apply BPT to find unknown lengths in parallel-line problems
+- ✅ Calculate area ratios using $k^2$
+- ✅ Solve map and model problems confidently
+
+**Geometry is not about memorising rules. It's about seeing relationships. You can see them now.**

@@ -1,0 +1,145 @@
+---
+id: similarity-07
+title: Areas of Similar Triangles
+sidebar_label: 7. Area Ratio
+sidebar_position: 8
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { AreaRatioSquares, AreaRatioTriangles } from '@site/src/components/AreaRatioVisual';
+
+# 7. Areas of Similar Triangles
+
+## The surprising result
+
+You already know: if two triangles are similar with scale factor $k$, every side is multiplied by $k$.
+
+Here is the result that surprises almost every student:
+
+:::note Area Ratio Theorem
+If $\triangle ABC \sim \triangle PQR$ with scale factor $k$, then:
+
+$$\dfrac{\text{Area of } \triangle PQR}{\text{Area of } \triangle ABC} = k^2$$
+
+The area ratio is the **square** of the linear scale factor.
+:::
+
+Side ratio = $k$. Area ratio = $k^2$. **NOT** $k$.
+
+---
+
+## Why k² and not k? — The visual proof
+
+<AreaRatioSquares />
+
+The key insight: **area is two-dimensional**. When you scale both length AND width by $k$, the area scales by $k \times k = k^2$.
+
+A triangle is just like the square — it has two dimensions. Double every side → area becomes $2 \times 2 = 4$ times larger.
+
+---
+
+## See it in similar triangles
+
+<AreaRatioTriangles />
+
+---
+
+## The formula — different forms
+
+$$\dfrac{\text{Area}_1}{\text{Area}_2} = \left(\dfrac{\text{corresponding side}_1}{\text{corresponding side}_2}\right)^2 = k^2$$
+
+This can be rewritten with any corresponding measurement:
+
+$$\dfrac{\text{Area}(\triangle ABC)}{\text{Area}(\triangle PQR)} = \left(\dfrac{AB}{PQ}\right)^2 = \left(\dfrac{BC}{QR}\right)^2 = \left(\dfrac{CA}{RP}\right)^2$$
+
+---
+
+## Worked examples
+
+<Tabs>
+  <TabItem value="ex1" label="Find area ratio">
+
+**Q:** $\triangle ABC \sim \triangle PQR$ with $AB = 6$ and $PQ = 9$. Find the ratio of their areas.
+
+**Step 1 — Find k:** $k = \dfrac{PQ}{AB} = \dfrac{9}{6} = \dfrac{3}{2}$
+
+**Step 2 — Area ratio:** $\dfrac{\text{Area}(\triangle PQR)}{\text{Area}(\triangle ABC)} = k^2 = \left(\dfrac{3}{2}\right)^2 = \dfrac{9}{4}$
+
+**Answer:** Area of $\triangle PQR$ : Area of $\triangle ABC$ = $9 : 4$
+
+  </TabItem>
+  <TabItem value="ex2" label="Find unknown area">
+
+**Q:** $\triangle ABC \sim \triangle DEF$. $AB = 4$, $DE = 6$, Area of $\triangle ABC = 32$ cm². Find area of $\triangle DEF$.
+
+**Step 1:** $k = \dfrac{DE}{AB} = \dfrac{6}{4} = \dfrac{3}{2}$
+
+**Step 2:** $\dfrac{\text{Area}(\triangle DEF)}{\text{Area}(\triangle ABC)} = k^2 = \dfrac{9}{4}$
+
+**Step 3:** Area of $\triangle DEF = \dfrac{9}{4} \times 32 = 72$ cm²
+
+  </TabItem>
+  <TabItem value="ex3" label="Find k from areas">
+
+**Q:** $\triangle PQR \sim \triangle XYZ$. Area of $\triangle XYZ = 49$ cm², area of $\triangle PQR = 16$ cm². If $PQ = 8$ cm, find $XY$.
+
+**Step 1 — Find k² from areas:**
+
+$\dfrac{\text{Area}(\triangle XYZ)}{\text{Area}(\triangle PQR)} = \dfrac{49}{16}$
+
+**Step 2 — Find k:**
+
+$k^2 = \dfrac{49}{16}$ → $k = \dfrac{7}{4}$
+
+**Step 3 — Find XY:**
+
+$\dfrac{XY}{PQ} = k$ → $XY = k \times PQ = \dfrac{7}{4} \times 8 = 14$ cm
+
+  </TabItem>
+  <TabItem value="ex4" label="Ratio of remaining area">
+
+**Q:** In $\triangle ABC$, $DE \parallel BC$, $\dfrac{AD}{AB} = \dfrac{1}{3}$. Find the ratio of area of $\triangle ADE$ to area of trapezium $BCED$.
+
+**Step 1:** $\triangle ADE \sim \triangle ABC$ with $k = \dfrac{AD}{AB} = \dfrac{1}{3}$
+
+**Step 2:** $\dfrac{\text{Area}(\triangle ADE)}{\text{Area}(\triangle ABC)} = k^2 = \dfrac{1}{9}$
+
+So if Area$(\triangle ABC) = 9x$, then Area$(\triangle ADE) = x$.
+
+**Step 3:** Area of trapezium $BCED$ = Area$(\triangle ABC)$ − Area$(\triangle ADE) = 9x - x = 8x$
+
+**Step 4:** Required ratio $= x : 8x = \mathbf{1 : 8}$
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Common mistakes
+
+:::warning Watch out for these
+1. **Using k instead of k²** for area — the most common error
+
+2. **Forgetting to square the ratio** when the ratio of sides is given as a fraction:
+   - Side ratio $= 2:3$
+   - Area ratio $= 4:9$ (NOT $2:3$!)
+
+3. **Taking square root of area ratio to find side ratio** — this IS correct:
+   - Area ratio $= 9:25$ → side ratio $= 3:5$ (take $\sqrt{}$)
+
+4. **Mixing up which is k and which is 1/k**:
+   - If smaller triangle has area 4 and larger has area 9, then $k = 3/2$ (larger÷smaller for corresponding sides)
+:::
+
+---
+
+## Summary
+
+:::tip Area Ratio — one formula to know
+$$\dfrac{\text{Area}_1}{\text{Area}_2} = \left(\dfrac{\text{side}_1}{\text{side}_2}\right)^2 = k^2$$
+
+To reverse: $\dfrac{\text{side}_1}{\text{side}_2} = \sqrt{\dfrac{\text{Area}_1}{\text{Area}_2}}$
+:::
+
+**Next:** [Maps and Models — real-world applications →](./08-maps-models)
