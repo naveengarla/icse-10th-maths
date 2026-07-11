@@ -63,6 +63,11 @@ const config = {
             label: 'Chapters',
           },
           {
+            to: '/pyq',
+            position: 'left',
+            label: '📋 PYQ',
+          },
+          {
             href: 'https://github.com/naveengarla/icse-10th-maths',
             label: 'GitHub',
             position: 'right',

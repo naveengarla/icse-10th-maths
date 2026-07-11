@@ -18,6 +18,16 @@ Welcome, Prasasta! This is your personal study site for the three Commercial Mat
 | [Chapter 4 →](./ch4-trig-identities/normal) | 📐 Trigonometry — Identities | ✅ Ready |
 | [Chapter 5 →](./ch5-heights-distances/normal) | 📏 Heights & Distances | ✅ Ready |
 
+## Previous Year Questions
+
+| Topic | PYQ Page |
+|-------|---------|
+| [GST →](./pyq/gst) | 📦 GST — 2 questions added |
+| [Banking →](./pyq/banking) | 🏦 Banking — coming soon |
+| [Shares →](./pyq/shares) | 📈 Shares — coming soon |
+| [Trig Identities →](./pyq/trig-identities) | 📐 Identities — coming soon |
+| [Heights & Distances →](./pyq/heights-distances) | 📏 Heights — coming soon |
+
 ## How to use this site
 
 Each chapter has **two modes** — pick based on how much time you have:

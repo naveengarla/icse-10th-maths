@@ -8,6 +8,19 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: '📋 Previous Year Questions',
+      collapsed: false,
+      items: [
+        'pyq/index',
+        'pyq/gst',
+        'pyq/banking',
+        'pyq/shares',
+        'pyq/trig-identities',
+        'pyq/heights-distances',
+      ],
+    },
+    {
+      type: 'category',
       label: '📦 Chapter 1 — GST',
       collapsed: false,
       items: [
