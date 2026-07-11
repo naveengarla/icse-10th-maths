@@ -58,12 +58,13 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'mainSidebar',
+            sidebarId: 'chaptersSidebar',
             position: 'left',
             label: 'Chapters',
           },
           {
-            to: '/pyq',
+            type: 'docSidebar',
+            sidebarId: 'pyqSidebar',
             position: 'left',
             label: '📋 PYQ',
           },
