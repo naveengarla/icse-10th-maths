@@ -15,6 +15,8 @@ Welcome, Prasasta! This is your personal study site for the three Commercial Mat
 | [Chapter 1 →](./ch1-gst/overview) | 📦 GST — Goods and Services Tax | ✅ Ready |
 | [Chapter 2 →](./ch2-banking/normal) | 🏦 Banking — Recurring Deposits | 🔜 Coming |
 | [Chapter 3 →](./ch3-shares/normal) | 📈 Shares & Dividends | 🔜 Coming |
+| [Chapter 4 →](./ch4-trig-identities/normal) | 📐 Trigonometry — Identities | ✅ Ready |
+| [Chapter 5 →](./ch5-heights-distances/normal) | 📏 Heights & Distances | ✅ Ready |
 
 ## How to use this site
 

@@ -34,6 +34,24 @@ const sidebars = {
         'ch3-shares/exam',
       ],
     },
+    {
+      type: 'category',
+      label: '📐 Chapter 4 — Trig Identities',
+      collapsed: true,
+      items: [
+        'ch4-trig-identities/normal',
+        'ch4-trig-identities/exam',
+      ],
+    },
+    {
+      type: 'category',
+      label: '📏 Chapter 5 — Heights & Distances',
+      collapsed: true,
+      items: [
+        'ch5-heights-distances/normal',
+        'ch5-heights-distances/exam',
+      ],
+    },
   ],
 };
 

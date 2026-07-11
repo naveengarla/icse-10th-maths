@@ -1,0 +1,209 @@
+---
+id: normal
+title: Heights & Distances — Deep Learning
+sidebar_label: Deep Learning
+sidebar_position: 1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import HeightDistanceDiagram from '@site/src/components/HeightDistanceDiagram';
+
+# 📏 Heights & Distances — Deep Learning
+
+:::note ICSE Scope
+**0 ≤ A ≤ 90°. Maximum two right-angled triangles per problem. Trigonometric tables are provided in the exam.**
+:::
+
+## 1. The Story (Finland Phenomenon)
+
+<div className="story-card">
+  <div className="story-label">🏰 Arjun at Golconda Fort</div>
+  <p>
+    <strong>Arjun</strong> stands 80 m away from the base of Golconda Fort's tower.
+    He tilts his head up at <strong>30°</strong> to see the top.
+    His eyes are 1.5 m above the ground.
+    Without climbing the tower, he calculates its height in 30 seconds — using only tan 30°.
+    <br /><br />
+    This is Heights and Distances: using angles and one known measurement to find
+    lengths you cannot directly measure.
+  </p>
+</div>
+
+---
+
+## 2. Core Concepts — CPA
+
+<Tabs>
+  <TabItem value="concrete" label="🧱 Concrete">
+
+**Two real-world ideas:**
+
+**Angle of Elevation** — You are BELOW looking UP at something.
+Stand at ground level, look up at a bird on a tree. The angle your eyes make above the horizontal = angle of elevation.
+
+**Angle of Depression** — You are ABOVE looking DOWN at something.
+Stand on a cliff, look down at a boat. The angle your eyes make below the horizontal = angle of depression.
+
+**Key fact:** Angle of elevation and angle of depression are **alternate angles** — they are equal when the horizontal lines are parallel.
+
+  </TabItem>
+  <TabItem value="pictorial" label="🖼️ Pictorial">
+
+<HeightDistanceDiagram type="both" />
+
+  </TabItem>
+  <TabItem value="abstract" label="🔢 Abstract">
+
+In every problem, you have a right triangle. The three sides are:
+
+| Side | What it represents |
+|------|--------------------|
+| **Opposite** (height h) | Vertical distance — height of tower, cliff, etc. |
+| **Adjacent** (distance d) | Horizontal distance from observer to base |
+| **Hypotenuse** | Direct line of sight (rarely needed) |
+
+<div className="fpill">tan θ = opposite / adjacent = h / d</div>
+<div className="fpill fpill-teal">h = d × tan θ</div>
+<div className="fpill fpill-teal">d = h / tan θ</div>
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 3. Formulas in 4 Languages
+
+### tan θ = h / d
+
+<Tabs>
+  <TabItem value="words" label="🗣️ Words">
+    The tangent of the angle of elevation (or depression) equals the height divided by the horizontal distance.
+    If you know any two of these three — angle, height, distance — you can always find the third.
+  </TabItem>
+  <TabItem value="visual" label="👁️ Visual">
+    The diagram in Section 2 shows both cases. The triangle always has:
+    - θ at the observer's position
+    - h as the vertical side (opposite to θ)
+    - d as the horizontal side (adjacent to θ)
+  </TabItem>
+  <TabItem value="math" label="🔣 Math">
+
+  <div className="fpill">tan θ = h / d</div>
+  <div className="fpill fpill-teal">h = d tan θ</div>
+  <div className="fpill fpill-teal">d = h / tan θ = h cot θ</div>
+
+  Also useful: `sin θ = h / (line of sight)` and `cos θ = d / (line of sight)`
+
+  </TabItem>
+  <TabItem value="try" label="✋ Try It">
+
+  **A tower is 50 m tall. Observer stands 50 m away. Find angle of elevation.**
+
+  tan θ = h / d = 50/50 = 1 → θ = **45°**
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 4. Problem-Solving Strategy
+
+Every ICSE Heights & Distances question follows this pattern:
+
+1. **Draw a diagram** — never skip this (most marks lost here)
+2. **Label** the known sides and the angle
+3. **Identify** which ratio to use: if you have opp and adj → **tan**; if hypotenuse is involved → sin or cos
+4. **Set up** the equation: `tan θ = h / d`
+5. **Substitute** the known values and solve
+6. **Check** units and reasonableness
+
+<div className="trap-box">
+  <div className="trap-title">⚠️ Always draw the diagram first</div>
+  <p>Most errors come from mislabeling which side is opposite and which is adjacent.
+  A clean diagram takes 30 seconds and prevents 3-mark errors.</p>
+</div>
+
+---
+
+## 5. Worked Examples
+
+<Tabs>
+  <TabItem value="basic" label="📗 Basic (1 Triangle)">
+
+**Q1 — Find height**
+
+> A boy stands 40 m from the base of a tower. The angle of elevation of the top is 30°. Find the height of the tower.
+
+**Diagram:** Observer at ground, tower vertical, angle 30° at observer.
+
+1. tan 30° = h / 40
+2. 1/√3 = h / 40
+3. h = 40/√3 = 40√3/3 = **23.1 m** (or leave as 40/√3)
+
+<div className="ans-box">✓ Height = 40/√3 m ≈ 23.1 m</div>
+
+**Q2 — Find distance**
+
+> From the top of a lighthouse 60 m high, the angle of depression of a boat is 45°. Find the distance of the boat from the base of the lighthouse.
+
+1. Angle of depression = 45° = angle of elevation from boat (alternate angles)
+2. tan 45° = 60 / d → 1 = 60/d → d = **60 m**
+
+<div className="ans-box">✓ Distance = 60 m</div>
+
+  </TabItem>
+  <TabItem value="two" label="📙 Two Triangles">
+
+**Q3 — Two angles, same tower**
+
+> A man observes a tower from two points A and B on the same horizontal line. A is 100 m closer to the tower. The angles of elevation from A and B are 60° and 30° respectively. Find the height of the tower.
+
+**Diagram:** Tower PQ, observer at A (closer), observer at B (further). Let PA = x, so PB = x + 100. Height = h.
+
+1. From A: tan 60° = h/x → √3 = h/x → h = x√3 ... (i)
+2. From B: tan 30° = h/(x+100) → 1/√3 = h/(x+100) → h = (x+100)/√3 ... (ii)
+3. Equate (i) and (ii): x√3 = (x+100)/√3
+4. 3x = x + 100 → 2x = 100 → x = 50 m
+5. h = 50√3 = **86.6 m**
+
+<div className="ans-box">✓ Height = 50√3 m ≈ 86.6 m</div>
+
+  </TabItem>
+  <TabItem value="elevation-depression" label="📘 Elev + Depression">
+
+**Q4 — From top of cliff**
+
+> From the top of a cliff 100 m high, the angles of depression of two boats on the same side are 30° and 45°. Find the distance between the boats.
+
+**Diagram:** Cliff PQ = 100 m. Boat A at angle 45°, Boat B at angle 30° (further away).
+
+1. From P, boat A: tan 45° = 100/d₁ → d₁ = 100 m
+2. From P, boat B: tan 30° = 100/d₂ → 1/√3 = 100/d₂ → d₂ = 100√3 m
+3. Distance between boats = d₂ − d₁ = 100√3 − 100 = **100(√3 − 1) m ≈ 73.2 m**
+
+<div className="ans-box">✓ Distance = 100(√3 − 1) m ≈ 73.2 m</div>
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 6. Common Values to Know
+
+| tan 30° | 1/√3 ≈ 0.577 |
+|---------|--------------|
+| tan 45° | 1 |
+| tan 60° | √3 ≈ 1.732 |
+| √3 | 1.732 |
+| 1/√3 | 0.577 |
+
+---
+
+## 7. Reflect & Write
+
+**Q1:** What is the difference between angle of elevation and angle of depression? When are they equal?
+
+**Q2:** A tower and a building are on opposite sides of a road. Draw a scenario where you need TWO triangles to find the height of the tower. Label what you know and what you'd solve for.
+
+**Q3 (Challenge):** A vertical pole and a vertical tower are on the same level ground. From the top of the pole (height 20 m), the angle of elevation of the top of the tower is 60° and the angle of depression of its foot is 30°. Find the height of the tower.

@@ -1,0 +1,167 @@
+---
+id: exam
+title: Trigonometry Identities — Exam Ready 🔥
+sidebar_label: "Exam Ready 🔥"
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 📐 Trig Identities — Exam Cram <span className="exam-badge">🔥 EXAM READY</span>
+
+## The 3 Identities + All Derived Forms
+
+<Tabs>
+  <TabItem value="id1" label="Identity 1">
+
+| Form | Expression |
+|------|-----------|
+| **Master** | `sin²A + cos²A = 1` |
+| Derived | `sin²A = 1 − cos²A` |
+| Derived | `cos²A = 1 − sin²A` |
+| Use when | You know sin, need cos — or vice versa |
+
+  </TabItem>
+  <TabItem value="id2" label="Identity 2">
+
+| Form | Expression |
+|------|-----------|
+| **Master** | `1 + tan²A = sec²A` |
+| Derived | `sec²A − tan²A = 1` |
+| Derived | `tan²A = sec²A − 1` |
+| Use when | Expression has tan and sec together |
+
+  </TabItem>
+  <TabItem value="id3" label="Identity 3">
+
+| Form | Expression |
+|------|-----------|
+| **Master** | `1 + cot²A = cosec²A` |
+| Derived | `cosec²A − cot²A = 1` |
+| Derived | `cot²A = cosec²A − 1` |
+| Use when | Expression has cot and cosec together |
+
+  </TabItem>
+  <TabItem value="extras" label="Key Relations">
+
+| Relation | Expression |
+|----------|-----------|
+| tan A | sin A / cos A |
+| cot A | cos A / sin A |
+| cosec A | 1 / sin A |
+| sec A | 1 / cos A |
+| cot A | 1 / tan A |
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Standard Angle Values
+
+| | 0° | 30° | 45° | 60° | 90° |
+|-|----|-----|-----|-----|-----|
+| sin | 0 | 1/2 | 1/√2 | √3/2 | 1 |
+| cos | 1 | √3/2 | 1/√2 | 1/2 | 0 |
+| tan | 0 | 1/√3 | 1 | √3 | ∞ |
+
+---
+
+## ⚠️ Top Traps
+
+<div className="trap-box">
+  <div className="trap-title">TRAP 1 — sin²A means (sinA)², NOT sin(A²)</div>
+  <p>Always square the ratio value, not the angle.</p>
+</div>
+<div className="trap-box">
+  <div className="trap-title">TRAP 2 — Can't cancel sin from sin²A + sinA</div>
+  <p>sinA(sinA + 1) — factor it, don't divide. Division loses the sinA = 0 solution.</p>
+</div>
+<div className="trap-box">
+  <div className="trap-title">TRAP 3 — Proving: always work on ONE side only</div>
+  <p>Never move terms across the = sign when proving. Simplify LHS to get RHS, or vice versa.</p>
+</div>
+<div className="trap-box">
+  <div className="trap-title">TRAP 4 — sec²A − 1 ≠ sec²A − sin²A</div>
+  <p>sec²A − 1 = tan²A. The 1 is a plain number, not sin²A or cos²A.</p>
+</div>
+
+---
+
+## Worked Examples
+
+<Tabs>
+  <TabItem value="q1" label="Q1 — Prove">
+
+**Prove: sin⁴A − cos⁴A = 1 − 2cos²A**
+
+1. LHS = (sin²A − cos²A)(sin²A + cos²A)
+2. = (sin²A − cos²A)(1)
+3. = sin²A − cos²A
+4. = (1 − cos²A) − cos²A = **1 − 2cos²A = RHS** ✓
+
+<div className="ans-box">✓ Proved</div>
+
+  </TabItem>
+  <TabItem value="q2" label="Q2 — Prove">
+
+**Prove: (1 + tan²A)/(1 + cot²A) = tan²A**
+
+1. LHS = sec²A / cosec²A
+2. = (1/cos²A) / (1/sin²A)
+3. = sin²A / cos²A = **tan²A = RHS** ✓
+
+<div className="ans-box">✓ Proved</div>
+
+  </TabItem>
+  <TabItem value="q3" label="Q3 — Given Ratio">
+
+**If sec A = 13/5, find all other ratios.**
+
+1. cos A = 5/13 → b = 5, h = 13
+2. p = √(h²−b²) = √(169−25) = √144 = 12
+3. sin A = 12/13, tan A = 12/5
+4. cosec A = 13/12, cot A = 5/12
+
+<div className="ans-box">✓ sin=12/13, cos=5/13, tan=12/5, cosec=13/12, cot=5/12</div>
+
+  </TabItem>
+  <TabItem value="q4" label="Q4 — Eliminate θ">
+
+**x = sec θ + tan θ, y = sec θ − tan θ. Prove xy = 1.**
+
+1. xy = (sec θ + tan θ)(sec θ − tan θ)
+2. = sec²θ − tan²θ = **1** ✓
+
+<div className="ans-box">✓ Proved (difference of squares + Identity 2)</div>
+
+  </TabItem>
+  <TabItem value="q5" label="Q5 — Simplify">
+
+**Simplify: (sin A + cosec A)² + (cos A + sec A)²**
+
+1. = sin²A + 2 + cosec²A + cos²A + 2 + sec²A
+2. = (sin²A + cos²A) + cosec²A + sec²A + 4
+3. = 1 + (1 + cot²A) + (1 + tan²A) + 4
+4. = **7 + tan²A + cot²A**
+
+<div className="ans-box">✓ 7 + tan²A + cot²A</div>
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Pre-Exam Checklist
+
+- [ ] Know all 3 identities and 6 derived forms without looking
+- [ ] Know sin, cos, tan for 0°, 30°, 45°, 60°, 90°
+- [ ] When proving: work on ONE side only
+- [ ] Convert everything to sin and cos if stuck
+- [ ] (sin²A + cos²A) always = 1 — spot it inside expressions
+- [ ] sec²A − tan²A = 1 and cosec²A − cot²A = 1 (difference form)
+- [ ] Given ratio → draw triangle → find all sides → all ratios
+- [ ] Eliminate θ: express both equations in terms of sinθ/cosθ
+- [ ] sin⁴A − cos⁴A = (sin²A+cos²A)(sin²A−cos²A) — difference of squares
+- [ ] Perfect square: sin²A + cos²A + 2sinAcosA = (sinA + cosA)²

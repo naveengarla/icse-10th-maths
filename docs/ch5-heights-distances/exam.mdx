@@ -1,0 +1,140 @@
+---
+id: exam
+title: Heights & Distances — Exam Ready 🔥
+sidebar_label: "Exam Ready 🔥"
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 📏 Heights & Distances — Exam Cram <span className="exam-badge">🔥 EXAM READY</span>
+
+## Key Formulas
+
+| Situation | Formula |
+|-----------|---------|
+| Find height | `h = d × tan θ` |
+| Find distance | `d = h / tan θ = h × cot θ` |
+| Find line of sight | `l = h / sin θ = d / cos θ` |
+| Two angles, same object | Set up two equations, eliminate unknown |
+
+## Values to Know by Heart
+
+| Ratio | 30° | 45° | 60° |
+|-------|-----|-----|-----|
+| tan | 1/√3 | 1 | √3 |
+| sin | 1/2 | 1/√2 | √3/2 |
+| cos | √3/2 | 1/√2 | 1/2 |
+
+**√3 = 1.732, 1/√3 = 0.577, √2 = 1.414**
+
+---
+
+## ⚠️ Top Traps
+
+<div className="trap-box">
+  <div className="trap-title">TRAP 1 — Skipping the diagram</div>
+  <p>Draw it every time. Label θ at the observer, h vertical, d horizontal. 30 seconds → saves 3 marks.</p>
+</div>
+<div className="trap-box">
+  <div className="trap-title">TRAP 2 — Forgetting observer's height</div>
+  <p>If the question says "eye level is 1.5 m above ground", the tower height = calculated h + 1.5 m.</p>
+</div>
+<div className="trap-box">
+  <div className="trap-title">TRAP 3 — Depression ≠ elevation (but related)</div>
+  <p>Angle of depression from top = angle of elevation from base (alternate angles, parallel horizontals).</p>
+</div>
+<div className="trap-box">
+  <div className="trap-title">TRAP 4 — Two-triangle problems: set up both equations first</div>
+  <p>Write both tan equations with unknowns, then divide or subtract to eliminate one unknown.</p>
+</div>
+
+---
+
+## 5-Step Method (every problem)
+
+1. **Draw** a clear diagram
+2. **Label** angle θ, height h, distance d
+3. **Write** the tan equation: `tan θ = h / d`
+4. **Substitute** known values
+5. **Solve** and state units
+
+---
+
+## Worked Examples
+
+<Tabs>
+  <TabItem value="q1" label="Q1 — Basic">
+
+> A pole 6 m high casts a shadow 6√3 m long. Find the angle of elevation of the sun.
+
+tan θ = 6 / 6√3 = 1/√3 → **θ = 30°**
+
+<div className="ans-box">✓ Angle of elevation = 30°</div>
+
+  </TabItem>
+  <TabItem value="q2" label="Q2 — Find Height">
+
+> The angle of elevation of the top of a building from a point 30 m away is 60°. Find the height.
+
+tan 60° = h / 30 → √3 = h/30 → **h = 30√3 m ≈ 51.96 m**
+
+<div className="ans-box">✓ Height = 30√3 m</div>
+
+  </TabItem>
+  <TabItem value="q3" label="Q3 — Depression">
+
+> From the top of a tower 75 m high, angle of depression of two cars on either side are 45° and 30°. Find distance between the cars.
+
+- Car A (45°): tan 45° = 75/d₁ → d₁ = 75 m
+- Car B (30°): tan 30° = 75/d₂ → d₂ = 75√3 m
+- Distance = 75 + 75√3 = **75(1 + √3) m ≈ 204.9 m**
+
+<div className="ans-box">✓ Distance = 75(1 + √3) m ≈ 204.9 m</div>
+
+  </TabItem>
+  <TabItem value="q4" label="Q4 — Two Angles">
+
+> From two points A and B, 100 m apart, the angles of elevation of a tower are 45° and 60°. Find height. (A is closer.)
+
+Let h = height, d = distance from A.
+
+- From A: tan 45° = h/d → d = h ...(i)
+- From B: tan 60° = h/(d+100) → √3(d+100) = h ...(ii)
+- From (i): d = h → sub in (ii): √3(h+100) = h
+- √3h + 100√3 = h → h(√3−1) = −100√3 ... rearrange:
+- h(√3−1) = 100√3 → **h = 100√3/(√3−1) = 50√3(√3+1) m ≈ 236.6 m**
+
+<div className="ans-box">✓ h = 50√3(√3+1) m ≈ 236.6 m</div>
+
+  </TabItem>
+  <TabItem value="q5" label="Q5 — Pole + Tower">
+
+> From top of a pole 20 m tall: elevation of tower top = 60°, depression of tower foot = 30°. Find tower height.
+
+Let tower height = H, horizontal distance = d.
+
+- Depression of foot → tan 30° = 20/d → d = 20√3 m
+- Elevation of top → tan 60° = (H−20)/d → √3 = (H−20)/(20√3)
+- H − 20 = 20√3 × √3 = 60 → **H = 80 m**
+
+<div className="ans-box">✓ Tower height = 80 m</div>
+
+  </TabItem>
+</Tabs>
+
+---
+
+## Pre-Exam Checklist
+
+- [ ] Draw diagram for every problem — no exceptions
+- [ ] tan θ = opposite / adjacent = h / d
+- [ ] Know tan 30° = 1/√3, tan 45° = 1, tan 60° = √3
+- [ ] Angle of depression = angle of elevation (alternate angles)
+- [ ] Two-triangle problems: write TWO equations, then solve simultaneously
+- [ ] If observer height given, add it to the final answer
+- [ ] Maximum 2 right-angled triangles in ICSE questions
+- [ ] Leave answer in surd form (like 30√3) unless decimal asked
+- [ ] Line of sight: use sin (h/sin θ) or cos (d/cos θ)
+- [ ] Check: does your answer make physical sense?

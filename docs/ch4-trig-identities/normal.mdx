@@ -1,0 +1,268 @@
+---
+id: normal
+title: Trigonometry Identities — Deep Learning
+sidebar_label: Deep Learning
+sidebar_position: 1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import TrigTriangle from '@site/src/components/TrigTriangle';
+
+# 📐 Trigonometry Identities — Deep Learning
+
+## 1. The Story (Finland Phenomenon)
+
+<div className="story-card">
+  <div className="story-label">🏗️ Riya's Architecture Project</div>
+  <p>
+    <strong>Riya</strong> is designing a ramp for a wheelchair.
+    She knows the ramp must rise <strong>1 metre</strong> over a horizontal run of <strong>4 metres</strong>.
+    What angle does it make? Is it safe? Her calculation uses only one idea —
+    the ratio of two sides of a right triangle. That idea is <strong>trigonometry</strong>.
+    <br /><br />
+    The <em>identities</em> in this chapter are the relationships between those ratios that are
+    always true, no matter what the triangle looks like.
+  </p>
+</div>
+
+---
+
+## 2. The Six Ratios — CPA Approach
+
+<Tabs>
+  <TabItem value="concrete" label="🧱 Concrete">
+
+Imagine holding a right-angled set-square. Label one acute angle **A**.
+
+- The side **across** from A = **Opposite (p)**
+- The side **next to** A (not the longest) = **Adjacent (b)**
+- The longest side = **Hypotenuse (h)**
+
+These three sides give six possible ratios. Each ratio has a name.
+
+  </TabItem>
+  <TabItem value="pictorial" label="🖼️ Pictorial">
+
+<TrigTriangle mode="ratios" />
+
+  </TabItem>
+  <TabItem value="abstract" label="🔢 Abstract">
+
+| Ratio | Formula | Reciprocal |
+|-------|---------|-----------|
+| **sin A** | p / h | cosec A = h / p |
+| **cos A** | b / h | sec A = h / b |
+| **tan A** | p / b | cot A = b / p |
+
+Also: `tan A = sin A / cos A` and `cot A = cos A / sin A`
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 3. The Three Pythagorean Identities — CPA
+
+<Tabs>
+  <TabItem value="concrete" label="🧱 Concrete">
+
+Pythagoras says: **p² + b² = h²** (always, for any right triangle).
+
+Now just divide both sides by h², by b², or by p² — you get three different identities.
+That's literally all the "proof" is.
+
+  </TabItem>
+  <TabItem value="pictorial" label="🖼️ Pictorial">
+
+<TrigTriangle mode="identity" />
+
+  </TabItem>
+  <TabItem value="abstract" label="🔢 Abstract">
+
+**Divide p² + b² = h² by h²:**
+
+<div className="fpill">sin²A + cos²A = 1</div>
+
+**Divide p² + b² = h² by b²:**
+
+<div className="fpill">1 + tan²A = sec²A</div>
+
+**Divide p² + b² = h² by p²:**
+
+<div className="fpill">1 + cot²A = cosec²A</div>
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 4. All Derived Forms (memorise these)
+
+<Tabs>
+  <TabItem value="from1" label="From Identity 1">
+
+From **sin²A + cos²A = 1**:
+
+<div className="fpill">sin²A = 1 − cos²A</div>
+<div className="fpill">cos²A = 1 − sin²A</div>
+
+  </TabItem>
+  <TabItem value="from2" label="From Identity 2">
+
+From **1 + tan²A = sec²A**:
+
+<div className="fpill">sec²A − tan²A = 1</div>
+<div className="fpill">tan²A = sec²A − 1</div>
+
+  </TabItem>
+  <TabItem value="from3" label="From Identity 3">
+
+From **1 + cot²A = cosec²A**:
+
+<div className="fpill">cosec²A − cot²A = 1</div>
+<div className="fpill">cot²A = cosec²A − 1</div>
+
+  </TabItem>
+</Tabs>
+
+<div className="info-box">
+  <strong>Pattern to remember:</strong> Each identity has the form <code>1 + (smaller)² = (bigger)²</code>.
+  sin/cos → 1; tan/sec → sec² wins; cot/cosec → cosec² wins.
+</div>
+
+---
+
+## 5. Standard Angle Values (from Tables)
+
+| Angle | sin | cos | tan |
+|-------|-----|-----|-----|
+| 0° | 0 | 1 | 0 |
+| 30° | 1/2 | √3/2 | 1/√3 |
+| 45° | 1/√2 | 1/√2 | 1 |
+| 60° | √3/2 | 1/2 | √3 |
+| 90° | 1 | 0 | undefined |
+
+<div className="trap-box">
+  <div className="trap-title">⚠️ Memory Trick for sin 0°→90°</div>
+  <p>sin values: √0/2, √1/2, √2/2, √3/2, √4/2 = 0, 1/2, 1/√2, √3/2, 1.<br />
+  cos is the reverse. tan = sin/cos.</p>
+</div>
+
+---
+
+## 6. Formulas in 4 Languages
+
+### Identity 1 — sin²A + cos²A = 1
+
+<Tabs>
+  <TabItem value="words" label="🗣️ Words">
+    The square of sin and the square of cos always add up to exactly 1, for any angle A between 0° and 90°.
+    This comes directly from Pythagoras — divide both sides of p²+b²=h² by h².
+  </TabItem>
+  <TabItem value="visual" label="👁️ Visual">
+    See the Pictorial tab in Section 3 — the triangle with unit hypotenuse makes this obvious.
+    `(sin A)² + (cos A)²` = `(p/h)² + (b/h)²` = `(p²+b²)/h²` = `h²/h²` = **1**.
+  </TabItem>
+  <TabItem value="math" label="🔣 Math">
+
+  <div className="fpill">sin²A + cos²A = 1</div>
+  <div className="fpill fpill-teal">∴ sinA = √(1 − cos²A)</div>
+  <div className="fpill fpill-teal">∴ cosA = √(1 − sin²A)</div>
+
+  </TabItem>
+  <TabItem value="try" label="✋ Try It">
+
+  **If sin A = 3/5, find cos A and tan A.**
+
+  - cos²A = 1 − sin²A = 1 − 9/25 = 16/25
+  - cos A = 4/5
+  - tan A = sin A / cos A = (3/5)÷(4/5) = **3/4**
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 7. Worked Examples
+
+<Tabs>
+  <TabItem value="prove" label="📗 Prove Identity">
+
+**Q1 — Prove: (1 − sin²A) / cos²A = 1**
+
+1. LHS = (1 − sin²A) / cos²A
+2. Use sin²A + cos²A = 1 → 1 − sin²A = cos²A
+3. LHS = cos²A / cos²A = **1 = RHS** ✓
+
+<div className="ans-box">✓ Proved</div>
+
+**Q2 — Prove: sin⁴A + cos⁴A + 2sin²A cos²A = 1**
+
+1. LHS = (sin²A + cos²A)² = 1² = **1 = RHS** ✓
+*(Recognise the perfect square pattern: a²+b²+2ab = (a+b)²)*
+
+<div className="ans-box">✓ Proved</div>
+
+  </TabItem>
+  <TabItem value="simplify" label="📙 Simplify">
+
+**Q3 — Simplify: (sec²A − 1) / sec²A**
+
+1. sec²A − 1 = tan²A (from identity 2)
+2. = tan²A / sec²A
+3. = (sin²A/cos²A) / (1/cos²A) = sin²A
+
+<div className="ans-box">✓ Answer: sin²A</div>
+
+**Q4 — Simplify: cosec A (1 − cos²A)**
+
+1. 1 − cos²A = sin²A
+2. = cosec A × sin²A = (1/sin A) × sin²A = **sin A**
+
+<div className="ans-box">✓ Answer: sin A</div>
+
+  </TabItem>
+  <TabItem value="given" label="📘 Given Ratio">
+
+**Q5 — If tan A = 4/3, find sin A and cos A (A is acute)**
+
+1. tan A = p/b = 4/3, so p = 4k, b = 3k
+2. h = √(p²+b²) = √(16k²+9k²) = 5k
+3. sin A = p/h = **4/5**, cos A = b/h = **3/5**
+
+<div className="ans-box">✓ sin A = 4/5 | cos A = 3/5</div>
+
+**Q6 — If 3 cot A = 4, find (3 sin A − 4 cos A) / (3 sin A + 4 cos A)**
+
+1. cot A = 4/3, so tan A = 3/4 → p=3, b=4, h=5
+2. sin A = 3/5, cos A = 4/5
+3. Numerator = 3(3/5) − 4(4/5) = 9/5 − 16/5 = −7/5
+4. Denominator = 3(3/5) + 4(4/5) = 9/5 + 16/5 = 25/5 = 5
+5. Answer = (−7/5) / 5 = **−7/25**
+
+<div className="ans-box">✓ Answer: −7/25</div>
+
+  </TabItem>
+  <TabItem value="eliminate" label="📕 Eliminate θ">
+
+**Q7 — If x = a sinθ and y = b cosθ, prove x²/a² + y²/b² = 1**
+
+1. x/a = sinθ → x²/a² = sin²θ
+2. y/b = cosθ → y²/b² = cos²θ
+3. x²/a² + y²/b² = sin²θ + cos²θ = **1** ✓
+
+<div className="ans-box">✓ Proved (standard elimination pattern)</div>
+
+  </TabItem>
+</Tabs>
+
+---
+
+## 8. Reflect & Write
+
+**Q1:** Write sin²A + cos²A = 1 in your own words — what does it actually mean geometrically?
+
+**Q2:** Derive 1 + tan²A = sec²A from p² + b² = h² in four steps without looking above.
+
+**Q3 (Challenge):** Prove: (cosec A − sin A)(sec A − cos A) = 1/(tan A + cot A)
