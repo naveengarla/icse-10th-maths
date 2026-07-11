@@ -11,12 +11,12 @@ const sidebars = {
       label: '📋 Previous Year Questions',
       collapsed: false,
       items: [
-        'pyq/index',
-        'pyq/gst',
-        'pyq/banking',
-        'pyq/shares',
-        'pyq/trig-identities',
-        'pyq/heights-distances',
+        'pyq-index',
+        'pyq-gst',
+        'pyq-banking',
+        'pyq-shares',
+        'pyq-trig-identities',
+        'pyq-heights-distances',
       ],
     },
     {
