@@ -196,6 +196,42 @@ body {
 }
 
 /* ── MOBILE (< 768px) ── */
+/* ── PYQ SOLUTION TOGGLE ── */
+details { margin-top: 0.5rem; }
+details summary {
+  cursor: pointer;
+  padding: 0.55rem 1rem;
+  background: #eff6ff;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: '▸'; }
+details[open] summary::before { content: '▾'; }
+details[open] summary { color: #15803d; background: #f0fdf4; }
+details > div {
+  padding: 0.9rem 1.1rem;
+  background: #f0fdf4;
+  border-top: 1px solid #bbf7d0;
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+details .ans {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  margin-top: 0.6rem;
+  font-weight: 700;
+  color: #15803d;
+}
+
 @media (max-width: 768px) {
   body { font-size: 15px; }
   .fpill { font-size: 0.82rem; }

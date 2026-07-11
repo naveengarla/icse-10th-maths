@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prasasta — Exam in 2 Days 🔥</title>
+<style>
+  :root{--navy:#1e3a5f;--blue:#3b82f6;--green:#15803d;--teal:#0f766e;--red:#dc2626;--orange:#ea580c;--purple:#7e22ce;--border:#e2e8f0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:#f1f5f9;color:#1e293b;font-size:16px;line-height:1.6}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,#1e3a5f,#0f766e);color:white;padding:1.5rem 2rem;text-align:center}
+  .hero h1{font-size:1.8rem;font-weight:800}
+  .hero p{opacity:.85;margin-top:.4rem}
+  .badge{display:inline-block;background:#ef4444;color:white;padding:.3rem 1rem;border-radius:20px;font-weight:700;font-size:.85rem;margin-top:.5rem}
+
+  /* LAYOUT */
+  .wrap{max-width:1100px;margin:0 auto;padding:1.5rem}
+  .tabs-nav{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap}
+  .tab-btn{padding:.65rem 1.25rem;border:2px solid var(--navy);border-radius:8px;background:white;cursor:pointer;font-size:.88rem;font-weight:700;color:var(--navy);transition:all .15s}
+  .tab-btn.active,.tab-btn:hover{background:var(--navy);color:white}
+  .tab-panel{display:none}.tab-panel.active{display:block}
+
+  /* CARDS */
+  .card{background:white;border:1px solid var(--border);border-radius:10px;padding:1.1rem;margin-bottom:1rem}
+  .card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:2px solid #e2e8f0}
+
+  /* FORMULA GRID */
+  .fg{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+  .f{background:#1e3a5f;color:white;border-radius:7px;padding:.6rem .85rem;font-family:'Courier New',monospace;font-size:.9rem;font-weight:700}
+  .f .lbl{font-size:.62rem;opacity:.65;margin-bottom:.15rem;font-family:system-ui;font-weight:400;letter-spacing:.07em;text-transform:uppercase}
+  .f.teal{background:#0f766e}
+  .f.green{background:#15803d}
+  .f.purple{background:#7e22ce}
+
+  /* TRAP */
+  .trap{background:#fff1f2;border-left:4px solid var(--red);border-radius:0 7px 7px 0;padding:.7rem 1rem;margin:.6rem 0;font-size:.88rem;color:#9f1239}
+  .trap strong{display:block;font-size:.65rem;text-transform:uppercase;letter-spacing:.07em;color:var(--red);margin-bottom:.2rem}
+
+  /* PYQ */
+  .pyq{border:1px solid var(--border);border-radius:8px;margin-bottom:.85rem;overflow:hidden}
+  .pyq-head{background:var(--navy);color:white;padding:.5rem 1rem;display:flex;justify-content:space-between;font-size:.82rem;font-weight:700}
+  .pyq-q{padding:.85rem 1rem;font-size:.9rem;line-height:1.65}
+  .show-sol{width:100%;padding:.55rem;background:#eff6ff;border:none;border-top:1px solid var(--border);cursor:pointer;font-size:.82rem;font-weight:700;color:var(--blue);text-align:left;display:flex;align-items:center;gap:.4rem}
+  .show-sol:hover{background:#dbeafe}
+  .sol{display:none;padding:.85rem 1rem;background:#f0fdf4;border-top:1px solid #bbf7d0;font-size:.85rem;line-height:1.75}
+  .sol.open{display:block}
+  .step{display:flex;gap:.6rem;margin-bottom:.5rem}
+  .sn{width:22px;height:22px;background:var(--blue);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:800;flex-shrink:0;margin-top:2px}
+  .ans{background:#dcfce7;border:1px solid #86efac;border-radius:6px;padding:.5rem .85rem;margin-top:.6rem;font-weight:700;color:var(--green)}
+
+  /* TABLE */
+  table{width:100%;border-collapse:collapse;font-size:.88rem}
+  th{background:var(--navy);color:white;padding:.45rem .75rem;text-align:left;font-size:.8rem}
+  td{padding:.42rem .75rem;border-bottom:1px solid var(--border)}
+  tr:nth-child(even) td{background:#f8fafc}
+
+  /* SVG */
+  .svgw{background:white;border:1px solid var(--border);border-radius:10px;overflow-x:auto;padding:1rem;margin:.75rem 0}
+
+  @media(max-width:640px){.fg{grid-template-columns:1fr}.tabs-nav{gap:.35rem}.tab-btn{font-size:.8rem;padding:.55rem .9rem}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>📚 Prasasta — Exam Ready</h1>
+  <p>Commercial Maths + Trigonometry · Everything you need</p>
+  <div class="badge">🔥 Exam in 2 Days — Focus Mode</div>
+</div>
+
+<div class="wrap">
+  <div class="tabs-nav">
+    <button class="tab-btn active" onclick="sw(this,'gst')">📦 GST</button>
+    <button class="tab-btn" onclick="sw(this,'trig')">📐 Trig Identities</button>
+    <button class="tab-btn" onclick="sw(this,'hd')">📏 Heights &amp; Dist.</button>
+    <button class="tab-btn" onclick="sw(this,'pyq-gst')">🔥 PYQ — GST</button>
+    <button class="tab-btn" onclick="sw(this,'pyq-trig')">🔥 PYQ — Trig</button>
+    <button class="tab-btn" onclick="sw(this,'pyq-hd')">🔥 PYQ — Heights</button>
+  </div>
+
+  <!-- ══ GST ══ -->
+  <div id="gst" class="tab-panel active">
+    <div class="card">
+      <h3>All Formulas</h3>
+      <div class="fg">
+        <div class="f"><div class="lbl">Selling Price</div>SP = MP × (100−d)/100</div>
+        <div class="f"><div class="lbl">Final Bill</div>Bill = SP × (100+r)/100</div>
+        <div class="f teal"><div class="lbl">Intra-State Split</div>CGST = SGST = r/2 %</div>
+        <div class="f purple"><div class="lbl">Inter-State</div>IGST = Full GST Rate</div>
+        <div class="f teal"><div class="lbl">Reverse (inclusive price)</div>SP = A × 100/(100+r)</div>
+        <div class="f green"><div class="lbl">Net GST (dealer)</div>Output Tax − Input Tax</div>
+        <div class="f"><div class="lbl">One-step master</div>Bill = MP×(100−d)/100×(100+r)/100</div>
+        <div class="f teal"><div class="lbl">GST rate change</div>Change = Base × (r₁−r₂)/100</div>
+      </div>
+    </div>
+    <!-- Bar model SVG -->
+    <div class="card">
+      <h3>Bar Model — MP ₹40,000 | 10% Discount | 18% GST</h3>
+      <div class="svgw">
+        <svg viewBox="0 0 640 215" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:system-ui,sans-serif">
+          <text x="4" y="44" font-size="9" fill="#475569" font-weight="600">MARKED PRICE</text>
+          <rect x="88" y="32" width="458" height="36" rx="3" fill="#3b82f6"/>
+          <text x="317" y="54" text-anchor="middle" font-size="11" fill="white" font-weight="700">SP = ₹36,000</text>
+          <rect x="548" y="32" width="50" height="36" rx="3" fill="#f59e0b"/>
+          <text x="573" y="47" text-anchor="middle" font-size="8" fill="white" font-weight="700">Disc</text>
+          <text x="573" y="60" text-anchor="middle" font-size="8" fill="white" font-weight="700">₹4K</text>
+          <line x1="88" y1="74" x2="598" y2="74" stroke="#94a3b8" stroke-width=".7"/>
+          <text x="343" y="84" text-anchor="middle" font-size="9" fill="#64748b">Marked Price = ₹40,000</text>
+          <text x="88" y="102" font-size="10" fill="#dc2626" font-weight="800">↓ GST on ₹36,000 ONLY — never on ₹40,000</text>
+          <text x="4" y="135" font-size="9" fill="#475569" font-weight="600">TAXABLE VALUE</text>
+          <rect x="88" y="118" width="458" height="36" rx="3" fill="#1d4ed8"/>
+          <text x="317" y="140" text-anchor="middle" font-size="11" fill="white" font-weight="700">Taxable Value = ₹36,000 — 18% GST here</text>
+          <text x="88" y="166" font-size="10" fill="#0f766e" font-weight="800">↓ Add 18% = 9% CGST + 9% SGST</text>
+          <text x="4" y="196" font-size="9" fill="#475569" font-weight="600">FINAL BILL</text>
+          <rect x="88" y="180" width="458" height="36" rx="3" fill="#3b82f6"/>
+          <text x="317" y="202" text-anchor="middle" font-size="11" fill="white" font-weight="700">SP ₹36,000</text>
+          <rect x="548" y="180" width="41" height="36" rx="3" fill="#06b6d4"/>
+          <text x="568" y="196" text-anchor="middle" font-size="8" fill="white" font-weight="700">CGST</text>
+          <text x="568" y="209" text-anchor="middle" font-size="8" fill="white" font-weight="700">₹3,240</text>
+          <rect x="591" y="180" width="41" height="36" rx="3" fill="#10b981"/>
+          <text x="611" y="196" text-anchor="middle" font-size="8" fill="white" font-weight="700">SGST</text>
+          <text x="611" y="209" text-anchor="middle" font-size="8" fill="white" font-weight="700">₹3,240</text>
+          <text x="340" y="211" text-anchor="middle" font-size="10" fill="#0f766e" font-weight="800">Final Bill = ₹42,480</text>
+        </svg>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚠️ Top Traps</h3>
+      <div class="trap"><strong>TRAP 1</strong>GST on SP (after discount), NEVER on Marked Price</div>
+      <div class="trap"><strong>TRAP 2</strong>Successive discounts: apply one by one. 10%+5% ≠ 15% (= 14.5%)</div>
+      <div class="trap"><strong>TRAP 3</strong>Inter-state = IGST only. Intra-state = CGST+SGST only. Never both.</div>
+      <div class="trap"><strong>TRAP 4</strong>Reverse: SP = Price × 100/(100+r). Don't subtract r% directly.</div>
+      <div class="trap"><strong>TRAP 5</strong>Consumer gets NO Input Tax Credit. Dealers only.</div>
+    </div>
+    <div class="card">
+      <h3>✅ Pre-Exam Checklist</h3>
+      <table><tbody>
+        <tr><td>☐</td><td>CGST = SGST = rate ÷ 2 (intra-state)</td></tr>
+        <tr><td>☐</td><td>GST always on SP after discount</td></tr>
+        <tr><td>☐</td><td>Successive discounts: one by one</td></tr>
+        <tr><td>☐</td><td>Reverse: × 100/(100+r)</td></tr>
+        <tr><td>☐</td><td>Net GST = Output Tax − Input Tax Credit</td></tr>
+        <tr><td>☐</td><td>Inter-state = IGST, Intra-state = CGST+SGST</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <!-- ══ TRIG ══ -->
+  <div id="trig" class="tab-panel">
+    <div class="card">
+      <h3>3 Identities + Derived Forms</h3>
+      <div class="fg">
+        <div class="f"><div class="lbl">Identity 1</div>sin²A + cos²A = 1</div>
+        <div class="f teal"><div class="lbl">Derived from 1</div>sin²A = 1−cos²A<br/>cos²A = 1−sin²A</div>
+        <div class="f green"><div class="lbl">Identity 2</div>1 + tan²A = sec²A</div>
+        <div class="f teal"><div class="lbl">Derived from 2</div>sec²A−tan²A = 1<br/>tan²A = sec²A−1</div>
+        <div class="f purple"><div class="lbl">Identity 3</div>1 + cot²A = cosec²A</div>
+        <div class="f teal"><div class="lbl">Derived from 3</div>cosec²A−cot²A = 1<br/>cot²A = cosec²A−1</div>
+        <div class="f"><div class="lbl">Key Relations</div>tanA = sinA/cosA<br/>cotA = cosA/sinA</div>
+        <div class="f green"><div class="lbl">Reciprocals</div>cosecA=1/sinA, secA=1/cosA, cotA=1/tanA</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Standard Values</h3>
+      <table>
+        <thead><tr><th></th><th>0°</th><th>30°</th><th>45°</th><th>60°</th><th>90°</th></tr></thead>
+        <tbody>
+          <tr><td><strong>sin</strong></td><td>0</td><td>1/2</td><td>1/√2</td><td>√3/2</td><td>1</td></tr>
+          <tr><td><strong>cos</strong></td><td>1</td><td>√3/2</td><td>1/√2</td><td>1/2</td><td>0</td></tr>
+          <tr><td><strong>tan</strong></td><td>0</td><td>1/√3</td><td>1</td><td>√3</td><td>∞</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Trig identity visual -->
+    <div class="card">
+      <h3>Why sin²A + cos²A = 1 — Visual Proof</h3>
+      <div class="svgw">
+        <svg viewBox="0 0 580 185" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:system-ui,sans-serif">
+          <polygon points="80,170 80,40 310,170" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+          <rect x="80" y="153" width="15" height="15" fill="none" stroke="#64748b" stroke-width="1.5"/>
+          <text x="63" y="110" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="700" transform="rotate(-90,63,110)">p (opposite)</text>
+          <text x="195" y="188" text-anchor="middle" font-size="11" fill="#0f766e" font-weight="700">b (adjacent)</text>
+          <text x="180" y="95" text-anchor="middle" font-size="11" fill="#1d4ed8" font-weight="700" transform="rotate(-38,180,95)">h (hypotenuse)</text>
+          <path d="M 278,170 A 30,30 0 0,0 260,148" fill="none" stroke="#f59e0b" stroke-width="2"/>
+          <text x="284" y="158" font-size="13" fill="#f59e0b" font-weight="800">A</text>
+          <rect x="340" y="20" width="230" height="150" rx="8" fill="#1e3a5f"/>
+          <text x="455" y="42" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,0.7)">Pythagoras: p² + b² = h²</text>
+          <text x="455" y="60" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)">÷ h² both sides →</text>
+          <text x="455" y="82" text-anchor="middle" font-size="12" fill="white" font-weight="800">sin²A + cos²A = 1</text>
+          <text x="455" y="100" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)">÷ b² both sides →</text>
+          <text x="455" y="118" text-anchor="middle" font-size="12" fill="white" font-weight="800">1 + tan²A = sec²A</text>
+          <text x="455" y="136" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)">÷ p² both sides →</text>
+          <text x="455" y="154" text-anchor="middle" font-size="12" fill="white" font-weight="800">1 + cot²A = cosec²A</text>
+        </svg>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚠️ Top Traps</h3>
+      <div class="trap"><strong>TRAP 1</strong>When PROVING: work on ONE side only. Never move terms across =.</div>
+      <div class="trap"><strong>TRAP 2</strong>Stuck? Convert everything to sinA and cosA first.</div>
+      <div class="trap"><strong>TRAP 3</strong>sec²A − 1 = tan²A (not sin²A). The 1 is a plain number.</div>
+      <div class="trap"><strong>TRAP 4</strong>sin²A means (sinA)². Not sin(A²).</div>
+    </div>
+  </div>
+
+  <!-- ══ HEIGHTS ══ -->
+  <div id="hd" class="tab-panel">
+    <div class="card">
+      <h3>Key Formulas</h3>
+      <div class="fg">
+        <div class="f"><div class="lbl">Find height</div>h = d × tan θ</div>
+        <div class="f teal"><div class="lbl">Find distance</div>d = h / tan θ</div>
+        <div class="f green"><div class="lbl">tan values</div>tan30°=1/√3, tan45°=1, tan60°=√3</div>
+        <div class="f purple"><div class="lbl">√3 = 1.732</div>1/√3 = 0.577</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Elevation vs Depression</h3>
+      <div class="svgw">
+        <svg viewBox="0 0 620 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:system-ui,sans-serif">
+          <text x="155" y="14" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a5f">Angle of Elevation</text>
+          <line x1="20" y1="140" x2="295" y2="140" stroke="#475569" stroke-width="1.5"/>
+          <rect x="225" y="60" width="22" height="80" rx="2" fill="#94a3b8"/>
+          <circle cx="50" cy="133" r="7" fill="#3b82f6"/>
+          <line x1="50" y1="133" x2="232" y2="64" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="5,3"/>
+          <line x1="50" y1="133" x2="180" y2="133" stroke="#64748b" stroke-width="1" stroke-dasharray="3,3"/>
+          <path d="M 100,133 A 50,50 0 0,1 78,110" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+          <text x="110" y="127" font-size="12" fill="#dc2626" font-weight="800">θ</text>
+          <text x="100" y="158" text-anchor="middle" font-size="9" fill="#64748b">horizontal</text>
+          <text x="247" y="108" font-size="9" fill="#10b981" font-weight="700">h</text>
+          <text x="140" y="150" text-anchor="middle" font-size="9" fill="#1d4ed8" font-weight="700">d</text>
+          <text x="155" y="168" text-anchor="middle" font-size="10" fill="#0f766e" font-weight="800">tan θ = h/d</text>
+          <text x="465" y="14" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a5f">Angle of Depression</text>
+          <line x1="325" y1="140" x2="620" y2="140" stroke="#475569" stroke-width="1.5"/>
+          <rect x="325" y="50" width="22" height="90" rx="2" fill="#94a3b8"/>
+          <circle cx="345" cy="58" r="7" fill="#7e22ce"/>
+          <line x1="345" y1="58" x2="570" y2="138" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="5,3"/>
+          <line x1="345" y1="58" x2="580" y2="58" stroke="#64748b" stroke-width="1" stroke-dasharray="3,3"/>
+          <path d="M 400,58 A 55,55 0 0,0 375,83" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+          <text x="410" y="76" font-size="12" fill="#dc2626" font-weight="800">θ</text>
+          <text x="323" y="98" font-size="9" fill="#10b981" font-weight="700">h</text>
+          <text x="465" y="153" text-anchor="middle" font-size="9" fill="#1d4ed8" font-weight="700">d</text>
+          <circle cx="570" cy="140" r="6" fill="#10b981"/>
+          <text x="465" y="168" text-anchor="middle" font-size="10" fill="#0f766e" font-weight="800">tan θ = h/d (same formula!)</text>
+        </svg>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚠️ Top Traps</h3>
+      <div class="trap"><strong>TRAP 1</strong>ALWAYS draw the diagram first. Label θ, h, d before writing any equation.</div>
+      <div class="trap"><strong>TRAP 2</strong>Angle of depression from top = angle of elevation from base (alternate angles).</div>
+      <div class="trap"><strong>TRAP 3</strong>Two-triangle problems: write BOTH equations first, then solve simultaneously.</div>
+      <div class="trap"><strong>TRAP 4</strong>Leave answers in surd form (30√3) unless decimal is asked.</div>
+    </div>
+  </div>
+
+  <!-- ══ PYQ GST ══ -->
+  <div id="pyq-gst" class="tab-panel">
+    <div class="card" style="background:#fff7ed;border-color:#fed7aa">
+      <p style="font-size:.88rem;color:#92400e"><strong>Strategy:</strong> MP → discount → SP (taxable value) → GST → Bill. Write every step — ICSE gives step marks.</p>
+    </div>
+
+    <!-- Q1 -->
+    <div class="pyq">
+      <div class="pyq-head"><span>Q1 · ICSE 2024 · Intra-state</span><span>[4 marks]</span></div>
+      <div class="pyq-q">A shopkeeper marks an article at ₹15,000 and gives a discount of 20%. GST is charged at 18% (intra-state). Find the CGST, SGST, and the amount paid by the customer.</div>
+      <button class="show-sol" onclick="toggleSol(this)"><span>▸</span> Show Solution</button>
+      <div class="sol">
+        <div class="step"><div class="sn">1</div><span>SP = 15,000 × 80/100 = <strong>₹12,000</strong></span></div>
+        <div class="step"><div class="sn">2</div><span>CGST Rate = SGST Rate = 18/2 = <strong>9% each</strong></span></div>
+        <div class="step"><div class="sn">3</div><span>CGST = 9/100 × 12,000 = <strong>₹1,080</strong>; SGST = <strong>₹1,080</strong></span></div>
+        <div class="step"><div class="sn">4</div><span>Bill = 12,000 + 1,080 + 1,080 = <strong>₹14,160</strong></span></div>
+        <div class="ans">✓ CGST = ₹1,080 | SGST = ₹1,080 | Bill = ₹14,160</div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="pyq">
+      <div class="pyq-head"><span>Q2 · ICSE 2023 · Reverse</span><span>[3 marks]</span></div>
+      <div class="pyq-q">After a 10% discount and 12% GST, a customer pays ₹28,224. Find the marked price.</div>
+      <button class="show-sol" onclick="toggleSol(this)"><span>▸</span> Show Solution</button>
+      <div class="sol">
+        <div class="step"><div class="sn">1</div><span>Let MP = x. SP = x × 90/100</span></div>
+        <div class="step"><div class="sn">2</div><span>Bill = SP × 112/100 → x × 90/100 × 112/100 = 28,224</span></div>
+        <div class="step"><div class="sn">3</div><span>x × 10080/10000 = 28,224 → x = 28,224 × 10000/10080 = <strong>₹28,000</strong></span></div>
+        <div class="ans">✓ Marked Price = ₹28,000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PYQ TRIG ══ -->
+  <div id="pyq-trig" class="tab-panel">
+    <div class="card" style="background:#fff7ed;border-color:#fed7aa">
+      <p style="font-size:.88rem;color:#92400e"><strong>Strategy:</strong> Prove = work ONE side only. Evaluate = replace complementary angles first (cos70°=sin20°). Stuck = convert to sinA/cosA.</p>
+    </div>
+
+    <div class="pyq">
+      <div class="pyq-head"><span>Q · 2024 · Prove (a³+b³ trick)</span><span>[4 marks]</span></div>
+      <div class="pyq-q">Prove: (sin³θ + cos³θ)/(sinθ + cosθ) + sinθcosθ = 1</div>
+      <button class="show-sol" onclick="toggleSol(this)"><span>▸</span> Show Solution</button>
+      <div class="sol">
+        <div class="step"><div class="sn">1</div><span>Use: a³+b³ = (a+b)(a²−ab+b²)</span></div>
+        <div class="step"><div class="sn">2</div><span>Numerator = (sinθ+cosθ)(sin²θ−sinθcosθ+cos²θ)</span></div>
+        <div class="step"><div class="sn">3</div><span>(sinθ+cosθ) cancels → LHS = (1−sinθcosθ) + sinθcosθ = <strong>1 = RHS ✓</strong></span></div>
+        <div class="ans">✓ Proved using a³+b³ factorisation</div>
+      </div>
+    </div>
+
+    <div class="pyq">
+      <div class="pyq-head"><span>Q · 2014 · Evaluate (complementary)</span><span>[3 marks]</span></div>
+      <div class="pyq-q">Evaluate: sin²34° + sin²56° + 2tan18°·tan72° − cot²30°</div>
+      <button class="show-sol" onclick="toggleSol(this)"><span>▸</span> Show Solution</button>
+      <div class="sol">
+        <div class="step"><div class="sn">1</div><span>sin56° = cos34° → sin²34° + cos²34° = <strong>1</strong></span></div>
+        <div class="step"><div class="sn">2</div><span>tan72° = cot18° → 2·tan18°·cot18° = 2×1 = <strong>2</strong></span></div>
+        <div class="step"><div class="sn">3</div><span>cot30° = √3 → cot²30° = <strong>3</strong></span></div>
+        <div class="step"><div class="sn">4</div><span>Total = 1 + 2 − 3 = <strong>0</strong></span></div>
+        <div class="ans">✓ Answer = 0</div>
+      </div>
+    </div>
+
+    <div class="pyq">
+      <div class="pyq-head"><span>Q · 2018 · Prove (bracket expansion)</span><span>[4 marks]</span></div>
+      <div class="pyq-q">Prove: (1 + cotθ − cosecθ)(1 + tanθ + secθ) = 2</div>
+      <button class="show-sol" onclick="toggleSol(this)"><span>▸</span> Show Solution</button>
+      <div class="sol">
+        <div class="step"><div class="sn">1</div><span>= [(sinθ+cosθ−1)/sinθ] × [(cosθ+sinθ+1)/cosθ]</span></div>
+        <div class="step"><div class="sn">2</div><span>= (sinθ+cosθ−1)(sinθ+cosθ+1) / (sinθcosθ)</span></div>
+        <div class="step"><div class="sn">3</div><span>= [(sinθ+cosθ)²−1] / sinθcosθ = [1+2sinθcosθ−1] / sinθcosθ</span></div>
+        <div class="step"><div class="sn">4</div><span>= 2sinθcosθ / sinθcosθ = <strong>2 = RHS ✓</strong></span></div>
+        <div class="ans">✓ Proved</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PYQ HEIGHTS ══ -->
+  <div id="pyq-hd" class="tab-panel">
+    <div class="card" style="background:#fff7ed;border-color:#fed7aa">
+      <p style="font-size:.88rem;color:#92400e"><strong>Strategy:</strong> Draw diagram → label θ, h, d → write tan θ = h/d → solve. For 2 triangles: write both equations, eliminate one unknown.</p>
+    </div>
+
+    <div class="pyq">
+      <div class="pyq-head"><span>Q · Pole & Tower (classic type)</span><span>[4 marks]</span></div>
+      <div class="pyq-q">A vertical pole 6 m tall and a vertical tower stand on the same ground. From the top of the pole, the angle of elevation of the top of the tower is 60° and angle of depression of the foot is 30°. Find the height of the tower and distance between them.</div>
+      <button class="show-sol" onclick="toggleSol(this)"><span>▸</span> Show Solution</button>
+      <div class="sol">
+        <svg viewBox="0 0 380 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:380px;display:block;margin-bottom:.75rem;font-family:system-ui">
+          <line x1="10" y1="145" x2="370" y2="145" stroke="#475569" stroke-width="1.5"/>
+          <rect x="15" y="95" width="18" height="50" rx="2" fill="#3b82f6"/><text x="24" y="90" text-anchor="middle" font-size="9" fill="#3b82f6">Pole 6m</text>
+          <rect x="290" y="25" width="22" height="120" rx="2" fill="#94a3b8"/><text x="301" y="20" text-anchor="middle" font-size="9" fill="#475569">Tower H m</text>
+          <circle cx="24" cy="95" r="5" fill="#f59e0b"/>
+          <line x1="24" y1="95" x2="294" y2="29" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <line x1="24" y1="95" x2="294" y2="145" stroke="#10b981" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <line x1="24" y1="95" x2="200" y2="95" stroke="#64748b" stroke-width="1" stroke-dasharray="3,3"/>
+          <text x="75" y="88" font-size="9" fill="#dc2626">elev. 60°</text>
+          <text x="65" y="115" font-size="9" fill="#10b981">dep. 30°</text>
+          <text x="155" y="158" text-anchor="middle" font-size="9" fill="#1d4ed8">d m</text>
+          <text x="310" y="90" font-size="9" fill="#475569">H−6</text>
+        </svg>
+        <div class="step"><div class="sn">1</div><span>Depression of foot: tan30° = 6/d → d = 6√3 m</span></div>
+        <div class="step"><div class="sn">2</div><span>Elevation of top: tan60° = (H−6)/d → √3 = (H−6)/(6√3) → H−6 = 18</span></div>
+        <div class="step"><div class="sn">3</div><span>H = 18 + 6 = <strong>24 m</strong> | distance = 6√3 ≈ <strong>10.39 m</strong></span></div>
+        <div class="ans">✓ Tower height = 24 m | Distance = 6√3 m</div>
+      </div>
+    </div>
+
+    <div class="pyq">
+      <div class="pyq-head"><span>Q · Two Towers (classic type)</span><span>[4 marks]</span></div>
+      <div class="pyq-q">Two vertical towers stand 120 m apart. Angle of elevation of top of Tower 1 from foot of Tower 2 is 30°. Angle of elevation of top of Tower 2 from foot of Tower 1 is 60°. Find heights of both towers.</div>
+      <button class="show-sol" onclick="toggleSol(this)"><span>▸</span> Show Solution</button>
+      <div class="sol">
+        <div class="step"><div class="sn">1</div><span>Tower 1: tan30° = h₁/120 → h₁ = 120 × 1/√3 = <strong>40√3 m ≈ 69.3 m</strong></span></div>
+        <div class="step"><div class="sn">2</div><span>Tower 2: tan60° = h₂/120 → h₂ = 120√3 ≈ <strong>207.8 m</strong></span></div>
+        <div class="ans">✓ h₁ = 40√3 m | h₂ = 120√3 m</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<script>
+function sw(btn, id) {
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+function toggleSol(btn) {
+  const sol = btn.nextElementSibling;
+  const open = sol.classList.toggle('open');
+  btn.querySelector('span').textContent = open ? '▾' : '▸';
+  btn.textContent = '';
+  btn.appendChild(document.createTextNode(open ? ' Hide Solution' : ' Show Solution'));
+  btn.insertBefore(Object.assign(document.createElement('span'), {textContent: open?'▾':'▸'}), btn.firstChild);
+}
+</script>
+</body>
+</html>

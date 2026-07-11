@@ -1,5 +1,7 @@
 // @ts-check
 const { themes } = require('prism-react-renderer');
+const remarkMath = require('remark-math');
+const rehypeKatex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -31,6 +33,8 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: false,
         theme: {
@@ -38,6 +42,13 @@ const config = {
         },
       }),
     ],
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css',
+      type: 'text/css',
+    },
   ],
 
   themeConfig:

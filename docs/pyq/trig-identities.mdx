@@ -1,531 +1,588 @@
 ---
 id: pyq-trig-identities
 title: PYQ — Trig Identities
-sidebar_label: Trig Identities
+sidebar_label: 📐 Trig Identities
 sidebar_position: 5
 ---
 
 import PYQCard from '@site/src/components/PYQCard';
 
-# 📐 PYQ — Trigonometry Identities (2000–2025)
+# 📐 PYQ — Trigonometric Identities (2000–2025)
 
 :::tip Strategy
-**For Prove questions:** Work on ONE side only. If stuck — convert everything to sin and cos.
-**For Evaluate questions:** Replace complementary angles (cos70° = sin20°, etc.) first, then simplify.
+**Prove:** Work ONE side only. Stuck? Convert everything to $\sin A$ and $\cos A$.  
+**Evaluate:** Replace complementary pairs first — $\cos 70° = \sin 20°$, $\tan 72° = \cot 18°$, etc.
 :::
 
 ---
 
 ## Year 2000
 
-<PYQCard year="2000" marks="4" qnum="1"
-  solution={<>
-    <strong>Multiply inside √ by (1−cosA)/(1−cosA):</strong><br/>
-    LHS = √[(1−cosA)² / (1−cos²A)] = √[(1−cosA)² / sin²A]<br/>
-    = (1−cosA) / sinA<br/><br/>
-    <strong>Show RHS equals same:</strong><br/>
-    sinA/(1+cosA) × (1−cosA)/(1−cosA) = sinA(1−cosA)/(1−cos²A) = sinA(1−cosA)/sin²A = (1−cosA)/sinA ✓
-  </>}
->
-  Prove: √[(1−cosA)/(1+cosA)] = sinA/(1+cosA)
+<PYQCard year="2000" marks="4" qnum="1">
+
+Prove: $\sqrt{\dfrac{1-\cos A}{1+\cos A}} = \dfrac{\sin A}{1+\cos A}$
+
+<details><summary>Show Solution</summary><div>
+
+**Multiply inside $\sqrt{\phantom{x}}$ by $\dfrac{1-\cos A}{1-\cos A}$:**
+
+$$\text{LHS} = \sqrt{\dfrac{(1-\cos A)^2}{1-\cos^2 A}} = \sqrt{\dfrac{(1-\cos A)^2}{\sin^2 A}} = \dfrac{1-\cos A}{\sin A}$$
+
+**Show RHS equals the same:**
+
+$$\dfrac{\sin A}{1+\cos A} = \dfrac{\sin A(1-\cos A)}{1-\cos^2 A} = \dfrac{\sin A(1-\cos A)}{\sin^2 A} = \dfrac{1-\cos A}{\sin A} \checkmark$$
+
+<div className="ans">✓ LHS = RHS = $\dfrac{1-\cos A}{\sin A}$</div>
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2000" marks="4" qnum="2"
-  solution={<>
-    <strong>Use complementary angle: cos(90°−A) = sinA, cosec(90°−A) = secA</strong><br/>
-    LHS = 1/(1+sinA) + 1/(1−sinA)<br/>
-    = (1−sinA + 1+sinA) / [(1+sinA)(1−sinA)]<br/>
-    = 2 / (1−sin²A)<br/>
-    = 2 / cos²A = 2sec²A = 2cosec²(90°−A) = RHS ✓
-  </>}
->
-  Prove: 1/(1+cos(90°−A)) + 1/(1−cos(90°−A)) = 2cosec²(90°−A)
+<PYQCard year="2000" marks="4" qnum="2">
+
+Prove: $\dfrac{1}{1+\cos(90°-A)} + \dfrac{1}{1-\cos(90°-A)} = 2\operatorname{cosec}^2(90°-A)$
+
+<details><summary>Show Solution</summary><div>
+
+Use: $\cos(90°-A) = \sin A$ and $\operatorname{cosec}(90°-A) = \sec A$
+
+$$\text{LHS} = \dfrac{1}{1+\sin A} + \dfrac{1}{1-\sin A} = \dfrac{(1-\sin A)+(1+\sin A)}{(1+\sin A)(1-\sin A)} = \dfrac{2}{1-\sin^2 A} = \dfrac{2}{\cos^2 A} = 2\sec^2 A$$
+
+$= 2\operatorname{cosec}^2(90°-A) = \text{RHS}$ $\checkmark$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2001
 
-<PYQCard year="2001" marks="4" qnum="1"
-  solution={<>
-    <strong>Multiply inside √ by (1−sinA)/(1−sinA):</strong><br/>
-    LHS = √[(1−sinA)² / (1−sin²A)] = (1−sinA) / cosA<br/><br/>
-    RHS = cosA/(1+sinA) = cosA(1−sinA)/(1−sin²A) = cosA(1−sinA)/cos²A = (1−sinA)/cosA ✓
-  </>}
->
-  Prove: √[(1−sinA)/(1+sinA)] = cosA/(1+sinA)
+<PYQCard year="2001" marks="4" qnum="1">
+
+Prove: $\sqrt{\dfrac{1-\sin A}{1+\sin A}} = \dfrac{\cos A}{1+\sin A}$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{LHS} = \sqrt{\dfrac{(1-\sin A)^2}{1-\sin^2 A}} = \sqrt{\dfrac{(1-\sin A)^2}{\cos^2 A}} = \dfrac{1-\sin A}{\cos A}$$
+
+$$\text{RHS} = \dfrac{\cos A}{1+\sin A} = \dfrac{\cos A(1-\sin A)}{1-\sin^2 A} = \dfrac{\cos A(1-\sin A)}{\cos^2 A} = \dfrac{1-\sin A}{\cos A} \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2001" marks="4" qnum="2"
-  solution={<>
-    <strong>Step 1:</strong> 2sinA − 1 = 0 → sinA = 1/2 → A = 30°<br/><br/>
-    <strong>Step 2: Verify sin3A = sin90° = 1</strong><br/><br/>
-    <strong>Step 3: Verify RHS:</strong><br/>
-    3sinA − 4sin³A = 3(1/2) − 4(1/2)³ = 3/2 − 4(1/8) = 3/2 − 1/2 = 1 = LHS ✓
-  </>}
->
-  If 2sinA − 1 = 0, show that sin3A = 3sinA − 4sin³A.
+<PYQCard year="2001" marks="4" qnum="2">
+
+If $2\sin A - 1 = 0$, show that $\sin 3A = 3\sin A - 4\sin^3 A$.
+
+<details><summary>Show Solution</summary><div>
+
+$2\sin A = 1 \Rightarrow \sin A = \dfrac{1}{2} \Rightarrow A = 30°$
+
+**LHS:** $\sin 3A = \sin 90° = 1$
+
+**RHS:** $3\sin A - 4\sin^3 A = 3\left(\dfrac{1}{2}\right) - 4\left(\dfrac{1}{2}\right)^3 = \dfrac{3}{2} - 4 \cdot \dfrac{1}{8} = \dfrac{3}{2} - \dfrac{1}{2} = 1 \checkmark$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2002
 
-<PYQCard year="2002" marks="4" qnum="1"
-  solution={<>
-    LHS = [(sinA−cosA) + (sinA+cosA)] / [(sinA+cosA)(sinA−cosA)]<br/>
-    = 2sinA / (sin²A − cos²A)<br/>
-    = 2sinA / (1 − cos²A − cos²A)<br/>
-    = 2sinA / (1 − 2cos²A) = RHS ✓
-  </>}
->
-  Prove: 1/(sinA+cosA) + 1/(sinA−cosA) = 2sinA/(1−2cos²A)
+<PYQCard year="2002" marks="4" qnum="1">
+
+Prove: $\dfrac{1}{\sin A+\cos A} + \dfrac{1}{\sin A-\cos A} = \dfrac{2\sin A}{1-2\cos^2 A}$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{LHS} = \dfrac{(\sin A-\cos A)+(\sin A+\cos A)}{(\sin A+\cos A)(\sin A-\cos A)} = \dfrac{2\sin A}{\sin^2 A-\cos^2 A}$$
+
+$$= \dfrac{2\sin A}{(1-\cos^2 A)-\cos^2 A} = \dfrac{2\sin A}{1-2\cos^2 A} = \text{RHS} \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2002" marks="4" qnum="2"
-  solution={<>
-    <strong>Use: sin(90°−A) = cosA, sec(90°−A) = cosecA</strong><br/>
-    LHS = 1/(1+cosA) + 1/(1−cosA)<br/>
-    = (1−cosA + 1+cosA) / (1−cos²A)<br/>
-    = 2 / sin²A = 2cosec²A = 2sec²(90°−A) = RHS ✓
-  </>}
->
-  Prove: 1/(1+sin(90°−A)) + 1/(1−sin(90°−A)) = 2sec²(90°−A)
+<PYQCard year="2002" marks="4" qnum="2">
+
+Prove: $\dfrac{1}{1+\sin(90°-A)} + \dfrac{1}{1-\sin(90°-A)} = 2\sec^2(90°-A)$
+
+<details><summary>Show Solution</summary><div>
+
+Use $\sin(90°-A) = \cos A$, $\sec(90°-A) = \operatorname{cosec} A$:
+
+$$\text{LHS} = \dfrac{1}{1+\cos A}+\dfrac{1}{1-\cos A} = \dfrac{2}{1-\cos^2 A} = \dfrac{2}{\sin^2 A} = 2\operatorname{cosec}^2 A = 2\sec^2(90°-A) \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2003
 
-<PYQCard year="2003" marks="4" qnum="1"
-  solution={<>
-    <strong>Convert tan and cot to sin/cos:</strong><br/>
-    = cosA/(1 − sinA/cosA) + sinA/(1 − cosA/sinA)<br/>
-    = cos²A/(cosA−sinA) + sin²A/(sinA−cosA)<br/>
-    = cos²A/(cosA−sinA) − sin²A/(cosA−sinA)<br/>
-    = (cos²A − sin²A)/(cosA−sinA)<br/>
-    = (cosA+sinA)(cosA−sinA)/(cosA−sinA)<br/>
-    = cosA + sinA = RHS ✓
-  </>}
->
-  Prove: cosA/(1−tanA) + sinA/(1−cotA) = sinA + cosA
+<PYQCard year="2003" marks="4" qnum="1">
+
+Prove: $\dfrac{\cos A}{1-\tan A} + \dfrac{\sin A}{1-\cot A} = \sin A + \cos A$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{LHS} = \dfrac{\cos A}{1-\frac{\sin A}{\cos A}} + \dfrac{\sin A}{1-\frac{\cos A}{\sin A}} = \dfrac{\cos^2 A}{\cos A-\sin A} + \dfrac{\sin^2 A}{\sin A-\cos A}$$
+
+$$= \dfrac{\cos^2 A-\sin^2 A}{\cos A-\sin A} = \dfrac{(\cos A+\sin A)(\cos A-\sin A)}{\cos A-\sin A} = \cos A+\sin A = \text{RHS} \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2004
 
-<PYQCard year="2004" marks="4" qnum="1"
-  solution={<>
-    <strong>Convert to sin/cos:</strong><br/>
-    LHS = (cosA/sinA + sinB/cosB) / (cosB/sinB + sinA/cosA)<br/>
-    = [(cosAcosB + sinAsinB)/(sinAcosB)] / [(cosAcosB + sinAsinB)/(sinBcosA)]<br/>
-    = (sinBcosA) / (sinAcosB)<br/>
-    = (cosA/sinA) × (sinB/cosB)<br/>
-    = cotA × tanB = RHS ✓
-  </>}
->
-  Prove: (cotA + tanB)/(cotB + tanA) = cotA tanB
+<PYQCard year="2004" marks="4" qnum="1">
+
+Prove: $\dfrac{\cot A+\tan B}{\cot B+\tan A} = \cot A \tan B$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{LHS} = \dfrac{\frac{\cos A}{\sin A}+\frac{\sin B}{\cos B}}{\frac{\cos B}{\sin B}+\frac{\sin A}{\cos A}} = \dfrac{\frac{\cos A\cos B+\sin A\sin B}{\sin A\cos B}}{\frac{\cos A\cos B+\sin A\sin B}{\sin B\cos A}} = \dfrac{\sin B\cos A}{\sin A\cos B} = \dfrac{\cos A}{\sin A}\cdot\dfrac{\sin B}{\cos B} = \cot A\tan B \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2004" marks="3" qnum="2"
-  solution={<>
-    = 14 × sin30° + 6 × cos60° − 5 × tan45°<br/>
-    = 14 × (1/2) + 6 × (1/2) − 5 × 1<br/>
-    = 7 + 3 − 5<br/>
-    = <strong>5</strong>
-  </>}
->
-  Evaluate: 14sin30° + 6cos60° − 5tan45°
+<PYQCard year="2004" marks="3" qnum="2">
+
+Evaluate: $14\sin 30° + 6\cos 60° - 5\tan 45°$
+
+<details><summary>Show Solution</summary><div>
+
+$$= 14\times\dfrac{1}{2} + 6\times\dfrac{1}{2} - 5\times 1 = 7 + 3 - 5 = \boxed{5}$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2005
 
-<PYQCard year="2005" marks="4" qnum="1"
-  solution={<>
-    LHS = (1−tanA)² + (1+tanA)²<br/>
-    = (1 − 2tanA + tan²A) + (1 + 2tanA + tan²A)<br/>
-    = 2 + 2tan²A<br/>
-    = 2(1 + tan²A)<br/>
-    = 2sec²A = RHS ✓
-  </>}
->
-  Prove: (1−tanA)² + (1+tanA)² = 2sec²A
+<PYQCard year="2005" marks="4" qnum="1">
+
+Prove: $(1-\tan A)^2+(1+\tan A)^2 = 2\sec^2 A$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{LHS} = 1-2\tan A+\tan^2 A+1+2\tan A+\tan^2 A = 2+2\tan^2 A = 2(1+\tan^2 A) = 2\sec^2 A = \text{RHS} \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2006
 
-<PYQCard year="2006" marks="4" qnum="1"
-  solution={<>
-    LHS = (1+tan²A) + (1 + 1/tan²A)<br/>
-    = sec²A + 1 + cot²A<br/>
-    = sec²A + cosec²A &nbsp;[since 1+cot²A = cosec²A]<br/>
-    = 1/cos²A + 1/sin²A<br/>
-    = (sin²A + cos²A)/(sin²A cos²A)<br/>
-    = 1/(sin²A cos²A)<br/><br/>
-    RHS = 1/(sin²A − sin⁴A) = 1/[sin²A(1−sin²A)] = 1/(sin²A cos²A) = LHS ✓
-  </>}
->
-  Prove: (1+tan²A) + (1 + 1/tan²A) = 1/(sin²A − sin⁴A)
+<PYQCard year="2006" marks="4" qnum="1">
+
+Prove: $(1+\tan^2 A)+\left(1+\dfrac{1}{\tan^2 A}\right) = \dfrac{1}{\sin^2 A - \sin^4 A}$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{LHS} = \sec^2 A + \operatorname{cosec}^2 A = \dfrac{1}{\cos^2 A}+\dfrac{1}{\sin^2 A} = \dfrac{\sin^2 A+\cos^2 A}{\sin^2 A\cos^2 A} = \dfrac{1}{\sin^2 A\cos^2 A}$$
+
+$$\text{RHS} = \dfrac{1}{\sin^2 A(1-\sin^2 A)} = \dfrac{1}{\sin^2 A\cos^2 A} = \text{LHS} \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2007
 
-<PYQCard year="2007" marks="4" qnum="1"
-  solution={<>
-    Multiply LHS numerator and denominator by (secA−tanA):<br/>
-    = (secA−tanA) / (sec²A−tan²A)<br/>
-    = (secA−tanA) / 1 &nbsp;[since sec²A−tan²A = 1]<br/>
-    = secA − tanA = RHS ✓
-  </>}
->
-  Prove: 1/(secA + tanA) = secA − tanA
+<PYQCard year="2007" marks="4" qnum="1">
+
+Prove: $\dfrac{1}{\sec A+\tan A} = \sec A-\tan A$
+
+<details><summary>Show Solution</summary><div>
+
+Multiply numerator and denominator by $(\sec A - \tan A)$:
+
+$$\text{LHS} = \dfrac{\sec A-\tan A}{\sec^2 A-\tan^2 A} = \dfrac{\sec A-\tan A}{1} = \sec A-\tan A = \text{RHS} \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2007" marks="3" qnum="2"
-  solution={<>
-    <strong>Use complementary angles: cos70° = sin20°, cos59° = sin31°</strong><br/>
-    = sin20°/sin20° + sin31°/sin31° − 8sin²30°<br/>
-    = 1 + 1 − 8 × (1/2)²<br/>
-    = 2 − 8 × 1/4<br/>
-    = 2 − 2 = <strong>0</strong>
-  </>}
->
-  Evaluate: cos70°/sin20° + cos59°/sin31° − 8sin²30°
+<PYQCard year="2007" marks="3" qnum="2">
+
+Evaluate: $\dfrac{\cos 70°}{\sin 20°}+\dfrac{\cos 59°}{\sin 31°}-8\sin^2 30°$
+
+<details><summary>Show Solution</summary><div>
+
+$\cos 70° = \sin 20°$ and $\cos 59° = \sin 31°$:
+
+$$= \dfrac{\sin 20°}{\sin 20°}+\dfrac{\sin 31°}{\sin 31°}-8\times\left(\dfrac{1}{2}\right)^2 = 1+1-8\times\dfrac{1}{4} = 2-2 = \boxed{0}$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2008
 
-<PYQCard year="2008" marks="4" qnum="1"
-  solution={<>
-    LHS = sinA × (sinA/cosA) / (1−cosA)<br/>
-    = sin²A / [cosA(1−cosA)]<br/>
-    = (1−cos²A) / [cosA(1−cosA)]<br/>
-    = (1−cosA)(1+cosA) / [cosA(1−cosA)]<br/>
-    = (1+cosA) / cosA<br/>
-    = 1/cosA + cosA/cosA<br/>
-    = secA + 1 = RHS ✓
-  </>}
->
-  Prove: (sinA tanA)/(1−cosA) = 1 + secA
+<PYQCard year="2008" marks="4" qnum="1">
+
+Prove: $\dfrac{\sin A\tan A}{1-\cos A} = 1+\sec A$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{LHS} = \dfrac{\sin A\cdot\frac{\sin A}{\cos A}}{1-\cos A} = \dfrac{\sin^2 A}{\cos A(1-\cos A)} = \dfrac{1-\cos^2 A}{\cos A(1-\cos A)} = \dfrac{(1-\cos A)(1+\cos A)}{\cos A(1-\cos A)} = \dfrac{1+\cos A}{\cos A} = \dfrac{1}{\cos A}+1 = \sec A+1 \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2009
 
-<PYQCard year="2009" marks="4" qnum="1"
-  solution={<>
-    Same as 2004 Q1 — same question repeated.<br/><br/>
-    LHS = (cosA/sinA + sinB/cosB) / (cosB/sinB + sinA/cosA)<br/>
-    = (cosAcosB + sinAsinB)/(sinAcosB) ÷ (cosAcosB + sinAsinB)/(sinBcosA)<br/>
-    = sinBcosA / sinAcosB = cotA × tanB = RHS ✓
-  </>}
->
-  Prove: (cotA + tanB)/(cotB + tanA) = cotA tanB
+<PYQCard year="2009" marks="4" qnum="1">
+
+Prove: $\dfrac{\cot A+\tan B}{\cot B+\tan A} = \cot A\tan B$ *(same as 2004)*
+
+<details><summary>Show Solution</summary><div>
+
+See 2004 Q1 — identical question. Answer: $\cot A\tan B \checkmark$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2010
 
-<PYQCard year="2010" marks="3" qnum="1"
-  solution={<>
-    <strong>Use: cos55° = sin35°, sin55° = cos35°</strong><br/>
-    = sin35° × sin35° + cos35° × cos35°<br/>
-    = sin²35° + cos²35°<br/>
-    = <strong>1</strong>
-  </>}
->
-  Evaluate: sin35°cos55° + cos35°sin55°
+<PYQCard year="2010" marks="3" qnum="1">
+
+Evaluate: $\sin 35°\cos 55°+\cos 35°\sin 55°$
+
+<details><summary>Show Solution</summary><div>
+
+$\cos 55° = \sin 35°$ and $\sin 55° = \cos 35°$:
+
+$$= \sin^2 35°+\cos^2 35° = \boxed{1}$$
+
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2010" marks="3" qnum="2"
-  solution={<>
-    <strong>Use: tan80° = cot10°</strong><br/>
-    = cosec²10° − cot²10°<br/>
-    = <strong>1</strong> &nbsp;(by identity: cosec²A − cot²A = 1)
-  </>}
->
-  Evaluate: cosec²10° − tan²80°
+<PYQCard year="2010" marks="3" qnum="2">
+
+Evaluate: $\operatorname{cosec}^2 10° - \tan^2 80°$
+
+<details><summary>Show Solution</summary><div>
+
+$\tan 80° = \cot 10°$, so $\tan^2 80° = \cot^2 10°$:
+
+$$= \operatorname{cosec}^2 10°-\cot^2 10° = \boxed{1} \quad(\text{identity: }\operatorname{cosec}^2 A - \cot^2 A = 1)$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2011
 
-<PYQCard year="2011" marks="3" qnum="1"
-  solution={<>
-    <strong>Use complementary angles:</strong><br/>
-    cos75° = sin15° → first term = sin15°/sin15° = 1<br/>
-    sin12° = cos78° → second term = cos78°/cos78° = 1<br/>
-    cos18° = sin72° → third term = sin72°/sin72° = 1<br/>
-    = 1 + 1 − 1 = <strong>1</strong>
-  </>}
->
-  Evaluate: cos75°/sin15° + sin12°/cos78° − cos18°/sin72°
+<PYQCard year="2011" marks="3" qnum="1">
+
+Evaluate: $\dfrac{\cos 75°}{\sin 15°}+\dfrac{\sin 12°}{\cos 78°}-\dfrac{\cos 18°}{\sin 72°}$
+
+<details><summary>Show Solution</summary><div>
+
+$\cos 75°=\sin 15°$, $\sin 12°=\cos 78°$, $\cos 18°=\sin 72°$:
+
+$$= \dfrac{\sin 15°}{\sin 15°}+\dfrac{\cos 78°}{\cos 78°}-\dfrac{\sin 72°}{\sin 72°} = 1+1-1 = \boxed{1}$$
+
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2011" marks="4" qnum="2"
-  solution={<>
-    LHS = (1/sinA − sinA)(1/cosA − cosA) × sec²A<br/>
-    = [(1−sin²A)/sinA] × [(1−cos²A)/cosA] × (1/cos²A)<br/>
-    = (cos²A/sinA) × (sin²A/cosA) × (1/cos²A)<br/>
-    = (sinA cosA) / cos²A<br/>
-    = sinA/cosA = tanA = RHS ✓
-  </>}
->
-  Prove: (cosecA − sinA)(secA − cosA)sec²A = tanA
+<PYQCard year="2011" marks="4" qnum="2">
+
+Prove: $(\operatorname{cosec} A-\sin A)(\sec A-\cos A)\sec^2 A = \tan A$
+
+<details><summary>Show Solution</summary><div>
+
+$$= \dfrac{1-\sin^2 A}{\sin A}\cdot\dfrac{1-\cos^2 A}{\cos A}\cdot\dfrac{1}{\cos^2 A} = \dfrac{\cos^2 A}{\sin A}\cdot\dfrac{\sin^2 A}{\cos A}\cdot\dfrac{1}{\cos^2 A} = \dfrac{\sin A}{\cos A} = \tan A \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2012
 
-<PYQCard year="2012" marks="4" qnum="1"
-  solution={<>
-    <strong>Simplify RHS:</strong><br/>
-    RHS = tan²A/(secA−1)²<br/>
-    = (sec²A−1)/(secA−1)²<br/>
-    = (secA+1)(secA−1)/(secA−1)²<br/>
-    = (secA+1)/(secA−1)<br/>
-    = (1/cosA + 1)/(1/cosA − 1)<br/>
-    = [(1+cosA)/cosA] / [(1−cosA)/cosA]<br/>
-    = (1+cosA)/(1−cosA) = LHS ✓
-  </>}
->
-  Prove: (1+cosA)/(1−cosA) = tan²A/(secA−1)²
+<PYQCard year="2012" marks="4" qnum="1">
+
+Prove: $\dfrac{1+\cos A}{1-\cos A} = \dfrac{\tan^2 A}{(\sec A-1)^2}$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{RHS} = \dfrac{\sec^2 A-1}{(\sec A-1)^2} = \dfrac{(\sec A+1)(\sec A-1)}{(\sec A-1)^2} = \dfrac{\sec A+1}{\sec A-1} = \dfrac{\frac{1+\cos A}{\cos A}}{\frac{1-\cos A}{\cos A}} = \dfrac{1+\cos A}{1-\cos A} = \text{LHS} \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2013
 
-<PYQCard year="2013" marks="4" qnum="1"
-  solution={<>
-    Same as 2000 Q1:<br/>
-    LHS = √[(1−cosA)² / sin²A] = (1−cosA)/sinA<br/>
-    RHS = sinA(1−cosA)/sin²A = (1−cosA)/sinA ✓
-  </>}
->
-  Prove: √[(1−cosA)/(1+cosA)] = sinA/(1+cosA)
+<PYQCard year="2013" marks="4" qnum="1">
+
+Prove: $\sqrt{\dfrac{1-\cos A}{1+\cos A}} = \dfrac{\sin A}{1+\cos A}$ *(same as 2000)*
+
+<details><summary>Show Solution</summary><div>
+
+See 2000 Q1 — identical question. $\text{LHS} = \text{RHS} = \dfrac{1-\cos A}{\sin A} \checkmark$
+
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2013" marks="3" qnum="2"
-  solution={<>
-    <strong>Term 1: cot41° = tan49°</strong><br/>
-    cot²41°/tan²49° = tan²49°/tan²49° = 1<br/><br/>
-    <strong>Term 2: sin75° = cos15°</strong><br/>
-    2sin²75°/cos²15° = 2cos²15°/cos²15° = 2<br/><br/>
-    = 1 − 2 = <strong>−1</strong>
-  </>}
->
-  Evaluate: cot²41°/tan²49° − 2sin²75°/cos²15°
+<PYQCard year="2013" marks="3" qnum="2">
+
+Evaluate: $\dfrac{\cot^2 41°}{\tan^2 49°}-\dfrac{2\sin^2 75°}{\cos^2 15°}$
+
+<details><summary>Show Solution</summary><div>
+
+$\cot 41° = \tan 49°$, so first term $= 1$.  
+$\sin 75° = \cos 15°$, so second term $= 2$.
+
+$$= 1 - 2 = \boxed{-1}$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2014
 
-<PYQCard year="2014" marks="3" qnum="1"
-  solution={<>
-    <strong>sin56° = cos34°:</strong> sin²34° + cos²34° = 1<br/>
-    <strong>tan72° = cot18°:</strong> 2 tan18° × cot18° = 2 × 1 = 2<br/>
-    <strong>cot30° = √3:</strong> cot²30° = 3<br/><br/>
-    = 1 + 2 − 3 = <strong>0</strong>
-  </>}
->
-  Evaluate: sin²34° + sin²56° + 2tan18°tan72° − cot²30°
+<PYQCard year="2014" marks="3" qnum="1">
+
+Evaluate: $\sin^2 34°+\sin^2 56°+2\tan 18°\tan 72°-\cot^2 30°$
+
+<details><summary>Show Solution</summary><div>
+
+- $\sin 56°=\cos 34°$, so $\sin^2 34°+\cos^2 34° = 1$
+- $\tan 72°=\cot 18°$, so $2\tan 18°\cot 18° = 2$
+- $\cot^2 30° = (\sqrt{3})^2 = 3$
+
+$$= 1+2-3 = \boxed{0}$$
+
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2014" marks="4" qnum="2"
-  solution={<>
-    LHS = (sinθ+cosθ)(sinθ/cosθ + cosθ/sinθ)<br/>
-    = (sinθ+cosθ) × (sin²θ+cos²θ)/(sinθcosθ)<br/>
-    = (sinθ+cosθ) × 1/(sinθcosθ)<br/>
-    = sinθ/(sinθcosθ) + cosθ/(sinθcosθ)<br/>
-    = 1/cosθ + 1/sinθ<br/>
-    = secθ + cosecθ = RHS ✓
-  </>}
->
-  Prove: (sinθ+cosθ)(tanθ+cotθ) = secθ + cosecθ
+<PYQCard year="2014" marks="4" qnum="2">
+
+Prove: $(\sin\theta+\cos\theta)(\tan\theta+\cot\theta) = \sec\theta+\operatorname{cosec}\theta$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{LHS} = (\sin\theta+\cos\theta)\cdot\dfrac{\sin^2\theta+\cos^2\theta}{\sin\theta\cos\theta} = \dfrac{\sin\theta+\cos\theta}{\sin\theta\cos\theta} = \dfrac{1}{\cos\theta}+\dfrac{1}{\sin\theta} = \sec\theta+\operatorname{cosec}\theta = \text{RHS} \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2015
 
-<PYQCard year="2015" marks="4" qnum="1"
-  solution={<>
-    Same as 2003 Q1:<br/>
-    cosA/(1−tanA) + sinA/(1−cotA)<br/>
-    = cos²A/(cosA−sinA) + sin²A/(sinA−cosA)<br/>
-    = cos²A/(cosA−sinA) − sin²A/(cosA−sinA)<br/>
-    = (cos²A−sin²A)/(cosA−sinA)<br/>
-    = (cosA+sinA)(cosA−sinA)/(cosA−sinA)<br/>
-    = cosA + sinA = RHS ✓
-  </>}
->
-  Prove: cosA/(1−tanA) + sinA/(1−cotA) = cosA + sinA
+<PYQCard year="2015" marks="4" qnum="1">
+
+Prove: $\dfrac{\cos A}{1-\tan A}+\dfrac{\sin A}{1-\cot A} = \cos A+\sin A$ *(same as 2003)*
+
+<details><summary>Show Solution</summary><div>
+
+See 2003 Q1 — identical. $\text{LHS} = \cos A+\sin A \checkmark$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2016
 
-<PYQCard year="2016" marks="3" qnum="1"
-  solution={<>
-    <strong>Use complementary pairs:</strong><br/>
-    csc²57° − tan²33°: sin57°=cos33°, so csc57°=sec33°. Also tan33°=cot57°.<br/>
-    ∴ csc²57° − tan²33° = 1/cos²33° − (1−cos²33°)/cos²33°... <strong>simpler:</strong><br/>
-    csc²57° − tan²33° = csc²57° − cot²57° = 1 (identity: csc²A − cot²A = 1)<br/><br/>
-    cos44°·csc46°: sin46°=cos44° → cos44°/sin46° = cos44°/cos44° = 1<br/><br/>
-    √2·cos45° = √2 × 1/√2 = 1<br/><br/>
-    tan²60° = (√3)² = 3<br/><br/>
-    = 1 + 1 − 1 − 3 = <strong>−2</strong>
-  </>}
->
-  Evaluate: csc²57° − tan²33° + cos44°·csc46° − √2·cos45° − tan²60°
+<PYQCard year="2016" marks="3" qnum="1">
+
+Evaluate: $\operatorname{csc}^2 57°-\tan^2 33°+\cos 44°\operatorname{csc}46°-\sqrt{2}\cos 45°-\tan^2 60°$
+
+<details><summary>Show Solution</summary><div>
+
+- $\operatorname{csc}^2 57°-\tan^2 33°$: since $57°+33°=90°$, $\operatorname{csc}^2 57°-\cot^2 57° = 1$
+- $\cos 44°\operatorname{csc}46° = \dfrac{\cos 44°}{\sin 46°} = \dfrac{\cos 44°}{\cos 44°} = 1$
+- $\sqrt{2}\cos 45° = \sqrt{2}\cdot\dfrac{1}{\sqrt{2}} = 1$
+- $\tan^2 60° = 3$
+
+$$= 1+1-1-3 = \boxed{-2}$$
+
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2016" marks="4" qnum="2"
-  solution={<>
-    LHS = cosA/(1+sinA) + sinA/cosA<br/>
-    = [cos²A + sinA(1+sinA)] / [cosA(1+sinA)]<br/>
-    = [cos²A + sinA + sin²A] / [cosA(1+sinA)]<br/>
-    = [1 + sinA] / [cosA(1+sinA)]<br/>
-    = 1/cosA = secA = RHS ✓
-  </>}
->
-  Prove: cosA/(1+sinA) + tanA = secA
+<PYQCard year="2016" marks="4" qnum="2">
+
+Prove: $\dfrac{\cos A}{1+\sin A}+\tan A = \sec A$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{LHS} = \dfrac{\cos A}{1+\sin A}+\dfrac{\sin A}{\cos A} = \dfrac{\cos^2 A+\sin A(1+\sin A)}{\cos A(1+\sin A)} = \dfrac{\cos^2 A+\sin A+\sin^2 A}{\cos A(1+\sin A)} = \dfrac{1+\sin A}{\cos A(1+\sin A)} = \dfrac{1}{\cos A} = \sec A \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2017
 
-<PYQCard year="2017" marks="4" qnum="1"
-  solution={<>
-    <strong>Factor numerator and denominator:</strong><br/>
-    LHS = sinθ(1−2sin²θ) / cosθ(2cos²θ−1)<br/><br/>
-    Substitute cos²θ = 1−sin²θ in denominator:<br/>
-    2cos²θ − 1 = 2(1−sin²θ) − 1 = 1 − 2sin²θ<br/><br/>
-    ∴ LHS = sinθ(1−2sin²θ) / cosθ(1−2sin²θ)<br/>
-    = sinθ/cosθ = tanθ = RHS ✓
-  </>}
->
-  Prove: (sinθ − 2sin³θ) / (2cos³θ − cosθ) = tanθ
+<PYQCard year="2017" marks="4" qnum="1">
+
+Prove: $\dfrac{\sin\theta-2\sin^3\theta}{2\cos^3\theta-\cos\theta} = \tan\theta$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{LHS} = \dfrac{\sin\theta(1-2\sin^2\theta)}{\cos\theta(2\cos^2\theta-1)}$$
+
+Substitute $\cos^2\theta = 1-\sin^2\theta$ in denominator: $2\cos^2\theta-1 = 1-2\sin^2\theta$
+
+$$= \dfrac{\sin\theta(1-2\sin^2\theta)}{\cos\theta(1-2\sin^2\theta)} = \dfrac{\sin\theta}{\cos\theta} = \tan\theta = \text{RHS} \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2018
 
-<PYQCard year="2018" marks="4" qnum="1"
-  solution={<>
-    <strong>Square both sides (both positive for 0&lt;θ&lt;90°):</strong><br/>
-    RHS² = (tanθ+cotθ)² = (sinθ/cosθ + cosθ/sinθ)²<br/>
-    = [(sin²θ+cos²θ)/(sinθcosθ)]² = 1/(sin²θcos²θ)<br/><br/>
-    LHS² = sec²θ + csc²θ = 1/cos²θ + 1/sin²θ<br/>
-    = (sin²θ+cos²θ)/(sin²θcos²θ) = 1/(sin²θcos²θ)<br/><br/>
-    LHS² = RHS² and both sides positive ∴ LHS = RHS ✓
-  </>}
->
-  Prove: √(sec²θ + csc²θ) = tanθ + cotθ
+<PYQCard year="2018" marks="4" qnum="1">
+
+Prove: $\sqrt{\sec^2\theta+\operatorname{cosec}^2\theta} = \tan\theta+\cot\theta$
+
+<details><summary>Show Solution</summary><div>
+
+$$\text{RHS}^2 = (\tan\theta+\cot\theta)^2 = \left(\dfrac{\sin^2\theta+\cos^2\theta}{\sin\theta\cos\theta}\right)^2 = \dfrac{1}{\sin^2\theta\cos^2\theta}$$
+
+$$\text{LHS}^2 = \sec^2\theta+\operatorname{cosec}^2\theta = \dfrac{1}{\cos^2\theta}+\dfrac{1}{\sin^2\theta} = \dfrac{1}{\sin^2\theta\cos^2\theta}$$
+
+Both sides positive, $\text{LHS}^2 = \text{RHS}^2$, so $\text{LHS} = \text{RHS}$ $\checkmark$
+
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2018" marks="4" qnum="2"
-  solution={<>
-    <strong>Convert to sin/cos:</strong><br/>
-    = [(sinθ + cosθ − 1)/sinθ] × [(cosθ + sinθ + 1)/cosθ]<br/>
-    = (sinθ+cosθ−1)(sinθ+cosθ+1) / (sinθcosθ)<br/>
-    = [(sinθ+cosθ)² − 1] / (sinθcosθ)<br/>
-    = [sin²θ + 2sinθcosθ + cos²θ − 1] / (sinθcosθ)<br/>
-    = [1 + 2sinθcosθ − 1] / (sinθcosθ)<br/>
-    = 2sinθcosθ / sinθcosθ = 2 = RHS ✓
-  </>}
->
-  Prove: (1 + cotθ − cscθ)(1 + tanθ + secθ) = 2
+<PYQCard year="2018" marks="4" qnum="2">
+
+Prove: $(1+\cot\theta-\operatorname{cosec}\theta)(1+\tan\theta+\sec\theta) = 2$
+
+<details><summary>Show Solution</summary><div>
+
+$$= \dfrac{\sin\theta+\cos\theta-1}{\sin\theta}\cdot\dfrac{\cos\theta+\sin\theta+1}{\cos\theta} = \dfrac{(\sin\theta+\cos\theta)^2-1}{\sin\theta\cos\theta} = \dfrac{1+2\sin\theta\cos\theta-1}{\sin\theta\cos\theta} = \dfrac{2\sin\theta\cos\theta}{\sin\theta\cos\theta} = 2 \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2019
 
-<PYQCard year="2019" marks="4" qnum="1"
-  solution={<>
-    <strong>Convert each bracket:</strong><br/>
-    (cscθ−sinθ) = (1−sin²θ)/sinθ = cos²θ/sinθ<br/>
-    (secθ−cosθ) = (1−cos²θ)/cosθ = sin²θ/cosθ<br/>
-    (tanθ+cotθ) = (sin²θ+cos²θ)/(sinθcosθ) = 1/(sinθcosθ)<br/><br/>
-    LHS = (cos²θ/sinθ) × (sin²θ/cosθ) × 1/(sinθcosθ)<br/>
-    = sin²θcos²θ / (sin²θcos²θ) = 1 = RHS ✓
-  </>}
->
-  Prove: (cscθ − sinθ)(secθ − cosθ)(tanθ + cotθ) = 1
+<PYQCard year="2019" marks="4" qnum="1">
+
+Prove: $(\operatorname{cosec}\theta-\sin\theta)(\sec\theta-\cos\theta)(\tan\theta+\cot\theta) = 1$
+
+<details><summary>Show Solution</summary><div>
+
+$$= \dfrac{\cos^2\theta}{\sin\theta}\cdot\dfrac{\sin^2\theta}{\cos\theta}\cdot\dfrac{1}{\sin\theta\cos\theta} = \dfrac{\sin^2\theta\cos^2\theta}{\sin^2\theta\cos^2\theta} = 1 \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2020
 
-<PYQCard year="2020" marks="4" qnum="1"
-  solution={<>
-    LHS = (1−tanθ)² / (1−cotθ)²<br/><br/>
-    Note: 1−cotθ = 1−1/tanθ = (tanθ−1)/tanθ<br/>
-    ∴ (1−cotθ)² = (tanθ−1)²/tan²θ = (1−tanθ)²/tan²θ<br/><br/>
-    LHS = (1−tanθ)² ÷ [(1−tanθ)²/tan²θ]<br/>
-    = (1−tanθ)² × tan²θ/(1−tanθ)²<br/>
-    = tan²θ = RHS ✓
-  </>}
->
-  Prove: [(1−tanθ)/(1−cotθ)]² = tan²θ
+<PYQCard year="2020" marks="4" qnum="1">
+
+Prove: $\left(\dfrac{1-\tan\theta}{1-\cot\theta}\right)^2 = \tan^2\theta$
+
+<details><summary>Show Solution</summary><div>
+
+Note: $1-\cot\theta = 1-\dfrac{1}{\tan\theta} = \dfrac{\tan\theta-1}{\tan\theta}$
+
+$$\text{LHS} = \dfrac{(1-\tan\theta)^2}{\left(\frac{\tan\theta-1}{\tan\theta}\right)^2} = \dfrac{(1-\tan\theta)^2\cdot\tan^2\theta}{(\tan\theta-1)^2} = \tan^2\theta = \text{RHS} \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2023
 
-<PYQCard year="2023" marks="4" qnum="1"
-  solution={<>
-    LHS = (sin²θ−1)(tan²θ+1) + 1<br/>
-    = (−cos²θ)(sec²θ) + 1 &nbsp;&nbsp;[since sin²θ−1 = −cos²θ and tan²θ+1 = sec²θ]<br/>
-    = −cos²θ × 1/cos²θ + 1<br/>
-    = −1 + 1 = 0 = RHS ✓
-  </>}
->
-  Prove: (sin²θ − 1)(tan²θ + 1) + 1 = 0
+<PYQCard year="2023" marks="4" qnum="1">
+
+Prove: $(\sin^2\theta-1)(\tan^2\theta+1)+1 = 0$
+
+<details><summary>Show Solution</summary><div>
+
+$$= (-\cos^2\theta)(\sec^2\theta)+1 = -\cos^2\theta\cdot\dfrac{1}{\cos^2\theta}+1 = -1+1 = 0 \checkmark$$
+
+</div></details>
+
 </PYQCard>
 
-<PYQCard year="2023" marks="1" qnum="2 (MCQ)"
-  solution={<>
-    (1+sinA)(1−sinA) = 1 − sin²A = <strong>cos²A</strong>
-  </>}
->
-  The value of (1+sinA)(1−sinA) is equal to ___
+<PYQCard year="2023" marks="1" qnum="2 (MCQ)">
+
+$(1+\sin A)(1-\sin A) = ?$
+
+<details><summary>Show Solution</summary><div>
+
+$$= 1-\sin^2 A = \boxed{\cos^2 A}$$
+
+</div></details>
+
 </PYQCard>
 
 ---
 
 ## Year 2024
 
-<PYQCard year="2024" marks="4" qnum="1"
-  solution={<>
-    <strong>Use a³+b³ = (a+b)(a²−ab+b²):</strong><br/>
-    sin³θ+cos³θ = (sinθ+cosθ)(sin²θ−sinθcosθ+cos²θ)<br/>
-    = (sinθ+cosθ)(1−sinθcosθ)<br/><br/>
-    LHS = [(sinθ+cosθ)(1−sinθcosθ)]/(sinθ+cosθ) + sinθcosθ<br/>
-    = (1−sinθcosθ) + sinθcosθ<br/>
-    = 1 = RHS ✓
-  </>}
->
-  Prove: (sin³θ + cos³θ)/(sinθ + cosθ) + sinθcosθ = 1
+<PYQCard year="2024" marks="4" qnum="1">
+
+Prove: $\dfrac{\sin^3\theta+\cos^3\theta}{\sin\theta+\cos\theta}+\sin\theta\cos\theta = 1$
+
+<details><summary>Show Solution</summary><div>
+
+Use $a^3+b^3 = (a+b)(a^2-ab+b^2)$:
+
+$$\text{LHS} = \dfrac{(\sin\theta+\cos\theta)(\sin^2\theta-\sin\theta\cos\theta+\cos^2\theta)}{\sin\theta+\cos\theta}+\sin\theta\cos\theta$$
+
+$$= (1-\sin\theta\cos\theta)+\sin\theta\cos\theta = 1 = \text{RHS} \checkmark$$
+
+</div></details>
+
 </PYQCard>
