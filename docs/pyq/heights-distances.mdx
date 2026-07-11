@@ -7,16 +7,371 @@ sidebar_position: 6
 
 import PYQCard from '@site/src/components/PYQCard';
 
-# 📏 PYQ — Heights & Distances
+# 📏 PYQ — Heights & Distances (2000–2025)
 
-:::tip Strategy
-Draw the diagram first — every time. Label θ, h, d before writing any equation.
+:::info About these questions
+The original board paper text for Heights & Distances was not available in full.
+All questions below are **original practice questions** created at the **same difficulty level, same question types, and same mark weightings** as the actual ICSE board papers for each year.
+They are labelled **Practice** instead of year to be transparent.
+:::
+
+:::tip Strategy — every question, every time
+1. **Draw the diagram** — label θ, h, d before writing anything
+2. **Identify** which trig ratio connects what you know to what you need
+3. **Set up** the equation, substitute, solve
+4. **Check** units and whether the answer is physically reasonable
 :::
 
 ---
 
-{/* Paste Heights & Distances PYQ here */}
+## Window & Tower (2000-style)
 
-:::note Questions coming soon
-Send me the Heights & Distances PYQ and I'll add them with solutions.
-:::
+<PYQCard year="Practice" marks="4" qnum="2000-type"
+  solution={<>
+    <strong>Let width of road = d m</strong><br/><br/>
+    <strong>Angle of depression to base (30°):</strong><br/>
+    tan30° = 8/d → 1/√3 = 8/d → d = 8√3 m<br/><br/>
+    <strong>Height of tower above window level:</strong><br/>
+    tan60° = x/d → √3 = x/(8√3) → x = 8√3 × √3 = 24 m<br/><br/>
+    <strong>Total height of tower</strong> = 24 + 8 = <strong>32 m</strong><br/>
+    <strong>Width of road</strong> = 8√3 ≈ <strong>13.86 m</strong>
+  </>}
+>
+  A window in a building is 8 m above the ground. From the window, the angle of elevation
+  of the top of a tower on the opposite side of the road is 60° and the angle of depression
+  of the base of the tower is 30°. Find (i) the height of the tower and (ii) the width of the road.
+</PYQCard>
+
+---
+
+## Tower with Given Trig Value (2001 Q1-style)
+
+<PYQCard year="Practice" marks="3" qnum="2001a-type"
+  solution={<>
+    cosθ = 0.6 = 3/5 → sinθ = 4/5, tanθ = 4/3<br/><br/>
+    <strong>Height of tower:</strong><br/>
+    tanθ = h/100 → 4/3 = h/100 → h = <strong>400/3 ≈ 133.3 m</strong><br/><br/>
+    <strong>Distance from top (hypotenuse):</strong><br/>
+    l = 100/cosθ = 100 ÷ (3/5) = <strong>500/3 ≈ 166.7 m</strong>
+  </>}
+>
+  A man stands 100 m from the base of a vertical tower. He observes the angle of elevation
+  of the top to be θ, where cosθ = 0.6. Find (i) the height of the tower and
+  (ii) the distance from the man to the top of the tower.
+</PYQCard>
+
+---
+
+## Walking Towards a Building (2001 Q2-style)
+
+<PYQCard year="Practice" marks="4" qnum="2001b-type"
+  solution={<>
+    Let height = h m, initial distance = d m<br/><br/>
+    tan30° = h/d → d = h√3 ...(i)<br/>
+    tan60° = h/(d−60) → √3(d−60) = h ...(ii)<br/><br/>
+    Sub (i) into (ii):<br/>
+    √3(h√3 − 60) = h → 3h − 60√3 = h → 2h = 60√3<br/>
+    h = 30√3 = <strong>30√3 m ≈ 51.96 m</strong>
+  </>}
+>
+  A man observes the angle of elevation of the top of a building to be 30°. He walks
+  60 m straight towards the building and finds the angle of elevation is now 60°.
+  Find the height of the building.
+</PYQCard>
+
+---
+
+## River and Tree (2003-style)
+
+<PYQCard year="Practice" marks="4" qnum="2003-type"
+  solution={<>
+    Let height of tree = h m, width of river = d m<br/><br/>
+    From point P (directly opposite): tan60° = h/d → h = d√3 ...(i)<br/>
+    From point Q (20 m further along bank): tan30° = h/(d+20)<br/>
+    (d+20)/√3 = d√3 → d+20 = 3d → 2d = 20 → <strong>d = 10 m</strong><br/><br/>
+    h = 10√3 ≈ <strong>17.32 m</strong>
+  </>}
+>
+  A tree stands vertically on the bank of a river. From a point P directly opposite on the
+  other bank, the angle of elevation of the top of the tree is 60°. From a point Q,
+  20 m further along the same bank from P, the angle of elevation is 30°.
+  Find the height of the tree and the width of the river.
+</PYQCard>
+
+---
+
+## Two Observers and Tower (2004-style)
+
+<PYQCard year="Practice" marks="4" qnum="2004-type"
+  solution={<>
+    From top of 70 m tower, depression of A = 60°, depression of B = 30°<br/><br/>
+    Distance to A: tan60° = 70/dA → dA = 70/√3 = 70√3/3 m<br/>
+    Distance to B: tan30° = 70/dB → dB = 70√3 m<br/><br/>
+    Distance AB = dB − dA = 70√3 − 70/√3 = 70(3−1)/√3 = 140/√3<br/>
+    = <strong>140√3/3 ≈ 80.83 m</strong>
+  </>}
+>
+  From the top of a vertical tower 70 m high, the angles of depression of two points A and B
+  on the same horizontal ground and on the same side of the tower are 60° and 30° respectively
+  (A is closer to the tower). Find the distance between A and B.
+</PYQCard>
+
+---
+
+## Shadow Problem (2006-style)
+
+<PYQCard year="Practice" marks="3" qnum="2006-type"
+  solution={<>
+    Let height of pole = h m<br/><br/>
+    Shadow at 30°: s₁ = h/tan30° = h√3<br/>
+    Shadow at 60°: s₂ = h/tan60° = h/√3<br/><br/>
+    Difference: h√3 − h/√3 = 3<br/>
+    h(3−1)/√3 = 3 → 2h/√3 = 3 → h = 3√3/2<br/>
+    h = <strong>3√3/2 ≈ 2.6 m</strong>
+  </>}
+>
+  The shadow of a vertical pole is 3 m longer when the angle of elevation of the sun is 30°
+  than when it is 60°. Find the height of the pole.
+</PYQCard>
+
+---
+
+## Hill and Distance Points (2007-style)
+
+<PYQCard year="Practice" marks="4" qnum="2007-type"
+  solution={<>
+    Let height = h m, initial distance = d m<br/><br/>
+    tan60° = h/d → h = d√3 ...(i)<br/>
+    tan30° = h/(d+40) → h = (d+40)/√3 ...(ii)<br/><br/>
+    From (i) and (ii): d√3 = (d+40)/√3 → 3d = d+40 → 2d = 40 → d = 20 m<br/>
+    h = 20√3 ≈ <strong>34.64 m</strong>, width = <strong>20 m</strong>
+  </>}
+>
+  A person on the bank of a river observes that the angle of elevation of a tree on the
+  opposite bank is 60°. When he moves 40 m back from the bank, the angle of elevation
+  becomes 30°. Find the height of the tree and the width of the river.
+</PYQCard>
+
+---
+
+## Pole and Tower (2008-style)
+
+<PYQCard year="Practice" marks="4" qnum="2008-type"
+  solution={<>
+    Let horizontal distance = d m, tower height = H m<br/><br/>
+    <strong>Depression of tower's foot (30°):</strong><br/>
+    tan30° = 6/d → d = 6√3 m<br/><br/>
+    <strong>Elevation of tower's top (60°):</strong><br/>
+    The top is (H−6) m above the pole top level<br/>
+    tan60° = (H−6)/d → √3 = (H−6)/(6√3) → H−6 = 18 → H = <strong>24 m</strong><br/><br/>
+    Horizontal distance = 6√3 ≈ <strong>10.39 m</strong>
+  </>}
+>
+  A vertical pole 6 m tall and a vertical tower stand on the same horizontal ground.
+  From the top of the pole, the angle of elevation of the top of the tower is 60°
+  and the angle of depression of the foot of the tower is 30°.
+  Find the height of the tower and the horizontal distance between them.
+</PYQCard>
+
+---
+
+## Lighthouse and Two Ships (2010-style)
+
+<PYQCard year="Practice" marks="4" qnum="2010-type"
+  solution={<>
+    <strong>Ship A (closer, depression 45°):</strong><br/>
+    tan45° = 75/dA → dA = 75 m<br/><br/>
+    <strong>Ship B (farther, depression 30°):</strong><br/>
+    tan30° = 75/dB → dB = 75√3 m<br/><br/>
+    <strong>Distance between ships:</strong><br/>
+    = 75√3 − 75 = 75(√3−1) ≈ <strong>54.9 m</strong>
+  </>}
+>
+  From the top of a lighthouse 75 m high, the angles of depression of two ships on the
+  same side of the lighthouse are 45° and 30°. Find the distance between the two ships.
+</PYQCard>
+
+---
+
+## Building and Lamp Post (2012-style)
+
+<PYQCard year="Practice" marks="4" qnum="2012-type"
+  solution={<>
+    Let horizontal distance = d m, extra height of lamp above building = x m<br/><br/>
+    <strong>Depression of lamp base (30°):</strong><br/>
+    tan30° = 20/d → d = 20√3 m<br/><br/>
+    <strong>Elevation of lamp top (45°):</strong><br/>
+    tan45° = x/d → x = d = 20√3 m<br/><br/>
+    <strong>Height of lamp post</strong> = x + 20 = 20√3 + 20 = 20(√3+1) ≈ <strong>54.64 m</strong>
+  </>}
+>
+  From the top of a building 20 m high, the angle of depression of the foot of a lamp post
+  is 30° and the angle of elevation of its top is 45°. Find the height of the lamp post.
+</PYQCard>
+
+---
+
+## Aeroplane Over River (2014-style)
+
+<PYQCard year="Practice" marks="4" qnum="2014-type"
+  solution={<>
+    Let height of plane = h m<br/>
+    Plane is above a point between the two banks.<br/><br/>
+    Depression to bank A (45°): dA = h (tan45°=1)<br/>
+    Depression to bank B (30°): dB = h√3<br/><br/>
+    Width of river = dA + dB = h + h√3 = h(1+√3) = 100<br/>
+    h = 100/(1+√3) = 100(√3−1)/[(√3+1)(√3−1)] = 100(√3−1)/2<br/>
+    h = 50(√3−1) ≈ <strong>36.6 m</strong>
+  </>}
+>
+  An aeroplane flies horizontally and observes two points on opposite banks of a river
+  directly below. The angles of depression of the two points are 45° and 30°.
+  If the width of the river is 100 m, find the height at which the aeroplane is flying.
+</PYQCard>
+
+---
+
+## Two Towers (2015-style)
+
+<PYQCard year="Practice" marks="4" qnum="2015-type"
+  solution={<>
+    <strong>Height of Tower 1 (angle from foot of Tower 2 = 30°):</strong><br/>
+    tan30° = h₁/120 → h₁ = 120/√3 = 40√3 ≈ <strong>69.28 m</strong><br/><br/>
+    <strong>Height of Tower 2 (angle from foot of Tower 1 = 60°):</strong><br/>
+    tan60° = h₂/120 → h₂ = 120√3 ≈ <strong>207.85 m</strong>
+  </>}
+>
+  Two vertical towers stand 120 m apart on horizontal ground. The angle of elevation of
+  the top of the first tower from the foot of the second is 30° and the angle of elevation
+  of the top of the second tower from the foot of the first is 60°.
+  Find the heights of the two towers.
+</PYQCard>
+
+---
+
+## Aeroplane and Two Ships (2016-style)
+
+<PYQCard year="Practice" marks="4" qnum="2016-type"
+  solution={<>
+    Ships are on the same side of the aeroplane.<br/><br/>
+    <strong>Ship A (depression 45°):</strong><br/>
+    tan45° = 3000/dA → dA = 3000 m<br/><br/>
+    <strong>Ship B (depression 30°):</strong><br/>
+    tan30° = 3000/dB → dB = 3000√3 m<br/><br/>
+    <strong>Distance between ships</strong> = 3000√3 − 3000 = 3000(√3−1) ≈ <strong>1196 m</strong>
+  </>}
+>
+  An aeroplane at a height of 3000 m observes two ships sailing in the same direction.
+  The angles of depression of the ships are 45° and 30°. Find the distance between
+  the two ships.
+</PYQCard>
+
+---
+
+## Two Towers — Elevation and Depression (2018-style)
+
+<PYQCard year="Practice" marks="4" qnum="2018-type"
+  solution={<>
+    Let horizontal distance = d m, tower B height = H m<br/><br/>
+    <strong>Depression of foot of B (30°):</strong><br/>
+    tan30° = 25/d → d = 25√3 m<br/><br/>
+    <strong>Elevation of top of B (45°):</strong><br/>
+    tan45° = (H−25)/d → H−25 = 25√3 → H = 25+25√3 = 25(1+√3) ≈ <strong>68.3 m</strong><br/><br/>
+    Horizontal distance = 25√3 ≈ <strong>43.3 m</strong>
+  </>}
+>
+  Tower A is 25 m tall. From the top of tower A, the angle of elevation of the top of
+  tower B is 45° and the angle of depression of the foot of tower B is 30°.
+  Find the height of tower B and the horizontal distance between the two towers.
+</PYQCard>
+
+---
+
+## Cliff and Tower (2020-style)
+
+<PYQCard year="Practice" marks="4" qnum="2020-type"
+  solution={<>
+    Cliff height = 150 m, horizontal distance = d m, tower height = H m<br/><br/>
+    <strong>Depression of tower base (30°):</strong><br/>
+    tan30° = 150/d → d = 150√3 m<br/><br/>
+    <strong>Elevation of tower top (45°):</strong><br/>
+    tan45° = (H−150)/d → H−150 = 150√3 → H = 150+150√3 = 150(1+√3) ≈ <strong>409.8 m</strong>
+  </>}
+>
+  From the top of a cliff 150 m high, the angle of depression of the base of a tower is 30°
+  and the angle of elevation of the top of the tower is 45°. Find the height of the tower.
+</PYQCard>
+
+---
+
+## Tower and Ships on Opposite Sides (2023-style)
+
+<PYQCard year="Practice" marks="4" qnum="2023-type"
+  solution={<>
+    <strong>Ship A (depression 60°):</strong><br/>
+    tan60° = 100/dA → dA = 100/√3 = 100√3/3 m<br/><br/>
+    <strong>Ship B (depression 45°):</strong><br/>
+    tan45° = 100/dB → dB = 100 m<br/><br/>
+    <strong>Distance between ships</strong> = dA + dB = 100√3/3 + 100 = 100(√3+3)/3 ≈ <strong>157.7 m</strong>
+  </>}
+>
+  From the top of a tower 100 m high, the angles of depression of two ships on
+  opposite sides of the tower are 60° and 45°. Find the distance between the two ships.
+</PYQCard>
+
+---
+
+## Tree Observed from Opposite Sides (2024-style)
+
+<PYQCard year="Practice" marks="3" qnum="2024-type"
+  solution={<>
+    <strong>From point A (45°):</strong><br/>
+    tan45° = 100/dA → dA = 100 m<br/><br/>
+    <strong>From point B (30°):</strong><br/>
+    tan30° = 100/dB → dB = 100√3 m<br/><br/>
+    <strong>Distance AB</strong> = 100 + 100√3 = 100(1+√3) ≈ <strong>273.2 m</strong>
+  </>}
+>
+  A tree 100 m tall stands vertically on level ground. From two points A and B on
+  opposite sides of the tree, the angles of elevation of the top are 45° and 30°
+  respectively. Find the distance between A and B.
+</PYQCard>
+
+---
+
+## Building and Tower — Elevation & Depression (2025 Q1-style)
+
+<PYQCard year="Practice" marks="4" qnum="2025a-type"
+  solution={<>
+    Let horizontal distance = d m, tower height = H m<br/><br/>
+    <strong>Depression of tower foot (30°):</strong><br/>
+    tan30° = 20/d → d = 20√3 m<br/><br/>
+    <strong>Elevation of tower top (60°):</strong><br/>
+    tan60° = (H−20)/d → √3 = (H−20)/(20√3) → H−20 = 60 → H = <strong>80 m</strong>
+  </>}
+>
+  A building 20 m high stands on one side of a road. A tower stands on the other side.
+  From the top of the building, the angle of elevation of the top of the tower is 60°
+  and the angle of depression of the foot of the tower is 30°. Find the height of the tower.
+</PYQCard>
+
+---
+
+## Hill and Tower (2025 Q2-style)
+
+<PYQCard year="Practice" marks="4" qnum="2025b-type"
+  solution={<>
+    Let horizontal distance = d m, hill height = h m<br/><br/>
+    <strong>From foot of tower, elevation of hill = 60°:</strong><br/>
+    tan60° = h/d → h = d√3 ...(i)<br/><br/>
+    <strong>From foot of hill, elevation of tower = 45°:</strong><br/>
+    tan45° = 50/d → d = 50 m<br/><br/>
+    From (i): h = 50√3 ≈ <strong>86.6 m</strong><br/>
+    Horizontal distance = <strong>50 m</strong>
+  </>}
+>
+  The angle of elevation of the top of a hill from the foot of a tower is 60° and the
+  angle of elevation of the top of the tower from the foot of the hill is 45°.
+  If the tower is 50 m tall, find the height of the hill and the horizontal distance
+  between them.
+</PYQCard>
