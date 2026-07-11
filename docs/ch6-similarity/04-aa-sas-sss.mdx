@@ -8,81 +8,224 @@ sidebar_position: 5
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { AACondition, SASCondition, SSSCondition } from '@site/src/components/SimilarityConditions';
+import { ThirdAngleForced, AngleSources, AAStepByStep } from '@site/src/components/AADeepDive';
+import { IncludedAngleDiagram, DecisionTree } from '@site/src/components/SASDeepDive';
 
 # 4. The Three Conditions — AA, SAS, SSS
 
-## The central question of this chapter
+## Why do we need conditions at all?
 
-Given two triangles — how do you PROVE they are similar without measuring every angle and every side?
+In the previous pages you learned that similar triangles have **equal angles** and **proportional sides**. But to check ALL of that for two triangles, you'd need to measure 3 angles and 3 sides — 6 measurements every time.
 
-Mathematicians discovered that you don't need to check everything. Just three shortcuts work.
+Mathematicians discovered shortcuts. In some cases, checking just **2 angles** or **1 angle + 2 sides** is enough to guarantee similarity. These shortcuts are the three conditions.
 
-:::note The three conditions
-If any ONE of these is true, the triangles are similar:
-1. **AA** — Two pairs of angles are equal
-2. **SAS** — One pair of angles is equal AND the sides around that angle are proportional
-3. **SSS** — All three pairs of corresponding sides are proportional
+:::note The three conditions — overview
+| Condition | What to check | How much work |
+|-----------|--------------|--------------|
+| **AA** | 2 pairs of equal angles | Easiest — most common |
+| **SAS** | 1 equal angle + 2 proportional sides AROUND it | Medium |
+| **SSS** | All 3 pairs of sides proportional | Most work |
+
+**In 80% of ICSE questions: use AA.**
 :::
 
 ---
 
 ## Condition 1 — AA (Angle-Angle)
 
-### The idea
+### Start here: why 2 angles are enough
 
-If two angles of one triangle equal two angles of another triangle — the triangles are similar.
+Before we look at any triangles, let's understand ONE fact that makes AA possible:
 
-**Why only two angles?** Because angles in a triangle always add up to 180°. So if two angles match, the third one is forced to match too (180° minus the other two).
+> **In any triangle, all three angles add up to 180°.**
+> So if you know TWO angles, the third is completely determined — it has no choice.
 
-$$\angle A = \angle P \text{ and } \angle B = \angle Q \implies \angle C = \angle R \text{ automatically}$$
+<ThirdAngleForced />
 
-### Visualised
+**The implication:** If $\angle A = \angle P$ and $\angle B = \angle Q$ in two triangles, then mathematically:
+
+$$\angle C = 180° - \angle A - \angle B = 180° - \angle P - \angle Q = \angle R$$
+
+The third angle MUST match too. So checking just 2 is genuinely sufficient.
+
+---
+
+### The AA condition stated precisely
+
+:::note AA Condition
+If **two angles** of one triangle are equal to **two angles** of another triangle, the triangles are similar.
+
+If $\angle A = \angle P$ and $\angle B = \angle Q$, then $\triangle ABC \sim \triangle PQR$.
+:::
 
 <AACondition />
 
-### When to use AA
+---
 
-AA is the **most commonly used** condition in ICSE problems because:
-- You only need to spot 2 equal angles
-- Parallel lines automatically create equal corresponding angles (very common in figures)
-- A shared angle counts as a "free" equal angle
+### Where do equal angles come from? (The 3 sources)
 
-### AA in practice
+This is the part students often miss. In an exam figure, equal angles don't appear by magic — they come from one of three geometric facts. You need to recognise these on sight.
+
+<AngleSources />
 
 <Tabs>
-  <TabItem value="parallel" label="Using Parallel Lines">
+  <TabItem value="common" label="Source 1 — Common Angle">
 
-**Figure:** In $\triangle ABC$, $DE \parallel BC$ where $D$ is on $AB$ and $E$ is on $AC$.
+**A shared vertex gives a common angle.**
 
-**Why is $\triangle ADE \sim \triangle ABC$?**
+When two triangles share a vertex point, the angle at that vertex is **the same angle** in both triangles.
 
-- $\angle A = \angle A$ — **common angle** (shared by both triangles)
-- $\angle ADE = \angle ABC$ — **corresponding angles** (since $DE \parallel BC$)
+**Example:** $\triangle ABC$ and $\triangle ADE$ both have vertex $A$ at the top.
 
-Two angles match → **AA** → $\triangle ADE \sim \triangle ABC$
+$\angle DAE = \angle BAC$ — they are literally the SAME angle.
 
-  </TabItem>
-  <TabItem value="shared" label="Using a Shared Angle">
-
-**Figure:** In $\triangle ABC$, $\angle ADB = 90°$ where $D$ is the foot of altitude from $A$.
-
-**Why is $\triangle ABD \sim \triangle ACD$?**
-
-- $\angle ADB = \angle ADC = 90°$
-- $\angle B = \angle B$ in $\triangle ABD$, $\angle A = \angle A$ in $\triangle ACD$...
-
-Actually: $\angle ABD$ in $\triangle ABD$ and $\angle DAC$ in $\triangle ACD$ — these are complementary pairs. A shared vertex creates common angles.
+✅ **Write in proof:** "$\angle A$ is common to both triangles"
 
   </TabItem>
-  <TabItem value="vertical" label="Vertically Opposite Angles">
+  <TabItem value="parallel" label="Source 2 — Parallel Lines">
 
-**Figure:** Diagonals of a quadrilateral intersect at $O$.
+**Parallel lines create equal corresponding angles.**
 
-$\angle AOB = \angle COD$ — **vertically opposite angles** (equal)
+When a line $DE$ is parallel to $BC$, the transversal $AB$ cuts both lines creating **corresponding angles**.
 
-If also $\angle OAB = \angle OCD$ — **alternate angles** (if $AB \parallel CD$)
+$\angle ADE = \angle ABC$ (corresponding angles, $DE \parallel BC$)
 
-Then $\triangle AOB \sim \triangle COD$ by **AA**.
+Similarly: $\angle AED = \angle ACB$
+
+✅ **Write in proof:** "$\angle ADE = \angle ABC$ (corresponding angles, $DE \parallel BC$)"
+
+  </TabItem>
+  <TabItem value="vertical" label="Source 3 — Vertically Opposite">
+
+**Two lines crossing create equal vertically opposite angles.**
+
+When diagonals of a quadrilateral cross at point $O$:
+
+$\angle AOB = \angle COD$ (vertically opposite angles)
+
+This is very common in trapezium problems where diagonals intersect.
+
+✅ **Write in proof:** "$\angle AOB = \angle COD$ (vertically opposite angles)"
+
+  </TabItem>
+</Tabs>
+
+---
+
+### AA — Step by step example (the most common ICSE type)
+
+<AAStepByStep />
+
+:::tip Exam format — write it exactly like this
+```
+In △ADE and △ABC:
+  ∠DAE = ∠BAC    ... (common angle at A)
+  ∠ADE = ∠ABC    ... (corresponding angles, DE ∥ BC)
+∴ △ADE ~ △ABC    ... (AA)
+```
+Two reasons, two angles, one conclusion. That's 3 marks in ICSE.
+:::
+
+---
+
+### AA — More examples with increasing difficulty
+
+<Tabs>
+  <TabItem value="aa1" label="Example 1 — Basic">
+
+**Figure:** $\triangle ABC$ with $\angle A = 65°$, $\angle B = 50°$. Another $\triangle PQR$ with $\angle P = 65°$, $\angle Q = 50°$.
+
+**Proof:**
+```
+In △ABC and △PQR:
+  ∠A = ∠P = 65°   ... (given)
+  ∠B = ∠Q = 50°   ... (given)
+∴ △ABC ~ △PQR     ... (AA)
+```
+
+**Note:** We didn't need to check $\angle C$ and $\angle R$ — they're automatically both $180° - 65° - 50° = 65°$.
+
+  </TabItem>
+  <TabItem value="aa2" label="Example 2 — Shared Angle">
+
+**Figure:** In $\triangle ABC$, $D$ is on $AB$ and $E$ is on $AC$ such that $DE \parallel BC$.
+
+**Prove $\triangle ADE \sim \triangle ABC$.**
+
+```
+In △ADE and △ABC:
+  ∠DAE = ∠BAC   ... (same angle — A is common vertex)
+  ∠ADE = ∠ABC   ... (DE ∥ BC → corresponding angles)
+∴ △ADE ~ △ABC   ... (AA)
+```
+
+**Careful with letter order:** A matches A (common), D matches B (both have angle β), E matches C.
+So the correct statement is $\triangle ADE \sim \triangle ABC$ — NOT $\triangle ADE \sim \triangle BAC$.
+
+  </TabItem>
+  <TabItem value="aa3" label="Example 3 — Diagonals">
+
+**Figure:** $ABCD$ is a trapezium with $AB \parallel CD$. Diagonals meet at $O$. Prove $\triangle AOB \sim \triangle COD$.
+
+```
+In △AOB and △COD:
+  ∠AOB = ∠COD   ... (vertically opposite angles)
+  ∠OAB = ∠OCD   ... (AB ∥ CD → alternate angles)
+∴ △AOB ~ △COD   ... (AA)
+```
+
+  </TabItem>
+  <TabItem value="aa4" label="Example 4 — Right Angles">
+
+**Figure:** In $\triangle ABC$, $\angle BAC = 90°$. $AD \perp BC$ where $D$ is on $BC$. Prove $\triangle ABD \sim \triangle CAD$.
+
+**Trick:** Both triangles have a 90° angle. Find ONE more matching angle.
+
+```
+In △ABD and △CAD:
+  ∠ADB = ∠CDA = 90°   ... (AD ⊥ BC, given)
+  ∠ABD = ∠CAD         ... (both = 90° − ∠BAD → complementary)
+∴ △ABD ~ △CAD        ... (AA)
+```
+
+**Why $\angle ABD = \angle CAD$?** In $\triangle ABD$: $\angle ABD + \angle BAD = 90°$. In $\triangle CAD$: $\angle CAD + \angle ACD = 90°$. But $\angle ACD = \angle ABD$ (same angle from the original). So $\angle BAD = \angle ACD$... work through it carefully.
+
+  </TabItem>
+</Tabs>
+
+---
+
+### AA — Edge cases and traps
+
+<Tabs>
+  <TabItem value="e1" label="❌ Only 1 angle equal">
+
+**Wrong:** "∠A = ∠P (given). Therefore △ABC ~ △PQR by AA."
+
+**Why wrong:** AA requires **two** pairs of equal angles. One is not enough — you could have the same angle but completely different other angles.
+
+**Fix:** Find the second pair before concluding.
+
+  </TabItem>
+  <TabItem value="e2" label="❌ Wrong letter order">
+
+**Wrong:** $\angle A = \angle Q$ and $\angle B = \angle P$. Writing "$\triangle ABC \sim \triangle PQR$."
+
+**Why wrong:** If A matches Q and B matches P, then the correct statement is $\triangle ABC \sim \triangle QPR$ (Q first, P second, R third).
+
+**Rule:** The position of the letter in the similarity statement MUST match the vertex with the equal angle.
+
+  </TabItem>
+  <TabItem value="e3" label="✅ When only 1 angle is given">
+
+**Situation:** You know $\angle A = \angle P$ but no other angles are given.
+
+**What to do:** Look for a reason why another pair might be equal:
+1. Is there a common angle?
+2. Are there parallel lines creating corresponding angles?
+3. Are there right angles given?
+
+If you find none, AA doesn't apply — try SAS or SSS.
 
   </TabItem>
 </Tabs>
@@ -91,50 +234,82 @@ Then $\triangle AOB \sim \triangle COD$ by **AA**.
 
 ## Condition 2 — SAS (Side-Angle-Side)
 
-### The idea
+### The word "included" explained carefully
 
-One angle of the first triangle equals one angle of the second triangle, AND the two sides that form that angle are in the same ratio in both triangles.
+SAS sounds simple but has one word that confuses everyone: **included**.
 
-$$\angle A = \angle P \quad \text{and} \quad \dfrac{AB}{PQ} = \dfrac{AC}{PR}$$
+The equal angle must be **included** between the two proportional sides. This means: the angle must be at the vertex where those two sides meet.
 
-Then $\triangle ABC \sim \triangle PQR$.
+<IncludedAngleDiagram />
 
-### The critical word: INCLUDED
+**Think of it this way:** If you pick any vertex of a triangle, that vertex has exactly two sides coming out of it. The angle at that vertex is "included" by those two sides — it sits between them.
 
-The equal angle must be the angle **between** (included by) the two proportional sides. An angle at one corner, with the two sides of that corner being the proportional ones.
+---
+
+### SAS stated precisely
+
+:::note SAS Condition
+If **one angle** of a triangle equals one angle of another triangle, AND the **two sides FORMING that angle** are proportional, the triangles are similar.
+
+If $\angle B = \angle Q$ AND $\dfrac{AB}{PQ} = \dfrac{BC}{QR}$, then $\triangle ABC \sim \triangle PQR$.
+:::
 
 <SASCondition />
 
-### SAS in practice
+---
+
+### How to apply SAS — step by step
+
+**Step 1:** Identify the equal angles (which vertices match).
+
+**Step 2:** Check the two sides AT each of those vertices (the included sides).
+
+**Step 3:** Compute their ratios. Are they equal?
+
+**Step 4:** If yes → SAS. Write the conclusion.
 
 <Tabs>
-  <TabItem value="example" label="Worked Example">
+  <TabItem value="sas1" label="Example 1 — Basic SAS">
 
-In $\triangle ABC$ and $\triangle PQR$:
-- $\angle B = \angle Q = 60°$
-- $AB = 4$, $PQ = 6$
-- $BC = 6$, $QR = 9$
+**Given:** $\triangle ABC$ and $\triangle PQR$ with $\angle B = \angle Q = 70°$, $AB = 4$, $PQ = 6$, $BC = 6$, $QR = 9$.
 
-**Check:** $\dfrac{PQ}{AB} = \dfrac{6}{4} = 1.5$ and $\dfrac{QR}{BC} = \dfrac{9}{6} = 1.5$ ✓
+**Step 1:** Equal angle at B and Q. So B↔Q in the similarity.
 
-Equal ratio + included angle $\angle B = \angle Q$
+**Step 2:** Sides at B: $AB$ and $BC$. Sides at Q: $PQ$ and $QR$.
 
-**Conclusion:** $\triangle ABC \sim \triangle PQR$ by **SAS** with $k = 1.5$
+**Step 3:** $\dfrac{PQ}{AB} = \dfrac{6}{4} = 1.5$ and $\dfrac{QR}{BC} = \dfrac{9}{6} = 1.5$. Equal ✓
+
+**Proof:**
+```
+In △ABC and △PQR:
+  ∠B = ∠Q = 70°         ... (given)
+  AB/PQ = BC/QR = 3/2   ... (given: 4/6 = 6/9 = 2/3)
+∴ △ABC ~ △PQR           ... (SAS)
+```
 
   </TabItem>
-  <TabItem value="trap" label="⚠️ The SAS Trap">
+  <TabItem value="sas2" label="Example 2 — Find Unknown">
 
-**What goes wrong:** Students use SAS when the equal angle is NOT between the two proportional sides.
+**Given:** $\triangle DEF \sim \triangle XYZ$ by SAS. $\angle E = \angle Y$, $DE = 5$, $XY = 10$, $EF = 8$. Find $YZ$.
 
-**Example of wrong usage:**
+Since $\angle E = \angle Y$ and SAS applies:
 
-$\angle A = \angle P$ (at vertex A and P), sides $BC = 5$ and $QR = 10$ (ratio 2), sides $AB = 3$ and $PQ = 6$ (ratio 2).
+$\dfrac{XY}{DE} = \dfrac{YZ}{EF}$
 
-But wait — $\angle A$ is the angle at vertex $A$, which is between sides $AB$ and $AC$. The side $BC$ is NOT adjacent to $\angle A$.
+$\dfrac{10}{5} = \dfrac{YZ}{8}$
 
-So $BC/QR$ cannot be used for SAS with angle $A$.
+$YZ = 2 \times 8 = 16$
 
-**Rule:** Only use sides that meet at the equal angle.
+  </TabItem>
+  <TabItem value="sas3" label="❌ SAS Trap — Wrong Angle">
+
+**Wrong attempt:** $\angle A = \angle P$, $AB = 3$, $PQ = 6$, $BC = 4$, $QR = 8$. "SAS applies."
+
+**Why wrong:** $\angle A$ is at vertex A, which is between sides $AB$ and $AC$. But $BC$ is the side opposite to $A$ — NOT adjacent to $A$.
+
+For SAS at $\angle A$: you need sides $AB$ and $AC$ to be proportional (not $AB$ and $BC$).
+
+**Moral:** The two proportional sides MUST both come out of the equal angle's vertex.
 
   </TabItem>
 </Tabs>
@@ -145,117 +320,124 @@ So $BC/QR$ cannot be used for SAS with angle $A$.
 
 ### The idea
 
-All three pairs of corresponding sides are in the same ratio.
+If ALL THREE pairs of corresponding sides are in the same ratio, the triangles must be similar.
 
-$$\dfrac{AB}{PQ} = \dfrac{BC}{QR} = \dfrac{CA}{RP} = k$$
-
-If all three ratios are equal → the triangles are similar.
+:::note SSS Condition
+If $\dfrac{AB}{PQ} = \dfrac{BC}{QR} = \dfrac{CA}{RP}$, then $\triangle ABC \sim \triangle PQR$.
+:::
 
 <SSSCondition />
 
-### SSS in practice
+---
+
+### How to apply SSS — step by step
+
+**The challenge with SSS:** You need to know which sides correspond. Unlike AA, where angles tell you the matching, SSS requires you to figure out the matching from the side ratios themselves.
+
+**Method:** Sort all sides from smallest to largest in each triangle. Match smallest↔smallest, middle↔middle, largest↔largest. Then check all three ratios.
 
 <Tabs>
-  <TabItem value="check" label="How to Check SSS">
+  <TabItem value="sss1" label="Example 1 — Basic">
 
-**Step 1:** List the sides of both triangles in order (smallest to largest or matched by position).
+$\triangle ABC$: sides 3, 4, 5. $\triangle PQR$: sides 6, 8, 10.
 
-**Step 2:** Compute each ratio: $\dfrac{\text{new}}{\text{original}}$.
+**Sort and match:**
 
-**Step 3:** If all three ratios are identical → SSS → Similar.
+| △ABC | △PQR | Ratio |
+|------|------|-------|
+| 3 (BC, smallest) | 6 (QR, smallest) | 6/3 = **2** |
+| 4 (AB, middle)   | 8 (PQ, middle)   | 8/4 = **2** |
+| 5 (CA, largest)  | 10 (RP, largest) | 10/5 = **2** |
 
-**Example:**
-
-$\triangle ABC$: sides 5, 7, 9. $\triangle PQR$: sides 10, 14, 18.
-
-$10/5 = 2$, $14/7 = 2$, $18/9 = 2$. All equal → **SSS** → $\triangle ABC \sim \triangle PQR$ with $k = 2$.
+All ratios = 2. $\therefore \triangle ABC \sim \triangle PQR$ **(SSS)** with $k = 2$.
 
   </TabItem>
-  <TabItem value="not-similar" label="When SSS Fails">
+  <TabItem value="sss2" label="Example 2 — NOT similar">
 
-**Example:**
+$\triangle ABC$: sides 4, 6, 8. $\triangle PQR$: sides 6, 9, 13.
 
-$\triangle ABC$: sides 3, 4, 5. $\triangle PQR$: sides 6, 9, 10.
+| △ABC | △PQR | Ratio |
+|------|------|-------|
+| 4 | 6 | 6/4 = **1.5** |
+| 6 | 9 | 9/6 = **1.5** |
+| 8 | 13 | 13/8 = **1.625** |
 
-$6/3 = 2$, $9/4 = 2.25$, $10/5 = 2$. 
+Third ratio differs. **Not similar.** Even one unequal ratio breaks SSS.
 
-The middle ratio is different. **NOT similar.**
+  </TabItem>
+  <TabItem value="sss3" label="❌ SSS Trap — Wrong pairing">
 
-Even one unequal ratio breaks similarity.
+**Wrong:** $\triangle ABC$ has sides 3, 5, 7. $\triangle PQR$ has sides 6, 10, 14.
+
+Student checks: $6/3=2$, $14/5=2.8$ ← ❌
+
+**Why wrong:** They matched 14 (largest of PQR) with 5 (middle of ABC). Always pair same rank sides.
+
+**Correct:** 6/3=2, 10/5=2, 14/7=2. Similar! ✓
 
   </TabItem>
 </Tabs>
 
 ---
 
-## Comparing all three conditions
+## Which condition to use? — Decision Tree
 
-| Condition | What you check | Most common use |
-|-----------|---------------|----------------|
-| **AA** | 2 pairs of equal angles | Parallel lines, shared angles, alternate angles |
-| **SAS** | 1 equal angle + the 2 sides around it are proportional | When angles are given with some sides |
-| **SSS** | All 3 side ratios equal | When all sides are given, no angles |
-
-:::tip Which condition to use in an exam?
-- **Parallel lines in the figure?** → Almost always **AA**
-- **One angle given, some sides given?** → Try **SAS**
-- **All sides given, no angles?** → **SSS**
-- **Two angles mentioned or provable?** → **AA** (easiest)
-:::
+<DecisionTree />
 
 ---
 
-## Writing the proof — exam format
-
-ICSE expects you to state the condition clearly. Here is the exact format:
-
-```
-In △ABC and △PQR:
-  ∠A = ∠P    ... (given / alternate angles / corresponding angles)
-  ∠B = ∠Q    ... (give reason)
-∴ △ABC ~ △PQR    ... (AA)
-```
-
-Always:
-1. Write the two triangles being compared
-2. State the equal angles / proportional sides
-3. Give a reason for each
-4. State the conclusion with the condition used
-
----
-
-## Quick practice
+## Practice — identify the correct condition
 
 <Tabs>
-  <TabItem value="q1" label="Q1">
+  <TabItem value="p1" label="Practice 1">
 
-In $\triangle ABC$, $DE \parallel BC$ ($D$ on $AB$, $E$ on $AC$). Write a similarity statement and state the condition.
+**Figure:** $\triangle LMN$ with $LM = 4$, $MN = 6$, $\angle M = 50°$. $\triangle XYZ$ with $XY = 8$, $YZ = 12$, $\angle Y = 50°$.
+
+Which condition? What is the similarity statement?
 
   </TabItem>
   <TabItem value="a1" label="Answer 1">
 
-In $\triangle ADE$ and $\triangle ABC$:
+$\angle M = \angle Y = 50°$ (equal included angle).
 
-- $\angle DAE = \angle BAC$ (common angle at $A$)
-- $\angle ADE = \angle ABC$ (corresponding angles, $DE \parallel BC$)
+Check sides at M: LM and MN. At Y: XY and YZ.
 
-$\therefore \triangle ADE \sim \triangle ABC$ (AA)
+$\dfrac{XY}{LM} = \dfrac{8}{4} = 2$ and $\dfrac{YZ}{MN} = \dfrac{12}{6} = 2$ ✓
 
-**Note the order:** $A$ matches $A$, $D$ matches $B$, $E$ matches $C$.
+**SAS:** $\triangle LMN \sim \triangle XYZ$ with $k = 2$.
 
   </TabItem>
-  <TabItem value="q2" label="Q2">
+  <TabItem value="p2" label="Practice 2">
 
-$\triangle PQR$ has $PQ = 6$, $QR = 8$, $PR = 10$. $\triangle XYZ$ has $XY = 3$, $YZ = 4$, $XZ = 5$.
+**Figure:** In $\triangle PQR$, $S$ is a point on $QR$ such that $PS \perp QR$. Given $\angle QPR = 90°$.
 
-Are they similar? State the condition.
+Prove $\triangle PQS \sim \triangle RPS$.
 
   </TabItem>
   <TabItem value="a2" label="Answer 2">
 
-$\dfrac{PQ}{XY} = \dfrac{6}{3} = 2$, $\quad \dfrac{QR}{YZ} = \dfrac{8}{4} = 2$, $\quad \dfrac{PR}{XZ} = \dfrac{10}{5} = 2$
+```
+In △PQS and △RPS:
+  ∠PSQ = ∠PSR = 90°   ... (PS ⊥ QR, given)
+  ∠PQS = ∠RPS         ... (both = 90° − ∠QPS, since ∠QPR = 90°)
+∴ △PQS ~ △RPS        ... (AA)
+```
 
-All ratios equal 2. $\therefore \triangle PQR \sim \triangle XYZ$ **(SSS)** with $k = 2$.
+Note: $\angle QPS + \angle PQS = 90°$ (in $\triangle PQS$). Also $\angle RPS + \angle PRS = 90°$ (in $\triangle RPS$). But $\angle PRS = \angle PQS$... wait, actually: $\angle QPS + \angle SPR = 90°$ (since $\angle QPR = 90°$). So $\angle PQS = 90° - \angle QPS$ and $\angle RPS = 90° - \angle QPS$. Equal! ✓
+
+  </TabItem>
+  <TabItem value="p3" label="Practice 3">
+
+**Figure:** Two triangles with sides: $\triangle ABC$: 5, 7, 9. $\triangle PQR$: 10, 14, 18.
+
+Are they similar? State the condition and scale factor.
+
+  </TabItem>
+  <TabItem value="a3" label="Answer 3">
+
+Check ratios (sort both sets): 5/10? No — match large to large: 10/5=2, 14/7=2, 18/9=2. All equal.
+
+**SSS:** $\triangle ABC \sim \triangle PQR$ with $k = 2$.
 
   </TabItem>
 </Tabs>
@@ -264,11 +446,15 @@ All ratios equal 2. $\therefore \triangle PQR \sim \triangle XYZ$ **(SSS)** with
 
 ## Summary
 
-:::tip Remember
-- **AA** — 2 angles equal (third is automatic) — most common
-- **SAS** — 1 angle equal AND the sides AROUND that angle are proportional
-- **SSS** — all 3 side ratios equal
-- In ICSE: AA appears in 80% of questions — master it first
+:::tip The complete picture
+| | AA | SAS | SSS |
+|--|----|----|-----|
+| **Check** | 2 angle pairs | 1 angle + 2 adjacent side ratios | 3 side ratios |
+| **Key word** | Common / corresponding / vertically opposite | **Included** angle | All three **equal ratios** |
+| **Exam frequency** | 🔥 Most common | Medium | Less common |
+| **Easiest mistake** | Wrong letter order | Angle not included | Wrong side pairing |
+
+**For every proof:** state the equal angles/sides, give a reason for each, then write the conclusion with the condition name.
 :::
 
-**Next:** [The hardest skill — which sides actually correspond? →](./05-corresponding-sides)
+**Next:** [The hardest skill — identifying which sides correspond →](./05-corresponding-sides)
