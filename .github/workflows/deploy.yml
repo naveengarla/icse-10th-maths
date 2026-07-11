@@ -1,9 +1,13 @@
-name: Deploy to GitHub Pages
+# Deployment is handled locally via: GIT_USER=naveengarla npm run deploy
+# This workflow is disabled to avoid conflicting with local deploys.
+# To re-enable, uncomment the 'on:' block below.
+
+# on:
+#   push:
+#     branches: [main]
 
 on:
-  push:
-    branches: [main]
-  workflow_dispatch:
+  workflow_dispatch:  # manual trigger only
 
 permissions:
   contents: write
@@ -14,22 +18,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build site
-        run: npm run build
+      - run: npm ci
+      - run: npm run build
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
-
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
