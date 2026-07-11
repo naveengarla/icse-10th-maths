@@ -10,8 +10,9 @@ import PYQCard from '@site/src/components/PYQCard';
 # 📐 PYQ — Trigonometric Identities (2000–2025)
 
 :::tip Strategy
-**Prove:** Work ONE side only. Stuck? Convert everything to $\sin A$ and $\cos A$.  
-**Evaluate:** Replace complementary pairs first — $\cos 70° = \sin 20°$, $\tan 72° = \cot 18°$, etc.
+**Prove:** Work ONE side only. Stuck? Convert everything to $\sin A$ and $\cos A$.
+
+**Evaluate:** Replace complementary pairs first — $\cos 70° = \sin 20°$, $\tan 72° = \cot 18°$.
 :::
 
 ---
@@ -22,18 +23,16 @@ import PYQCard from '@site/src/components/PYQCard';
 
 Prove: $\sqrt{\dfrac{1-\cos A}{1+\cos A}} = \dfrac{\sin A}{1+\cos A}$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-**Multiply inside $\sqrt{\phantom{x}}$ by $\dfrac{1-\cos A}{1-\cos A}$:**
+Multiply inside $\sqrt{\phantom{x}}$ by $\dfrac{1-\cos A}{1-\cos A}$:
 
-$$\text{LHS} = \sqrt{\dfrac{(1-\cos A)^2}{1-\cos^2 A}} = \sqrt{\dfrac{(1-\cos A)^2}{\sin^2 A}} = \dfrac{1-\cos A}{\sin A}$$
+$$\text{LHS} = \sqrt{\dfrac{(1-\cos A)^2}{\sin^2 A}} = \dfrac{1-\cos A}{\sin A}$$
 
-**Show RHS equals the same:**
+RHS: $\dfrac{\sin A}{1+\cos A} = \dfrac{\sin A(1-\cos A)}{\sin^2 A} = \dfrac{1-\cos A}{\sin A} \checkmark$
 
-$$\dfrac{\sin A}{1+\cos A} = \dfrac{\sin A(1-\cos A)}{1-\cos^2 A} = \dfrac{\sin A(1-\cos A)}{\sin^2 A} = \dfrac{1-\cos A}{\sin A} \checkmark$$
-
-<div className="ans">✓ LHS = RHS = $\dfrac{1-\cos A}{\sin A}$</div>
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -41,15 +40,14 @@ $$\dfrac{\sin A}{1+\cos A} = \dfrac{\sin A(1-\cos A)}{1-\cos^2 A} = \dfrac{\sin 
 
 Prove: $\dfrac{1}{1+\cos(90°-A)} + \dfrac{1}{1-\cos(90°-A)} = 2\operatorname{cosec}^2(90°-A)$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-Use: $\cos(90°-A) = \sin A$ and $\operatorname{cosec}(90°-A) = \sec A$
+Use $\cos(90°-A)=\sin A$ and $\operatorname{cosec}(90°-A)=\sec A$:
 
-$$\text{LHS} = \dfrac{1}{1+\sin A} + \dfrac{1}{1-\sin A} = \dfrac{(1-\sin A)+(1+\sin A)}{(1+\sin A)(1-\sin A)} = \dfrac{2}{1-\sin^2 A} = \dfrac{2}{\cos^2 A} = 2\sec^2 A$$
+$$\text{LHS} = \dfrac{1}{1+\sin A}+\dfrac{1}{1-\sin A} = \dfrac{2}{1-\sin^2 A} = \dfrac{2}{\cos^2 A} = 2\sec^2 A = 2\operatorname{cosec}^2(90°-A) \checkmark$$
 
-$= 2\operatorname{cosec}^2(90°-A) = \text{RHS}$ $\checkmark$
-
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -61,13 +59,14 @@ $= 2\operatorname{cosec}^2(90°-A) = \text{RHS}$ $\checkmark$
 
 Prove: $\sqrt{\dfrac{1-\sin A}{1+\sin A}} = \dfrac{\cos A}{1+\sin A}$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$\text{LHS} = \sqrt{\dfrac{(1-\sin A)^2}{1-\sin^2 A}} = \sqrt{\dfrac{(1-\sin A)^2}{\cos^2 A}} = \dfrac{1-\sin A}{\cos A}$$
+$$\text{LHS} = \sqrt{\dfrac{(1-\sin A)^2}{\cos^2 A}} = \dfrac{1-\sin A}{\cos A}$$
 
-$$\text{RHS} = \dfrac{\cos A}{1+\sin A} = \dfrac{\cos A(1-\sin A)}{1-\sin^2 A} = \dfrac{\cos A(1-\sin A)}{\cos^2 A} = \dfrac{1-\sin A}{\cos A} \checkmark$$
+RHS $= \dfrac{\cos A(1-\sin A)}{\cos^2 A} = \dfrac{1-\sin A}{\cos A} = \text{LHS} \checkmark$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -75,15 +74,16 @@ $$\text{RHS} = \dfrac{\cos A}{1+\sin A} = \dfrac{\cos A(1-\sin A)}{1-\sin^2 A} =
 
 If $2\sin A - 1 = 0$, show that $\sin 3A = 3\sin A - 4\sin^3 A$.
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$2\sin A = 1 \Rightarrow \sin A = \dfrac{1}{2} \Rightarrow A = 30°$
+$2\sin A=1 \Rightarrow \sin A=\dfrac{1}{2} \Rightarrow A=30°$
 
-**LHS:** $\sin 3A = \sin 90° = 1$
+**LHS:** $\sin 90° = 1$
 
-**RHS:** $3\sin A - 4\sin^3 A = 3\left(\dfrac{1}{2}\right) - 4\left(\dfrac{1}{2}\right)^3 = \dfrac{3}{2} - 4 \cdot \dfrac{1}{8} = \dfrac{3}{2} - \dfrac{1}{2} = 1 \checkmark$
+**RHS:** $3\cdot\dfrac{1}{2}-4\cdot\dfrac{1}{8} = \dfrac{3}{2}-\dfrac{1}{2} = 1 \checkmark$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -93,29 +93,29 @@ $2\sin A = 1 \Rightarrow \sin A = \dfrac{1}{2} \Rightarrow A = 30°$
 
 <PYQCard year="2002" marks="4" qnum="1">
 
-Prove: $\dfrac{1}{\sin A+\cos A} + \dfrac{1}{\sin A-\cos A} = \dfrac{2\sin A}{1-2\cos^2 A}$
+Prove: $\dfrac{1}{\sin A+\cos A}+\dfrac{1}{\sin A-\cos A} = \dfrac{2\sin A}{1-2\cos^2 A}$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$\text{LHS} = \dfrac{(\sin A-\cos A)+(\sin A+\cos A)}{(\sin A+\cos A)(\sin A-\cos A)} = \dfrac{2\sin A}{\sin^2 A-\cos^2 A}$$
+$$\text{LHS} = \dfrac{2\sin A}{\sin^2 A-\cos^2 A} = \dfrac{2\sin A}{1-\cos^2 A-\cos^2 A} = \dfrac{2\sin A}{1-2\cos^2 A} = \text{RHS} \checkmark$$
 
-$$= \dfrac{2\sin A}{(1-\cos^2 A)-\cos^2 A} = \dfrac{2\sin A}{1-2\cos^2 A} = \text{RHS} \checkmark$$
-
-</div></details>
+</details>
 
 </PYQCard>
 
 <PYQCard year="2002" marks="4" qnum="2">
 
-Prove: $\dfrac{1}{1+\sin(90°-A)} + \dfrac{1}{1-\sin(90°-A)} = 2\sec^2(90°-A)$
+Prove: $\dfrac{1}{1+\sin(90°-A)}+\dfrac{1}{1-\sin(90°-A)} = 2\sec^2(90°-A)$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-Use $\sin(90°-A) = \cos A$, $\sec(90°-A) = \operatorname{cosec} A$:
+Use $\sin(90°-A)=\cos A$:
 
-$$\text{LHS} = \dfrac{1}{1+\cos A}+\dfrac{1}{1-\cos A} = \dfrac{2}{1-\cos^2 A} = \dfrac{2}{\sin^2 A} = 2\operatorname{cosec}^2 A = 2\sec^2(90°-A) \checkmark$$
+$$\text{LHS} = \dfrac{1}{1+\cos A}+\dfrac{1}{1-\cos A} = \dfrac{2}{\sin^2 A} = 2\operatorname{cosec}^2 A = 2\sec^2(90°-A) \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -125,15 +125,14 @@ $$\text{LHS} = \dfrac{1}{1+\cos A}+\dfrac{1}{1-\cos A} = \dfrac{2}{1-\cos^2 A} =
 
 <PYQCard year="2003" marks="4" qnum="1">
 
-Prove: $\dfrac{\cos A}{1-\tan A} + \dfrac{\sin A}{1-\cot A} = \sin A + \cos A$
+Prove: $\dfrac{\cos A}{1-\tan A}+\dfrac{\sin A}{1-\cot A} = \sin A+\cos A$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$\text{LHS} = \dfrac{\cos A}{1-\frac{\sin A}{\cos A}} + \dfrac{\sin A}{1-\frac{\cos A}{\sin A}} = \dfrac{\cos^2 A}{\cos A-\sin A} + \dfrac{\sin^2 A}{\sin A-\cos A}$$
+$$= \dfrac{\cos^2 A}{\cos A-\sin A}+\dfrac{\sin^2 A}{\sin A-\cos A} = \dfrac{\cos^2 A-\sin^2 A}{\cos A-\sin A} = \cos A+\sin A = \text{RHS} \checkmark$$
 
-$$= \dfrac{\cos^2 A-\sin^2 A}{\cos A-\sin A} = \dfrac{(\cos A+\sin A)(\cos A-\sin A)}{\cos A-\sin A} = \cos A+\sin A = \text{RHS} \checkmark$$
-
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -143,25 +142,27 @@ $$= \dfrac{\cos^2 A-\sin^2 A}{\cos A-\sin A} = \dfrac{(\cos A+\sin A)(\cos A-\si
 
 <PYQCard year="2004" marks="4" qnum="1">
 
-Prove: $\dfrac{\cot A+\tan B}{\cot B+\tan A} = \cot A \tan B$
+Prove: $\dfrac{\cot A+\tan B}{\cot B+\tan A} = \cot A\tan B$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$\text{LHS} = \dfrac{\frac{\cos A}{\sin A}+\frac{\sin B}{\cos B}}{\frac{\cos B}{\sin B}+\frac{\sin A}{\cos A}} = \dfrac{\frac{\cos A\cos B+\sin A\sin B}{\sin A\cos B}}{\frac{\cos A\cos B+\sin A\sin B}{\sin B\cos A}} = \dfrac{\sin B\cos A}{\sin A\cos B} = \dfrac{\cos A}{\sin A}\cdot\dfrac{\sin B}{\cos B} = \cot A\tan B \checkmark$$
+$$\text{LHS} = \dfrac{\frac{\cos A\cos B+\sin A\sin B}{\sin A\cos B}}{\frac{\cos A\cos B+\sin A\sin B}{\sin B\cos A}} = \dfrac{\sin B\cos A}{\sin A\cos B} = \cot A\tan B = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
 <PYQCard year="2004" marks="3" qnum="2">
 
-Evaluate: $14\sin 30° + 6\cos 60° - 5\tan 45°$
+Evaluate: $14\sin 30°+6\cos 60°-5\tan 45°$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$= 14\times\dfrac{1}{2} + 6\times\dfrac{1}{2} - 5\times 1 = 7 + 3 - 5 = \boxed{5}$$
+$$= 14\times\dfrac{1}{2}+6\times\dfrac{1}{2}-5\times 1 = 7+3-5 = \boxed{5}$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -173,11 +174,12 @@ $$= 14\times\dfrac{1}{2} + 6\times\dfrac{1}{2} - 5\times 1 = 7 + 3 - 5 = \boxed{
 
 Prove: $(1-\tan A)^2+(1+\tan A)^2 = 2\sec^2 A$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$\text{LHS} = 1-2\tan A+\tan^2 A+1+2\tan A+\tan^2 A = 2+2\tan^2 A = 2(1+\tan^2 A) = 2\sec^2 A = \text{RHS} \checkmark$$
+$$\text{LHS} = 2+2\tan^2 A = 2(1+\tan^2 A) = 2\sec^2 A = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -187,15 +189,16 @@ $$\text{LHS} = 1-2\tan A+\tan^2 A+1+2\tan A+\tan^2 A = 2+2\tan^2 A = 2(1+\tan^2 
 
 <PYQCard year="2006" marks="4" qnum="1">
 
-Prove: $(1+\tan^2 A)+\left(1+\dfrac{1}{\tan^2 A}\right) = \dfrac{1}{\sin^2 A - \sin^4 A}$
+Prove: $(1+\tan^2 A)+\left(1+\dfrac{1}{\tan^2 A}\right) = \dfrac{1}{\sin^2 A-\sin^4 A}$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$\text{LHS} = \sec^2 A + \operatorname{cosec}^2 A = \dfrac{1}{\cos^2 A}+\dfrac{1}{\sin^2 A} = \dfrac{\sin^2 A+\cos^2 A}{\sin^2 A\cos^2 A} = \dfrac{1}{\sin^2 A\cos^2 A}$$
+$$\text{LHS} = \sec^2 A+\operatorname{cosec}^2 A = \dfrac{1}{\cos^2 A}+\dfrac{1}{\sin^2 A} = \dfrac{1}{\sin^2 A\cos^2 A}$$
 
 $$\text{RHS} = \dfrac{1}{\sin^2 A(1-\sin^2 A)} = \dfrac{1}{\sin^2 A\cos^2 A} = \text{LHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -207,13 +210,14 @@ $$\text{RHS} = \dfrac{1}{\sin^2 A(1-\sin^2 A)} = \dfrac{1}{\sin^2 A\cos^2 A} = \
 
 Prove: $\dfrac{1}{\sec A+\tan A} = \sec A-\tan A$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-Multiply numerator and denominator by $(\sec A - \tan A)$:
+Multiply by $(\sec A-\tan A)$:
 
 $$\text{LHS} = \dfrac{\sec A-\tan A}{\sec^2 A-\tan^2 A} = \dfrac{\sec A-\tan A}{1} = \sec A-\tan A = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -221,13 +225,14 @@ $$\text{LHS} = \dfrac{\sec A-\tan A}{\sec^2 A-\tan^2 A} = \dfrac{\sec A-\tan A}{
 
 Evaluate: $\dfrac{\cos 70°}{\sin 20°}+\dfrac{\cos 59°}{\sin 31°}-8\sin^2 30°$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$\cos 70° = \sin 20°$ and $\cos 59° = \sin 31°$:
+$\cos 70°=\sin 20°$, $\cos 59°=\sin 31°$:
 
-$$= \dfrac{\sin 20°}{\sin 20°}+\dfrac{\sin 31°}{\sin 31°}-8\times\left(\dfrac{1}{2}\right)^2 = 1+1-8\times\dfrac{1}{4} = 2-2 = \boxed{0}$$
+$$= 1+1-8\times\dfrac{1}{4} = 2-2 = \boxed{0}$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -239,11 +244,12 @@ $$= \dfrac{\sin 20°}{\sin 20°}+\dfrac{\sin 31°}{\sin 31°}-8\times\left(\dfra
 
 Prove: $\dfrac{\sin A\tan A}{1-\cos A} = 1+\sec A$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$\text{LHS} = \dfrac{\sin A\cdot\frac{\sin A}{\cos A}}{1-\cos A} = \dfrac{\sin^2 A}{\cos A(1-\cos A)} = \dfrac{1-\cos^2 A}{\cos A(1-\cos A)} = \dfrac{(1-\cos A)(1+\cos A)}{\cos A(1-\cos A)} = \dfrac{1+\cos A}{\cos A} = \dfrac{1}{\cos A}+1 = \sec A+1 \checkmark$$
+$$\text{LHS} = \dfrac{\sin^2 A}{\cos A(1-\cos A)} = \dfrac{1-\cos^2 A}{\cos A(1-\cos A)} = \dfrac{1+\cos A}{\cos A} = \sec A+1 = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -255,11 +261,12 @@ $$\text{LHS} = \dfrac{\sin A\cdot\frac{\sin A}{\cos A}}{1-\cos A} = \dfrac{\sin^
 
 Prove: $\dfrac{\cot A+\tan B}{\cot B+\tan A} = \cot A\tan B$ *(same as 2004)*
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-See 2004 Q1 — identical question. Answer: $\cot A\tan B \checkmark$
+See 2004 Q1 — identical question. $\text{LHS} = \cot A\tan B = \text{RHS} \checkmark$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -271,27 +278,29 @@ See 2004 Q1 — identical question. Answer: $\cot A\tan B \checkmark$
 
 Evaluate: $\sin 35°\cos 55°+\cos 35°\sin 55°$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$\cos 55° = \sin 35°$ and $\sin 55° = \cos 35°$:
+$\cos 55°=\sin 35°$, $\sin 55°=\cos 35°$:
 
 $$= \sin^2 35°+\cos^2 35° = \boxed{1}$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
 <PYQCard year="2010" marks="3" qnum="2">
 
-Evaluate: $\operatorname{cosec}^2 10° - \tan^2 80°$
+Evaluate: $\operatorname{cosec}^2 10°-\tan^2 80°$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$\tan 80° = \cot 10°$, so $\tan^2 80° = \cot^2 10°$:
+$\tan 80°=\cot 10°$, so:
 
-$$= \operatorname{cosec}^2 10°-\cot^2 10° = \boxed{1} \quad(\text{identity: }\operatorname{cosec}^2 A - \cot^2 A = 1)$$
+$$= \operatorname{cosec}^2 10°-\cot^2 10° = \boxed{1}$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -303,25 +312,27 @@ $$= \operatorname{cosec}^2 10°-\cot^2 10° = \boxed{1} \quad(\text{identity: }\
 
 Evaluate: $\dfrac{\cos 75°}{\sin 15°}+\dfrac{\sin 12°}{\cos 78°}-\dfrac{\cos 18°}{\sin 72°}$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$\cos 75°=\sin 15°$, $\sin 12°=\cos 78°$, $\cos 18°=\sin 72°$:
+Each pair is complementary — each fraction equals 1:
 
-$$= \dfrac{\sin 15°}{\sin 15°}+\dfrac{\cos 78°}{\cos 78°}-\dfrac{\sin 72°}{\sin 72°} = 1+1-1 = \boxed{1}$$
+$$= 1+1-1 = \boxed{1}$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
 <PYQCard year="2011" marks="4" qnum="2">
 
-Prove: $(\operatorname{cosec} A-\sin A)(\sec A-\cos A)\sec^2 A = \tan A$
+Prove: $(\operatorname{cosec}A-\sin A)(\sec A-\cos A)\sec^2 A = \tan A$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$= \dfrac{1-\sin^2 A}{\sin A}\cdot\dfrac{1-\cos^2 A}{\cos A}\cdot\dfrac{1}{\cos^2 A} = \dfrac{\cos^2 A}{\sin A}\cdot\dfrac{\sin^2 A}{\cos A}\cdot\dfrac{1}{\cos^2 A} = \dfrac{\sin A}{\cos A} = \tan A \checkmark$$
+$$= \dfrac{\cos^2 A}{\sin A}\cdot\dfrac{\sin^2 A}{\cos A}\cdot\dfrac{1}{\cos^2 A} = \dfrac{\sin A}{\cos A} = \tan A = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -333,11 +344,12 @@ $$= \dfrac{1-\sin^2 A}{\sin A}\cdot\dfrac{1-\cos^2 A}{\cos A}\cdot\dfrac{1}{\cos
 
 Prove: $\dfrac{1+\cos A}{1-\cos A} = \dfrac{\tan^2 A}{(\sec A-1)^2}$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$\text{RHS} = \dfrac{\sec^2 A-1}{(\sec A-1)^2} = \dfrac{(\sec A+1)(\sec A-1)}{(\sec A-1)^2} = \dfrac{\sec A+1}{\sec A-1} = \dfrac{\frac{1+\cos A}{\cos A}}{\frac{1-\cos A}{\cos A}} = \dfrac{1+\cos A}{1-\cos A} = \text{LHS} \checkmark$$
+$$\text{RHS} = \dfrac{(\sec A+1)(\sec A-1)}{(\sec A-1)^2} = \dfrac{\sec A+1}{\sec A-1} = \dfrac{1+\cos A}{1-\cos A} = \text{LHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -349,11 +361,12 @@ $$\text{RHS} = \dfrac{\sec^2 A-1}{(\sec A-1)^2} = \dfrac{(\sec A+1)(\sec A-1)}{(
 
 Prove: $\sqrt{\dfrac{1-\cos A}{1+\cos A}} = \dfrac{\sin A}{1+\cos A}$ *(same as 2000)*
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-See 2000 Q1 — identical question. $\text{LHS} = \text{RHS} = \dfrac{1-\cos A}{\sin A} \checkmark$
+See 2000 Q1. $\text{LHS} = \dfrac{1-\cos A}{\sin A} = \text{RHS} \checkmark$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -361,14 +374,14 @@ See 2000 Q1 — identical question. $\text{LHS} = \text{RHS} = \dfrac{1-\cos A}{
 
 Evaluate: $\dfrac{\cot^2 41°}{\tan^2 49°}-\dfrac{2\sin^2 75°}{\cos^2 15°}$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$\cot 41° = \tan 49°$, so first term $= 1$.  
-$\sin 75° = \cos 15°$, so second term $= 2$.
+$\cot 41°=\tan 49°$ → first term $=1$. $\sin 75°=\cos 15°$ → second term $=2$.
 
-$$= 1 - 2 = \boxed{-1}$$
+$$= 1-2 = \boxed{-1}$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -380,15 +393,16 @@ $$= 1 - 2 = \boxed{-1}$$
 
 Evaluate: $\sin^2 34°+\sin^2 56°+2\tan 18°\tan 72°-\cot^2 30°$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-- $\sin 56°=\cos 34°$, so $\sin^2 34°+\cos^2 34° = 1$
-- $\tan 72°=\cot 18°$, so $2\tan 18°\cot 18° = 2$
-- $\cot^2 30° = (\sqrt{3})^2 = 3$
+- $\sin^2 34°+\cos^2 34° = 1$
+- $2\tan 18°\cot 18° = 2$
+- $\cot^2 30° = 3$
 
 $$= 1+2-3 = \boxed{0}$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -396,11 +410,12 @@ $$= 1+2-3 = \boxed{0}$$
 
 Prove: $(\sin\theta+\cos\theta)(\tan\theta+\cot\theta) = \sec\theta+\operatorname{cosec}\theta$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$\text{LHS} = (\sin\theta+\cos\theta)\cdot\dfrac{\sin^2\theta+\cos^2\theta}{\sin\theta\cos\theta} = \dfrac{\sin\theta+\cos\theta}{\sin\theta\cos\theta} = \dfrac{1}{\cos\theta}+\dfrac{1}{\sin\theta} = \sec\theta+\operatorname{cosec}\theta = \text{RHS} \checkmark$$
+$$\text{LHS} = \dfrac{\sin\theta+\cos\theta}{\sin\theta\cos\theta} = \dfrac{1}{\cos\theta}+\dfrac{1}{\sin\theta} = \sec\theta+\operatorname{cosec}\theta = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -412,11 +427,12 @@ $$\text{LHS} = (\sin\theta+\cos\theta)\cdot\dfrac{\sin^2\theta+\cos^2\theta}{\si
 
 Prove: $\dfrac{\cos A}{1-\tan A}+\dfrac{\sin A}{1-\cot A} = \cos A+\sin A$ *(same as 2003)*
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-See 2003 Q1 — identical. $\text{LHS} = \cos A+\sin A \checkmark$
+See 2003 Q1. $\text{LHS} = \cos A+\sin A \checkmark$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -428,16 +444,17 @@ See 2003 Q1 — identical. $\text{LHS} = \cos A+\sin A \checkmark$
 
 Evaluate: $\operatorname{csc}^2 57°-\tan^2 33°+\cos 44°\operatorname{csc}46°-\sqrt{2}\cos 45°-\tan^2 60°$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-- $\operatorname{csc}^2 57°-\tan^2 33°$: since $57°+33°=90°$, $\operatorname{csc}^2 57°-\cot^2 57° = 1$
-- $\cos 44°\operatorname{csc}46° = \dfrac{\cos 44°}{\sin 46°} = \dfrac{\cos 44°}{\cos 44°} = 1$
-- $\sqrt{2}\cos 45° = \sqrt{2}\cdot\dfrac{1}{\sqrt{2}} = 1$
+- $\operatorname{csc}^2 57°-\cot^2 57° = 1$ (identity)
+- $\cos 44°/\sin 46° = \cos 44°/\cos 44° = 1$
+- $\sqrt{2}\cdot\frac{1}{\sqrt{2}} = 1$
 - $\tan^2 60° = 3$
 
 $$= 1+1-1-3 = \boxed{-2}$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -445,11 +462,12 @@ $$= 1+1-1-3 = \boxed{-2}$$
 
 Prove: $\dfrac{\cos A}{1+\sin A}+\tan A = \sec A$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$\text{LHS} = \dfrac{\cos A}{1+\sin A}+\dfrac{\sin A}{\cos A} = \dfrac{\cos^2 A+\sin A(1+\sin A)}{\cos A(1+\sin A)} = \dfrac{\cos^2 A+\sin A+\sin^2 A}{\cos A(1+\sin A)} = \dfrac{1+\sin A}{\cos A(1+\sin A)} = \dfrac{1}{\cos A} = \sec A \checkmark$$
+$$\text{LHS} = \dfrac{\cos^2 A+\sin A(1+\sin A)}{\cos A(1+\sin A)} = \dfrac{1+\sin A}{\cos A(1+\sin A)} = \dfrac{1}{\cos A} = \sec A = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -461,15 +479,16 @@ $$\text{LHS} = \dfrac{\cos A}{1+\sin A}+\dfrac{\sin A}{\cos A} = \dfrac{\cos^2 A
 
 Prove: $\dfrac{\sin\theta-2\sin^3\theta}{2\cos^3\theta-\cos\theta} = \tan\theta$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
 $$\text{LHS} = \dfrac{\sin\theta(1-2\sin^2\theta)}{\cos\theta(2\cos^2\theta-1)}$$
 
-Substitute $\cos^2\theta = 1-\sin^2\theta$ in denominator: $2\cos^2\theta-1 = 1-2\sin^2\theta$
+Since $2\cos^2\theta-1 = 2(1-\sin^2\theta)-1 = 1-2\sin^2\theta$:
 
-$$= \dfrac{\sin\theta(1-2\sin^2\theta)}{\cos\theta(1-2\sin^2\theta)} = \dfrac{\sin\theta}{\cos\theta} = \tan\theta = \text{RHS} \checkmark$$
+$$= \dfrac{\sin\theta}{\cos\theta} = \tan\theta = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -481,15 +500,16 @@ $$= \dfrac{\sin\theta(1-2\sin^2\theta)}{\cos\theta(1-2\sin^2\theta)} = \dfrac{\s
 
 Prove: $\sqrt{\sec^2\theta+\operatorname{cosec}^2\theta} = \tan\theta+\cot\theta$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$\text{RHS}^2 = (\tan\theta+\cot\theta)^2 = \left(\dfrac{\sin^2\theta+\cos^2\theta}{\sin\theta\cos\theta}\right)^2 = \dfrac{1}{\sin^2\theta\cos^2\theta}$$
+$$\text{RHS}^2 = \left(\dfrac{1}{\sin\theta\cos\theta}\right)^2 = \dfrac{1}{\sin^2\theta\cos^2\theta}$$
 
-$$\text{LHS}^2 = \sec^2\theta+\operatorname{cosec}^2\theta = \dfrac{1}{\cos^2\theta}+\dfrac{1}{\sin^2\theta} = \dfrac{1}{\sin^2\theta\cos^2\theta}$$
+$$\text{LHS}^2 = \dfrac{1}{\cos^2\theta}+\dfrac{1}{\sin^2\theta} = \dfrac{1}{\sin^2\theta\cos^2\theta}$$
 
-Both sides positive, $\text{LHS}^2 = \text{RHS}^2$, so $\text{LHS} = \text{RHS}$ $\checkmark$
+Both sides positive ∴ $\text{LHS} = \text{RHS} \checkmark$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -497,11 +517,12 @@ Both sides positive, $\text{LHS}^2 = \text{RHS}^2$, so $\text{LHS} = \text{RHS}$
 
 Prove: $(1+\cot\theta-\operatorname{cosec}\theta)(1+\tan\theta+\sec\theta) = 2$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$= \dfrac{\sin\theta+\cos\theta-1}{\sin\theta}\cdot\dfrac{\cos\theta+\sin\theta+1}{\cos\theta} = \dfrac{(\sin\theta+\cos\theta)^2-1}{\sin\theta\cos\theta} = \dfrac{1+2\sin\theta\cos\theta-1}{\sin\theta\cos\theta} = \dfrac{2\sin\theta\cos\theta}{\sin\theta\cos\theta} = 2 \checkmark$$
+$$= \dfrac{(\sin\theta+\cos\theta)^2-1}{\sin\theta\cos\theta} = \dfrac{2\sin\theta\cos\theta}{\sin\theta\cos\theta} = 2 = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -513,11 +534,12 @@ $$= \dfrac{\sin\theta+\cos\theta-1}{\sin\theta}\cdot\dfrac{\cos\theta+\sin\theta
 
 Prove: $(\operatorname{cosec}\theta-\sin\theta)(\sec\theta-\cos\theta)(\tan\theta+\cot\theta) = 1$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$= \dfrac{\cos^2\theta}{\sin\theta}\cdot\dfrac{\sin^2\theta}{\cos\theta}\cdot\dfrac{1}{\sin\theta\cos\theta} = \dfrac{\sin^2\theta\cos^2\theta}{\sin^2\theta\cos^2\theta} = 1 \checkmark$$
+$$= \dfrac{\cos^2\theta}{\sin\theta}\cdot\dfrac{\sin^2\theta}{\cos\theta}\cdot\dfrac{1}{\sin\theta\cos\theta} = \dfrac{\sin^2\theta\cos^2\theta}{\sin^2\theta\cos^2\theta} = 1 = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -529,13 +551,14 @@ $$= \dfrac{\cos^2\theta}{\sin\theta}\cdot\dfrac{\sin^2\theta}{\cos\theta}\cdot\d
 
 Prove: $\left(\dfrac{1-\tan\theta}{1-\cot\theta}\right)^2 = \tan^2\theta$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-Note: $1-\cot\theta = 1-\dfrac{1}{\tan\theta} = \dfrac{\tan\theta-1}{\tan\theta}$
+Note $1-\cot\theta = \dfrac{\tan\theta-1}{\tan\theta}$, so $(1-\cot\theta)^2 = \dfrac{(1-\tan\theta)^2}{\tan^2\theta}$:
 
-$$\text{LHS} = \dfrac{(1-\tan\theta)^2}{\left(\frac{\tan\theta-1}{\tan\theta}\right)^2} = \dfrac{(1-\tan\theta)^2\cdot\tan^2\theta}{(\tan\theta-1)^2} = \tan^2\theta = \text{RHS} \checkmark$$
+$$\text{LHS} = \dfrac{(1-\tan\theta)^2\cdot\tan^2\theta}{(1-\tan\theta)^2} = \tan^2\theta = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -547,11 +570,12 @@ $$\text{LHS} = \dfrac{(1-\tan\theta)^2}{\left(\frac{\tan\theta-1}{\tan\theta}\ri
 
 Prove: $(\sin^2\theta-1)(\tan^2\theta+1)+1 = 0$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-$$= (-\cos^2\theta)(\sec^2\theta)+1 = -\cos^2\theta\cdot\dfrac{1}{\cos^2\theta}+1 = -1+1 = 0 \checkmark$$
+$$= (-\cos^2\theta)(\sec^2\theta)+1 = -1+1 = 0 = \text{RHS} \checkmark$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -559,11 +583,12 @@ $$= (-\cos^2\theta)(\sec^2\theta)+1 = -\cos^2\theta\cdot\dfrac{1}{\cos^2\theta}+
 
 $(1+\sin A)(1-\sin A) = ?$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
 $$= 1-\sin^2 A = \boxed{\cos^2 A}$$
 
-</div></details>
+</details>
 
 </PYQCard>
 
@@ -575,14 +600,13 @@ $$= 1-\sin^2 A = \boxed{\cos^2 A}$$
 
 Prove: $\dfrac{\sin^3\theta+\cos^3\theta}{\sin\theta+\cos\theta}+\sin\theta\cos\theta = 1$
 
-<details><summary>Show Solution</summary><div>
+<details>
+<summary>Show Solution</summary>
 
-Use $a^3+b^3 = (a+b)(a^2-ab+b^2)$:
+Use $a^3+b^3=(a+b)(a^2-ab+b^2)$:
 
-$$\text{LHS} = \dfrac{(\sin\theta+\cos\theta)(\sin^2\theta-\sin\theta\cos\theta+\cos^2\theta)}{\sin\theta+\cos\theta}+\sin\theta\cos\theta$$
+$$\text{LHS} = (1-\sin\theta\cos\theta)+\sin\theta\cos\theta = 1 = \text{RHS} \checkmark$$
 
-$$= (1-\sin\theta\cos\theta)+\sin\theta\cos\theta = 1 = \text{RHS} \checkmark$$
-
-</div></details>
+</details>
 
 </PYQCard>
