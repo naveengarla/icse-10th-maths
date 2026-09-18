@@ -43,14 +43,16 @@ The cheaper buyer earns more dividend per rupee invested, although the company p
 
 ```mermaid
 flowchart TD
-    F["Face value and dividend rate"] --> D["Dividend per share"]
-    I["Investment"] --> N["Number of shares"]
-    M["Market price"] --> N
-    N --> A["Annual dividend"]
-    D --> A
-    A --> Y["Yield percentage"]
-    I --> Y
+    F["Face value F and annual dividend rate r%"] -->|"F × r ÷ 100"| D["Dividend per share d"]
+    I["Investment I"] -->|"Divide by market price: I ÷ M"| N["Number of shares n"]
+    M["Market price M"] -->|"Price used to divide investment: I ÷ M"| N
+    N -->|"Multiply by dividend per share: n × d"| A["Annual dividend D"]
+    D -->|"Multiply by share count: d × n"| A
+    A -->|"Divide by investment, then × 100"| Y["Yield y% = D ÷ I × 100"]
+    I -->|"Provides the denominator I in the yield formula"| Y
 ```
+
+**How to read the arrows:** each label states how the starting quantity is used to calculate the next one. Two arrows entering the same box supply inputs to **one calculation**, not two separate answers. For example, investment and market price give n = I ÷ M; share count and dividend per share give D = n × d. Here r is the numerical percentage: for 8%, use r = 8.
 
 Read the two paths separately: **market price controls how many shares money buys; face value controls what each share earns**. They meet at annual dividend. To find yield, compare that income with the money spent.
 
