@@ -4,6 +4,7 @@ const sidebars = {
   // ── Shown when you click "Chapters" in navbar ──
   chaptersSidebar: [
     { type: 'doc', id: 'index', label: '🏠 Home' },
+    { type: 'doc', id: 'pedagogy/framework', label: 'Learning framework' },
     {
       type: 'category',
       label: '📦 Ch 1 — GST',
@@ -20,7 +21,7 @@ const sidebars = {
       type: 'category',
       label: '📈 Ch 3 — Shares & Dividends',
       collapsed: true,
-      items: ['ch3-shares/normal', 'ch3-shares/exam'],
+      items: ['ch3-shares/normal', 'ch3-shares/understanding', 'ch3-shares/income', 'ch3-shares/yield', 'ch3-shares/transactions', 'ch3-shares/allocation', 'ch3-shares/recognition', 'ch3-shares/practice', 'ch3-shares/strengthen', 'ch3-shares/exam', 'ch3-shares/coverage'],
     },
     {
       type: 'category',
