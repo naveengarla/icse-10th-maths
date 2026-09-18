@@ -8,6 +8,9 @@ sidebar_label: "Exam: Mixed and timed practice"
 
 # Recognise the problem without its lesson heading
 
+For teaching before practice, use [foundations](./foundations.md), [concepts](./concepts.md), [formulae with reasons](./formulae.md), [problem reading](./read-problems.md), and [step-by-step exam solutions](./worked-solutions.md). The compact bank answers are for checking, not a replacement for these explanations.
+
+
 Attempt the [12 mixed retrieval prompts](./recognition.md) first. Then choose a timed set below or use the full 28-prompt Exam bank. Several source questions also appear in Core; this deliberate retrieval is not counted as fresh textbook coverage.
 
 ## Suggested 35-minute paper — 25 practice marks

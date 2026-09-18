@@ -58,13 +58,33 @@ Do not call an excluded question redundant until every variation has a selected 
 
 **Exam:** interleave types without method labels. Include difficult problems, timed practice, MCQs, statement reasoning and cases. Label suggested marks/timing as authored guidance. Only label questions as PYQs when official paper/year provenance has been checked; a textbook resemblance is insufficient.
 
-## 5. Author the learning pages
+## 5. Author the learning pages: compress repetition, preserve teaching
 
-Each concept lesson should provide meaning, prerequisites, recognition clues, method/formula, meaningful variations, a fully worked example, independent practice links, common errors and an exit check. Prefer short sessions. Teach why the formula applies before introducing shortcuts.
+The mandatory sequence for each chapter is **foundations → concepts → formula meaning and derivation → problem reading → reasoned worked examples → guided attempt → independent practice → mixed recognition → exam presentation**.
 
-Link each Core question to a lesson or worked example. Provide solutions after an attempt, with units, intermediate reasoning and a sanity check. Separate an interpretation ambiguity from a learner error.
+### Foundations and concepts
 
-End with mixed retrieval: give the student no problem-type label until after their attempt. Revisit mistakes after a delay; do not infer durable mastery from one successful response.
+Identify prerequisites before teaching the chapter. Explain each prerequisite with a small example and a readiness check with feedback. Do not assume a student in Class 10 has mastered percentages, fractions or algebra. Provide a concept checklist with meaning, units, examples and common confusions. A vocabulary list alone is insufficient.
+
+### Formulae
+
+State symbols, units and conditions. Derive a small set of central relationships before showing rearrangements. Explain why the formula applies, which value or percentage base it uses, and what changes when the unknown changes. Include formula-selection practice rather than asking the learner only to recite formulas.
+
+### Reading and reasoning
+
+Teach how to extract givens, identify the requested quantity, decode language and connect intermediate quantities. Explicitly contrast words such as by/to, amount/percentage, equal investments/equal incomes, and proceeds/profit. For multi-stage questions, make the chronological or algebraic structure visible. Use a compact Mermaid diagram when branching or dependencies help; prose and tables remain sufficient for simple steps.
+
+### Every model solution
+
+Include the question, how to read it, why the method was chosen, essential exam working, a sanity check, a common wrong approach and a transfer question. Show intermediate arithmetic and algebra, especially for reverse and multi-stage problems. Keep the learning explanation separate from the shorter mathematical presentation the student should reproduce in an exam. Do not invent official marking schemes.
+
+### Practice and compression
+
+Link each Core problem to a relevant fully explained model or lesson. Give a supported attempt before independent work. Compact answer keys are useful only after teaching; they must not replace the reasoning. A wrong answer should lead to the missing prerequisite, concept, recognition step or calculation, not simply a larger random question set.
+
+**Reduce repeated questions and unnecessary software work. Do not reduce conceptual explanation, important algebraic steps or exam presentation merely to save tokens.** Markdown is sufficient for substantive teaching, tables, mathematical notation, expandable solutions and Mermaid source; no application framework is required to author or review it.
+
+End with mixed retrieval and delayed retries. Do not infer durable mastery from one correct attempt.
 
 ## 6. Publish honest statistics
 
@@ -78,7 +98,7 @@ State overlap between paths and between teaching and practice. New practice does
 - Confirm every source variation has a Core witness; retain source-specific notes.
 - Check arithmetic with an independent computation, then check interpretation separately.
 - Ensure Core lessons explain every rare transformation; avoid coverage that exists only as an unexplained tag.
-- Build the site, test navigation and solution reveals, and inspect narrow-screen and dark-mode layout.
+- For Markdown-only work, check relative links, mathematical steps, solution completeness and diagram syntax. Build or browser-test a website only when website changes are requested.
 - Use a reviewable branch/PR. Publishing the website is separate from preparing content.
 
 Future chapters should reuse this schema and workflow, not assume Shares & Dividends’ list of concepts is universal. In this Markdown edition, students choose Strengthen questions using the variation-to-question map rather than automatic recommendations.

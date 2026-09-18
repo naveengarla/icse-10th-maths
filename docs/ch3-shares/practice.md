@@ -5,9 +5,13 @@ title: "Core practice"
 
 # Core: cover every mapped variation
 
+**First learn, then attempt:** [foundations](./foundations.md) → [concepts](./concepts.md) → [formulae](./formulae.md) → [read and plan](./read-problems.md) → [worked solutions](./worked-solutions.md). The brief answers below are checking aids after this teaching. Write your own exam-style steps before opening them.
+
 Solve on paper before revealing each answer. After a mistake, use the [Strengthen lookup](./strengthen.md) and retry later. This path has 29 prompts / 52 subparts, covering all 48 recorded variations.
 
 ## P01
+
+[Need the reasoning and exam method?](./worked-solutions.md#e1-decode-the-price-before-finding-cost)
 
 Original transfer practice. Difficulty 1/3.
 
@@ -32,6 +36,8 @@ Find the cost of (i) 40 ₹30 shares at ₹6 premium; (ii) 50 ₹40 shares at �
 
 ## T04
 
+[Need the reasoning and exam method?](./worked-solutions.md#e4-desired-income-to-required-investment)
+
 Textbook p. 35; PDF page 12. Difficulty 2/3.
 
 15% ₹100 shares cost 20% above par. Find income per share, shares for ₹6,480 annual income, and investment.
@@ -48,6 +54,8 @@ Textbook p. 35; PDF page 12. Difficulty 2/3.
 </details>
 
 ## A01e
+
+[Need the reasoning and exam method?](./worked-solutions.md#e3-find-the-companys-dividend-rate)
 
 Textbook p. 28; PDF page 5. Difficulty 1/3.
 
@@ -67,6 +75,8 @@ Textbook p. 28; PDF page 5. Difficulty 1/3.
 
 ## B01c
 
+[Need the reasoning and exam method?](./foundations.md#7-units-and-time-periods)
+
 Textbook p. 33; PDF page 10. Difficulty 1/3.
 
 100 shares of ₹120 at par pay 10% half-yearly dividend. Find annual dividend.
@@ -85,6 +95,8 @@ Textbook p. 33; PDF page 10. Difficulty 1/3.
 
 ## T01b
 
+[Need the reasoning and exam method?](./income.md#two-variations-that-should-not-be-skipped)
+
 Textbook p. 34; PDF page 11. Difficulty 1/3.
 
 100 ₹100 shares paying 10% are bought at ₹20 discount; another 100 identical shares are bought at ₹120. Find total dividend.
@@ -102,6 +114,8 @@ Textbook p. 34; PDF page 11. Difficulty 1/3.
 </details>
 
 ## T01d
+
+[Need the reasoning and exam method?](./recognition.md#source-issues-to-recognise)
 
 Textbook p. 34; PDF page 11. Difficulty 2/3.
 
@@ -123,6 +137,8 @@ Textbook p. 34; PDF page 11. Difficulty 2/3.
 
 ## A01f
 
+[Need the reasoning and exam method?](./worked-solutions.md#e5-yield-and-its-reverse-calculations)
+
 Textbook p. 28; PDF page 5. Difficulty 1/3.
 
 Dividend rate is 12%, yield is 10%. Are the shares at, above or below par?
@@ -141,6 +157,8 @@ Dividend rate is 12%, yield is 10%. Are the shares at, above or below par?
 
 ## B03
 
+[Need the reasoning and exam method?](./worked-solutions.md#e5-yield-and-its-reverse-calculations)
+
 Textbook p. 33; PDF page 10. Difficulty 1/3.
 
 ₹100 shares are at ₹20 premium and yield 15%. Find dividend rate.
@@ -153,6 +171,8 @@ Textbook p. 33; PDF page 10. Difficulty 1/3.
 </details>
 
 ## B08
+
+[Need the reasoning and exam method?](./worked-solutions.md#e5-yield-and-its-reverse-calculations)
 
 Textbook p. 33; PDF page 10. Difficulty 2/3.
 
@@ -171,6 +191,8 @@ Textbook p. 33; PDF page 10. Difficulty 2/3.
 
 ## B09
 
+[Need the reasoning and exam method?](./worked-solutions.md#e7-compare-investments-fairly)
+
 Textbook p. 33; PDF page 10. Difficulty 1/3.
 
 1,800 ₹100 shares pay 15%. Find annual dividend and yield if bought at 40% premium; round yield to the nearest integer.
@@ -186,6 +208,8 @@ Textbook p. 33; PDF page 10. Difficulty 1/3.
 
 ## B13
 
+[Need the reasoning and exam method?](./worked-solutions.md#e7-compare-investments-fairly)
+
 Textbook p. 34; PDF page 11. Difficulty 2/3.
 
 Compare 5% ₹100 shares at ₹120 and 6% ₹100 shares at ₹132. Which yields more, and what is the income difference for ₹26,400 in each?
@@ -200,6 +224,8 @@ Compare 5% ₹100 shares at ₹120 and 6% ₹100 shares at ₹132. Which yields 
 </details>
 
 ## T05
+
+[Need the reasoning and exam method?](./worked-solutions.md#e6-additional-income-means-additional-shares)
 
 Textbook p. 35; PDF page 12. Difficulty 2/3.
 
@@ -218,6 +244,8 @@ Ashwarya buys 496 ₹100 shares at ₹132. Find investment, dividend at 7.5%, an
 
 ## A10
 
+[Need the reasoning and exam method?](./read-problems.md#read-this-source-question-together-a10-p-28)
+
 Textbook p. 28; PDF page 5. Difficulty 2/3.
 
 ₹7,500 invested in 10% ₹100 shares gives ₹500 annual income. Find the price per share.
@@ -230,6 +258,8 @@ Textbook p. 28; PDF page 5. Difficulty 2/3.
 </details>
 
 ## P02
+
+[Need the reasoning and exam method?](./worked-solutions.md#e8-partial-sales-cost-proceeds-and-what-remains)
 
 Original transfer practice. Difficulty 2/3.
 
@@ -246,6 +276,8 @@ Invest ₹12,000 in 8% ₹100 shares at ₹120. Sell 30% at ₹150. Find annual 
 
 ## P03
 
+[Need the reasoning and exam method?](./worked-solutions.md#e10-reinvest-the-dividend-too-and-choose-the-percentage-base)
+
 Original transfer practice. Difficulty 3/3.
 
 Invest ₹10,000 in 8% ₹100 shares at ₹100. After one year sell at ₹92; add the dividend and reinvest in 10% ₹50 shares at ₹40. Find the new annual income and its increase relative to original capital.
@@ -261,6 +293,8 @@ Invest ₹10,000 in 8% ₹100 shares at ₹100. After one year sell at ₹92; ad
 
 ## T09
 
+[Need the reasoning and exam method?](./worked-solutions.md#e8-partial-sales-cost-proceeds-and-what-remains)
+
 Textbook p. 35; PDF page 12. Difficulty 2/3.
 
 ₹45,000 buys 15% ₹100 shares at ₹125. Sell just enough at ₹140 to raise ₹8,400. Find remaining shares and dividend.
@@ -275,6 +309,8 @@ Textbook p. 35; PDF page 12. Difficulty 2/3.
 </details>
 
 ## T16
+
+[Need the reasoning and exam method?](./worked-solutions.md#e8-partial-sales-cost-proceeds-and-what-remains)
 
 Textbook p. 36; PDF page 13. Difficulty 2/3.
 
@@ -293,6 +329,8 @@ Mr Saha invests ₹18,000 in 10% ₹100 shares at ₹150. He later sells 80%. Fi
 
 ## T13
 
+[Need the reasoning and exam method?](./worked-solutions.md#e8-partial-sales-cost-proceeds-and-what-remains)
+
 Textbook p. 36; PDF page 13. Difficulty 2/3.
 
 Invest ₹52,000 in 8% ₹100 shares at ₹20 discount, then sell after a year at ₹20 premium. Find dividend and total profit including dividend.
@@ -307,6 +345,8 @@ Invest ₹52,000 in 8% ₹100 shares at ₹20 discount, then sell after a year a
 </details>
 
 ## T01g
+
+[Need the reasoning and exam method?](./worked-solutions.md#e15-source-wording-statement-reasoning-and-case-studies)
 
 Textbook p. 34; PDF page 11. Difficulty 2/3.
 
@@ -326,6 +366,8 @@ Textbook p. 34; PDF page 11. Difficulty 2/3.
 
 ## T03
 
+[Need the reasoning and exam method?](./worked-solutions.md#e15-source-wording-statement-reasoning-and-case-studies)
+
 Textbook p. 35; PDF page 12. Difficulty 3/3.
 
 Mrs Kulkarni invests ₹1,31,040 in ₹100 shares at 9% discount. She sells shares “worth ₹72,000” at 10% premium and the rest at 5% discount. Find overall gain/loss.
@@ -341,6 +383,8 @@ Mrs Kulkarni invests ₹1,31,040 in ₹100 shares at 9% discount. She sells shar
 
 ## T06
 
+[Need the reasoning and exam method?](./worked-solutions.md#e11-reverse-reinvestment-build-the-equation-per-old-share)
+
 Textbook p. 35; PDF page 12. Difficulty 3/3.
 
 Gopal sells some 10% ₹100 shares at 20% discount and reinvests in 20% ₹100 shares at ₹60. Annual income from the sold holding increases by ₹18,000. Find shares sold.
@@ -353,6 +397,8 @@ Gopal sells some 10% ₹100 shares at 20% discount and reinvests in 20% ₹100 s
 </details>
 
 ## T07
+
+[Need the reasoning and exam method?](./worked-solutions.md#e11-reverse-reinvestment-build-the-equation-per-old-share)
 
 Textbook p. 35; PDF page 12. Difficulty 3/3.
 
@@ -367,6 +413,8 @@ Buy 6% ₹100 shares at ₹12 premium; sell all at ₹96; reinvest in 10% ₹10 
 
 ## T17
 
+[Need the reasoning and exam method?](./worked-solutions.md#e11-reverse-reinvestment-build-the-equation-per-old-share)
+
 Textbook p. 36; PDF page 13. Difficulty 3/3.
 
 Sell an unknown number of 8% ₹20 shares at ₹18. Reinvest in 12% ₹10 shares at 50% premium. Annual income changes by ₹120. Find old shares sold.
@@ -379,6 +427,8 @@ Sell an unknown number of 8% ₹20 shares at ₹18. Reinvest in 12% ₹10 shares
 </details>
 
 ## B15
+
+[Need the reasoning and exam method?](./worked-solutions.md#e13-equal-dividend-unknown-rate-versus-unknown-allocation)
 
 Textbook p. 34; PDF page 11. Difficulty 3/3.
 
@@ -393,6 +443,8 @@ Two brothers invest ₹16,000 each. A buys 3% ₹100 shares at ₹80; B buys ₹
 
 ## P04
 
+[Need the reasoning and exam method?](./worked-solutions.md#e12-equal-investments-sum-and-difference-are-different-conditions)
+
 Original transfer practice. Difficulty 3/3.
 
 Equal amounts are invested in 10% ₹100 shares at ₹125 and 12% ₹100 shares at ₹100. Combined annual dividend is ₹2,000. Find total investment.
@@ -405,6 +457,8 @@ Equal amounts are invested in 10% ₹100 shares at ₹125 and 12% ₹100 shares 
 </details>
 
 ## T08
+
+[Need the reasoning and exam method?](./worked-solutions.md#e12-equal-investments-sum-and-difference-are-different-conditions)
 
 Textbook p. 35; PDF page 12. Difficulty 3/3.
 
@@ -421,6 +475,8 @@ Compare 5% ₹10 shares at ₹13 with 6% ₹10 shares at ₹16. Equal amounts ar
 
 ## T11
 
+[Need the reasoning and exam method?](./worked-solutions.md#e13-equal-dividend-unknown-rate-versus-unknown-allocation)
+
 Textbook p. 35; PDF page 12. Difficulty 3/3.
 
 Split ₹50,760 between 8% ₹100 shares at 8% discount and 9% ₹100 shares at 8% premium so that incomes are equal.
@@ -433,6 +489,8 @@ Split ₹50,760 between 8% ₹100 shares at 8% discount and 9% ₹100 shares at 
 </details>
 
 ## T18
+
+[Need the reasoning and exam method?](./worked-solutions.md#e14-three-companies-find-the-missing-income-before-overall-yield)
 
 Textbook p. 36; PDF page 13. Difficulty 3/3.
 
@@ -448,6 +506,8 @@ Invest ₹50,000 in 12% ₹100 shares at ₹125, ₹60,000 in 15% ₹100 shares 
 </details>
 
 ## CASE
+
+[Need the reasoning and exam method?](./worked-solutions.md#e15-source-wording-statement-reasoning-and-case-studies)
 
 Textbook p. 36; PDF page 13. Difficulty 2/3.
 

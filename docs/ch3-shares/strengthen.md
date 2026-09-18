@@ -5,6 +5,9 @@ title: "Strengthen: targeted extra practice"
 
 # Find another question for the skill you missed
 
+For teaching before practice, use [foundations](./foundations.md), [concepts](./concepts.md), [formulae with reasons](./formulae.md), [problem reading](./read-problems.md), and [step-by-step exam solutions](./worked-solutions.md). The compact bank answers are for checking, not a replacement for these explanations.
+
+
 Use the lookup below. Choose a question you have not yet solved; if only one exists, revisit its lesson and retry after a delay. Worked examples W01–W14 are support, not fresh independent practice. Use your browser’s Find command to locate an ID.
 
 | Variation | Questions |

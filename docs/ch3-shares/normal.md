@@ -18,16 +18,26 @@ This chapter reorganizes every question in the supplied Shares & Dividends PDF i
 | Selected source worked examples | 13 |
 | Exam questions | 28 |
 
-## Learning route
+## Before attempting questions
 
-1. [Understand and buy a share](./understanding.md)
-2. [Dividend and income](./income.md)
-3. [Return and yield](./yield.md)
-4. [Sell and reinvest](./transactions.md)
-5. [Multiple companies](./allocation.md)
-6. [Mixed recognition and traps](./recognition.md)
+Work through these in order. Skip a foundation only when you can explain it and answer its checkpoint independently.
 
-The first lesson covers two foundational clusters: understanding a share and buying shares. The last lesson integrates the clusters.
+1. **[Foundations](./foundations.md):** percentages, the correct base, unitary method, reversing equations, extra versus total, units and time. Eight explained readiness checks.
+2. **[Concept checklist](./concepts.md):** the 14 meanings you need, taught through one consistent example.
+3. **[Formulae with derivations](./formulae.md):** four core relationships, their rearrangements, conditions and recognition clues.
+4. **[Read and plan a problem](./read-problems.md):** decode the language, label givens, identify the unknown and construct a plan.
+5. **[Reasoned worked solutions](./worked-solutions.md):** read → plan → exam steps → check → transfer practice, including reverse and multi-company questions.
+
+## Concept lessons
+
+- [Understand and buy a share](./understanding.md)
+- [Dividend and income](./income.md)
+- [Return and yield](./yield.md)
+- [Sell and reinvest](./transactions.md)
+- [Multiple companies](./allocation.md)
+- [Mixed recognition and traps](./recognition.md)
+
+The first lesson covers two foundational clusters; mixed recognition integrates them. Mermaid diagrams in the Markdown show where different quantities enter a calculation. GitHub renders these diagrams directly; enabling diagram rendering in the separate website is outside this Markdown update.
 
 ## Three practice paths
 
@@ -35,9 +45,9 @@ The first lesson covers two foundational clusters: understanding a share and buy
 - **[Strengthen](./strengthen.md):** all 76 source questions and six original transfer questions, with a variation-to-question lookup. Use this after a mistake, then retry without help later.
 - **[Exam](./exam.md):** 28 mixed questions, MCQs, assertion–reason, a case study and a suggested timed paper. These are textbook exam-style questions, not verified PYQs.
 
-Use a 15–20 minute session: read one section, inspect a worked example, then solve two or three questions on paper. Write **given → wanted → method** before calculating. Track attempts on paper; this Markdown edition does not save progress or grade answers.
+Use a 15–20 minute session: read one section, explain the worked example’s reasoning, reproduce its essential exam steps with the answer covered, then solve two or three questions on paper. Write **given → wanted → method** before calculating. Track attempts on paper; this Markdown edition does not save progress or grade answers.
 
-The 13 worked examples are teaching support, not independent practice. Core and Exam overlap. Removing any whole Core question leaves at least one recorded variation uncovered, but this is not proof of a globally smallest set or a guarantee of marks. Add practice where the learner struggles.
+The original 13 selected source worked examples remain teaching support. The new worked-solutions guide expands existing source questions into 15 teaching sections, some covering several contrasting questions. These presentations and the eight foundation checks are not additional textbook questions or changes to Core counts. Core and Exam overlap. Removing any whole Core question leaves at least one recorded variation uncovered, but this is not proof of a globally smallest set or a guarantee of marks. Add practice where the learner struggles.
 
 See the [complete coverage audit](./coverage.md) and the [reusable authoring framework](../pedagogy/framework.md).
 
