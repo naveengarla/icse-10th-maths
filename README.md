@@ -8,7 +8,7 @@ Study materials for ICSE Class 10 Commercial Mathematics.
 |---------|-------|--------|
 | Chapter 1 | GST — Goods and Services Tax | ✅ Done |
 | Chapter 2 | Banking — Recurring Deposits | 🔜 Next |
-| [Chapter 3](docs/ch3-shares/normal.md) | Shares and Dividends | ✅ Lessons, foundations and practice ready |
+| [Chapter 3](docs/ch3-shares/README.md) | Shares and Dividends | ✅ Lessons, foundations and practice ready |
 
 ## Chapter 1 — GST
 
@@ -25,7 +25,7 @@ Two versions for different study modes:
 
 ## Chapter 3 — Shares and Dividends
 
-**[Start here: learning route](docs/ch3-shares/normal.md)**
+**[Start here: numbered chapter contents](docs/ch3-shares/README.md)**
 
 Learn the foundations and reasoning before attempting the question bank. These Markdown pages can be read directly on GitHub.
 

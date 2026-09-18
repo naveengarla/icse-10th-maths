@@ -5,6 +5,8 @@ title: "Shares & Dividends: Start Here"
 
 # Learn the patterns, then practise
 
+**[Open the chapter contents and numbered reading order](./README.md)** — start with Foundations, then follow the lessons and practice paths.
+
 This chapter reorganizes every question in the supplied Shares & Dividends PDF into concepts, skills, problem types and meaningful variations.
 
 | Coverage | Count |
